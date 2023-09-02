@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accademic Excellence| Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/accademicexcellence.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+            
+
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+                
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+              <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+     
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section>
+            <div class="container1">
+                <div class="containerh2">
+                <h1 class="containerheading3">ACADEMIC EXCELLENCE</h1>
+                </div>
+                <div class="home-background-image10" id="home-background-image">
+                    
+                </div> 
+              <div class="image-slider">
+                <img src="{{ url_for('static', filename='images/accademic-excellence-home-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/accademic-excellence-home-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/accademic-excellence-home-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/accademic-excellence-home-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/accademic-excellence-home-image.jpg')}}" alt="home image background">
+                
+              </div>
+
+                <div class="facts-container">
+                    <div class="facts" id="facts">
+                        <h3>Facts</h3>
+                      </div>
+                  <div class="facts" id="facts">
+                    <h3>2021 IB Diploma Results</h3>
+                    <p>Our average IB score of 34.9 was 1.88 points higher than the global average</p>
+                  </div>
+                  <div class="facts" id="facts">
+                    <h3>2021 IGCSE Marks</h3>
+                    <p>96% of our students achieved A*–C, alongside 26 Distinction awards, 6 Merit awards, and multiple top-in-country Honours</p>
+                  </div>
+                  <div class="facts" id="facts">
+                    <h3>Global University Pathways</h3>
+                    <p>Our students receive offers from top universities in the UK, the US, Europe, Canada, and other international locations</p>
+                  </div>
+                </div>
+              </div>
+              
+              <aside class="excellence-aside" id="excellence-aside">
+                <div class="tailor-support">
+                <div class="exellence-content" id="excellence-content">
+                  <h1>TAILORED SUPPORT</h1>
+                  <p>Our teachers will place your child at the center of their own learning, allowing us to tailor to their specific abilities and interests.</p>
+                  <p>We consider our students’ different learning styles to develop lessons that are integrated across different subjects, based on age-appropriate topics that boost their curiosity.</p>
+                  <p>And while our students’ learning experiences are filled with personal challenge and growth, they lead to fantastic outcomes.</p>
+                </div>
+                <div class="exellence-image" id="excellence-image">
+                  <img src="{{ url_for('static', filename='images/aside-excellence-image.png')}}" alt="aside image">
+                <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+                </div>
+            </div>
+              </aside>
+              
+
+             <article class="button-class-range" id="button-class-range">          
+                <div class="container-1">
+                    <div class="content-wrapper">
+                        <div class="left-early-content" id="left-early-content">
+                            <h1>EARLY YEARS</h1>
+                            <p>We’ll unlock your child’s potential through our internationally recognized curricula,
+                                personalized approach to learning, and integration of subjects. We’ll also guide your child
+                                in connecting their questions or interests to the world outside of school.</p>
+                        </div>
+                        <div class="right-early-content" id="right-early-content">
+                            <img src="{{ url_for('static', filename='images/early-years-image.jpg')}}" alt="right-early-content image">
+                            <h4>2 TO 5 YEARS OLD</h4>
+                            <h1>Early Years Foundation Stage (EYFS)</h1>
+                            <p>We offer a holistic approach to children's learning through purposeful play, tailoring
+                                practical activities and skills to literature and math. We make learning fun through
+                                engaging hands-on experiences.</p>
+                            <a href="{{url_for('early')}}"><button>READ MORE</button></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+                
+            <div class="primary-container-primary">
+            <div class="primary-container">        
+                <div class="left-primary-content" id="left-primary-content">
+                    <img src="{{ url_for('static', filename='images/right-primary-content-image.jpg')}}" alt="right-primary-content image">
+                    <h4>5 TO 11 YEARS OLD</h4>
+                    <h1>National Curriculum for England (NCE) and the International Primary Curriculum (IPC)</h1>
+                    <p>Our Primary curriculum combines the best aspects of the NCE and the IPC. We place each child at the center of their own learning experience, and we develop lessons and activities that offer opportunities for personal challenge, growth, and success.</p>
+                    <a href="{{ url_for('primary')}}"><button>READ MORE</button></a>
+                </div>
+
+                <div class="right-primary-content" id="right-primary-content">
+                    <h1>PRIMARY SCHOOL<br>(ELEMENTARY)</h1>
+                    <p>We build our students’ confidence as they develop new skills.</p>
+                    <p>By exploring modern topics and themes across the subjects, your child will work towards their questions, interests, and goals in various areas of the International Primary Curriculum (IPC).</p>
+                </div>
+            </div>
+        </div>
+
+        <aside class="secondary-container-secondary">
+        <div class="secondary-container">
+            <div class="left-lower-secondary-content" id="left-lower-secondary-content">
+                <h1>LOWER SECONDARY<br>(MIDDLE SCHOOL)</h1>
+                <p>Following the International Middle Years Curriculum and the English National Curriculum, we nurture our lower secondary students’ curiosity so that they love learning. While we have specialist teachers for each subject, we’ll also encourage your child to connect their ideas across the subjects, linking each lesson by “big ideas.”</p>
+            </div>
+    
+            <div class="right-lower-secondary-content" id="right-lower-secondary-content">
+                <img src="{{ url_for('static', filename='images/right-lower-secondary-content-image.jpg')}}" alt="right-lower-secondary-content image">
+                <h4>11 TO 14 YEARS OLD</h4>
+                <h1>Learner Profile Diploma and English National Curriculum</h1>
+                <p>At DNPS, our students are introduced to a vast array of new and fascinating ideas designed to develop their critical thinking skills, curiosity, and love of learning. Our lower secondary curriculum is designed to meet the challenges of a rapidly changing world, promoting both academic and personal development.</p>
+                <a href="{{ url_for('lowersecondary')}}"><button>READ MORE</button></a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="igcse-container">
+        <div class="left-igcse-content" id="left-igcse-content">
+            <img src="{{ url_for('static', filename='images/right-igcse-content-image.jpg')}}" alt="right-igcse-content image">
+            <h1>The International General Certificate of Secondary Education (IGCSE)</h1>
+            <p>Our international program is similar to the UK's General Certificate of Secondary Education (GCSE), although it has more of a global theme.</p>
+            <a href="{{url_for('uppersecondary')}}"><button>READ MORE</button></a>
+        </div>
+
+        <div class="right-igcse-content" id="right-igcse-content">
+            <h1>IGCSE PROGRAMME<br>(UPPER SECONDARY)</h1>
+            <p>In Years 10 and 11 of High School (Upper Secondary), our students complete the two-year Cambridge IGCSE program, which involves a world-class curriculum that ends in the globally recognized exam and qualification, as developed by Cambridge University Press & Assessment.</p>
+
+            <p>Our students go on to achieve impressive IGCSE results, as over half achieve A*–A grades – which is double the global average. And after the IGCSE qualification, they’ll have the ideal preparation for continuing to the impressive International Baccalaureate Diploma Programme (IBDP).</p>
+        </div>
+    </div>
+               
+                <article class="ib-container-ib">
+                    <div class="ib-container">
+                        <div class="left-ib-content" id="left-ib-content">
+                            <h1>THE IB DIPLOMA PROGRAMME<br>(UPPER SECONDARY)</h1>
+                            <p>From Year 12 onward of High School (Upper Secondary), students at BISW all follow the The International Baccalaureate Diploma Programme to prepare for university. The IB is a challenging two-year course of study that prepares students for success in a global society. This program of study leads to the highly regarded qualification that is widely recognized by the world’s leading universities.</p>
+                        </div>
+            
+                        <div class="right-ib-content" id="right-ib-content">
+                            <img src="{{ url_for('static', filename='images/right-ib-content-image.png')}}" alt="right-ib-content image">
+                            <h4>16 TO 18 YEARS OLD</h4>
+            
+                            <h1>The IB Diploma Programme</h1>
+                            <p>The IBDP prepares our students to solve challenges of the future through interdisciplinary study.</p>
+            
+                            <p>They’ll choose three subjects to study at Higher Level (HL) and three to study at Standard Level (SL): Studies in Language and Literature, Language Acquisition, Individuals and Societies, Sciences, Mathematics, and the Arts.</p>
+            
+                            <p>They’ll also have extended essays, service projects, and opportunities to explore specialized knowledge — while taking time to reflect on the nature of knowledge itself!</p>
+                            <a href="{{ url_for('ibprogram')}}"><button>READ MORE</button></a>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="general-button-range">
+                <div class="general-button-range-class" id="general-button-range-class">
+                    <img src="{{ url_for('static', filename='images/general-button-range-image.svg')}}" alt="general button image">
+                    <div class="general-button-range-text">
+                        <h4>Want to learn more about our curriculum?</h4>
+                        <p>Read our curriculum guides to learn more about how our personalized approach to learning can benefit your child.</p>
+                    </div>
+                    <p class="general-button-range-button" id="general-button-range-button">
+                        <a href="{{ url_for('curriculumguide')}}">
+                            <button>CURRICULA GUIDE</button>
+                        </a>
+                    </p>
+                </div>
+            </aside>
+
+            <div class="all-categories">
+                <button class="toggle">EARLY YEARS</button>
+                <button class="toggle">PRIMARY</button>
+                <button class="toggle">LOWER SECONDARY</button>
+                <button class="toggle">UPPER SECONDARY</button>
+            </div>
+        
+            <div class="content early-content">
+                <img src="{{ url_for('static', filename='images/early-box1.jpg')}}" alt="Early Years">
+                <h1>EARLY YEARS</h1>
+                <div class="box-with-content">
+                    <div class="box1"><p>Languages Taught: 2 (English and Spanish)</p></div>
+                    <div class="box2"><p>Student-Teacher Ratio: 4:1 for Pre-Nursery, 8:1 for Nursery, and 10:1 for Reception</p></div>
+                    <div class="box3"><p>Nationalities: 70+</p></div>
+                    <div class="box4"><p>Ages: 2–5</p></div>
+                </div>
+            </div>
+        
+            <div class="content primary-content">
+                <img src="{{ url_for('static', filename='images/primary.jpg')}}" alt="Primary">
+                <h1>PRIMARY</h1>
+                <div class="box-with-content">
+                    <div class="box1"><p>Languages Taught: English and Spanish</p></div>
+                    <div class="box2"><p>Average Class Size: 20</p></div>
+                    <div class="box3"><p>Nationalities: 70+</p></div>
+                    <div class="box4"><p>Ages: 5–11</p></div>
+                </div>
+            </div>
+        
+                <div class="content lower-secondary">
+                    <img src="{{ url_for('static', filename='images/secondary.jpg')}}" alt="Lower Secondary">
+                    <h1>LOWER SECONDARY (MIDDLE SCHOOL)</h1>
+                    <div class="box-with-content">
+                        <div class="box1"><p>Languages Taught: English, Spanish, and French</p></div>
+                        <div class="box2"><p>Average Class Size: 20</p></div>
+                        <div class="box3"><p>Nationalities: 70+</p></div>
+                        <div class="box4"><p>Ages: 12–14</p></div>
+                    </div>
+                </div>
+        
+               
+                <div class="content upper-secondary">
+                    <img src=" {{ url_for('static', filename='images/upper.jpg')}}" alt="Upper Secondary">
+                    <h1>UPPER SECONDARY (HIGH SCHOOL)</h1>
+                    <div class="box-with-content">
+                        <div class="box1"><p>Languages Taught: English, Spanish, and French</p></div>
+                        <div class="box2"><p>Average Class Size: 20</p></div>
+                        <div class="box3"><p>Nationalities: 70+</p></div>
+                        <div class="box4"><p>Ages: 14–18</p></div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="all-categories">
+                <button class="toggle-button" data-target="early-content1">EARLY YEARS</button>
+                <button class="toggle-button" data-target="primary-content1">PRIMARY</button>
+                <button class="toggle-button" data-target="lower-content1">LOWER SECONDARY</button>
+                <button class="toggle-button" data-target="upper-content1">UPPER SECONDARY</button>
+              </div>
+              <div class="content-heading">
+                <h1>A TYPICAL DAY AT DNPS</h1>
+            </div>
+    <div class="content1 early-content1">
+        <div class="box-container">
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/early-mage1.jpg')}}" alt="Early Years">
+                <h2>READY FOR THE DAY</h2>
+                <p>Every morning, we gather to greet our classmates, sing our welcome song, and prepare for our exciting day.</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/early-mage2.jpg')}}" alt="Early Years">
+                <h2>EXCITING LESSONS</h2>
+                <p>With a mix of student-led and teacher-led learning, Early Years classes give students a chance to engage with new topics in a fun, stimulating way.</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/early-mage3.jpg')}}" alt="Early Years">
+                <h2>LUNCHTIME</h2>
+                <p>We enjoy delicious, healthy food after a morning of engaging activities. Our snacks and meals are always nutritious and tasty, and this time of day helps us build good table manners and learn to tidy up after ourselves.</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/early-mage4.jpg')}}" alt="Early Years">
+                <h2>THE GREAT OUTDOORS</h2>
+                <p>Being active, playing games, and learning outside are important for children. At BISW, Pre-Nursery and Nursery are steps away from outdoor fun in playgrounds attached to their classrooms, and Reception takes a weekly Walk in the Woods at Dumbarton Oaks Park to explore nature and make discoveries.</p>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/early-mage5.jpg')}}" alt="Early Years">
+                <h2>EARLY LITERACY</h2>
+                <p>We use books that spark the imagination and encourage us to engage with stories through actions, pictures, and songs. We also provide Phonics lessons through Read Write, Inc. to give students a flying start in learning to read and write.</p>
+            </div>
+        </div>
+        </div>                
+                <div class="content1 primary-content1">
+                    <div class="box-container">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary1.jpg')}}" alt="Early Years">
+                        <h2>READY FOR LEARNING</h2>
+                            <p>Settling in at registration, we prepare for a full day of learning and get ready for the exciting lessons ahead.</p>
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary2.jpg')}}" alt="Early Years">
+                        <h2>ENGLISH AND MATHS</h2>
+                            <p>Our British heritage is evident in our instruction of English and Mathematics lessons that correspond with the English National Curriculum.</p>
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary3.jpg')}}" alt="Early Years">
+                        <h2>LUNCHTIME</h2>
+                            <p>In partnership with FLIK Independent School Dining, we offer delicious, healthy, and locally sourced meals for students through our meal service program.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary4.jpg')}}" alt="Early Years">
+                        <h2>EXPLORING IPC TOPICS</h2>
+                            <p>Using the International Primary Curriculum (IPC), we explore fascinating topics each half term and follow a thematic approach to learning that lets curiosity guide us through learning pathways. Together, we unlock inventive ways to explore IPC ideas across multiple subjects, such as Art, History, and Science.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary5.jpg')}}" alt="Early Years">
+                        <h2>SPECIALIST LESSONS</h2>
+                            <p>Each week, students take specialist classes, such as Physical Education, Performing Arts and Spanish, with instructors who provide lessons that help students gain confidence and skills.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary6.jpg')}}" alt="Early Years">
+                        <h2>AFTER-SCHOOL ACTIVITIES</h2>
+                            <p>We offer a variety of after-school activities and clubs that help students explore their interests. Participating in these helps students develop their skills and empowers them to try new things.</p>   
+                    </div>
+                </div>
+                </div>
+
+                <div class="content1 lower-content1">
+                    <div class="box-container">
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/lower1.jpg')}}" alt="Early Years">
+                        <h2>FORM GROUPS</h2>
+                            <p>We take time to get ready for the day and focus on well-being in our form groups at morning registration. This is a great time to discuss important information like our schedules or details of an upcoming activity or presentation.</p>
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/lower2.jpg')}}" alt="Early Years">
+                        <h2>EXPLORING BIG IDEAS</h2>
+                            <p>The programme in Lower Secondary (Years 7 to 9) lets us explore big ideas through the lens of multiple subjects. We work on areas that makes us curious and connect reference points from various subjects to specific themes or topics.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/lower3.jpg')}}" alt="Early Years">
+                        <h2>LUNCHTIME</h2>
+                            <p>In partnership with FLIK Independent School Dining, we offer delicious, healthy, and locally sourced meals for students through our meal service program.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/lower4.jpg')}}" alt="Early Years">
+                        <h2>A BREADTH OF OPPORTUNITIES</h2>
+                            <p>Lower secondary offers a wide range of ways for students to learn. For example, we artistically express ourselves while uncovering and showcasing our talents in Music, Dance and Drama, and we discover the world around us during lab times in science courses like Biology, Chemistry, and Physics.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/lower5.jpg')}}" alt="Early Years">
+                        <h2>BEYOND EXTRACURRICULARS</h2>
+                            <p>With sports teams in addition to academic and hobby clubs, the range of extracurricular activities at BISW includes something fun for everyone and ensures students can explore their interests. Students have access to field trips to important sites in the DC area. Furthermore, we provide residential trips to overnight camps.</p>   
+                    </div>
+                    <div class="box">
+                        <img src="{{ url_for('static', filename='images/primary6.jpg')}}" alt="Early Years">
+                        <h2>AFTER-SCHOOL ACTIVITIES</h2>
+                            <p>We offer a variety of after-school activities and clubs that help students explore their interests. Participating in these helps students develop their skills and empowers them to try new things.</p>   
+                    </div>
+                </div>
+              </div>
+      
+                    <div class="content1 upper-content1">
+                        <div class="box-container">
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='images/upper1.jpg')}}" alt="Early Years">
+                            <h2>FORM GROUPS</h2>
+                                <p>We take time to get ready for the day and focus on well-being in our form groups at morning registration. This is a great time to discuss important information like our schedules or details of an upcoming activity or presentation.</p>
+                        </div>
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='images/upper2.jpg')}}" alt="Early Years">
+                            <h2>PURSUING GOALS WITH IGCSE</h2>
+                                <p>Students in Years 10 and 11 learn across ten subjects in the two-year IGCSE programme, which is customized to their personal goals and interests. Compulsory subjects include English, mathematics, languages, and sciences. Electives in history, geography, fine arts, performing arts, and more are available.</p>   
+                        </div>
+        
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='images/upper3.jpg')}}" alt="Early Years">
+                            <h2>STANDING OUT WITH THE IB</h2>
+                                <p>Students in Years 12 and 13 work through the International Baccalaureate Diploma Programme (IBDP), a widely acclaimed programme accepted and recognized for entry into higher education and universities worldwide.</p>   
+                        </div>
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='images/upper4.jpg')}}" alt="Early Years">
+                            <h2>BUILDING LEADERSHIP SKILLS</h2>
+                                <p>DNPS upper secondary students show leadership skills by serving the community. From helping charitable organizations in the DC area to assisting communities abroad on service trips, there is an abundance of opportunities to help those around us.</p>   
+                        </div>
+        
+                        <div class="box">
+                            <img src="{{ url_for('static', filename='images/upper5.jpg')}}" alt="Early Years">
+                            <h2>BEYOND EXTRACURRICULARS</h2>
+                                <p>Students showcase their leadership and teamwork skills through opportunities like Student Council and Model UN. We offer a range of sports teams in addition to academic and hobby clubs, and students also take field trips to important sites in the DC area. Furthermore, we provide residential trips, such as overnight camps and service trips.</p>   
+                        </div>
+                    </div>
+            </div>
+
+            <div class="meet" id="meet">
+                <div class="meet-right-image">
+                    <img src="{{ url_for('static', filename='images/meet-image.png')}}" alt="Alumni Image">
+                </div>
+            
+                <div class="meet-content">
+                    <h1>MEET OUR ALUMNI</h1>
+                    <p>Our students leave BISW with the confidence, results, resilience, and ambition to succeed in whatever they want to do or be in life. What's more, they'll always be part of the Nord Anglia family.</p>
+                </div>
+            </div>
+            
+
+            <div class="box-container1">
+                <div class="box-with-image">
+                    <div class="first-box">
+                        <img src="{{ url_for('static', filename='images/first-image.jpg')}}" alt="Ernesto">
+                        <h2>Ernesto</h2>
+                        <h5>University of Chicago</h5>
+                        <p>“Having friends from different countries provided me with unique memories. They’ve instilled in me an appreciation of experiencing different cultures and a drive for travelling the world — which has led me to pursue a career in foreign affairs."</p>
+                    </div>
+                </div>
+                
+                <div class="box-with-image">
+                    <div class="second-box">
+                        <img src="{{ url_for('static', filename='images/secondary-image.jpg')}}" alt="Isabella">
+                        <h2>Isabella</h2>
+                        <h5>University of Nottingham, England</h5>
+                        <p>“At DNPS, I participated in Student Council, Global Goals, and Model UN/World Scholar’s Cup. My experiences helped me to find my current leadership position as a course representative in the Science Faculty at the University of Nottingham. We hold a similar version of a Town Hall, like a Student Council, to report back to the Department and Schools on actions and resources.” "</p>
+                    </div>
+                </div>
+                
+                <div class="box-with-image">
+                    <div class="third-box">
+                        <img src="{{ url_for('static', filename='images/third-image.jpg')}}" alt="Dhanesh">
+                        <h2>Dhanesh</h2>
+                        <h5>Schweizerische Hotelfachschule Luzern</h5>
+                        <p>“At the Swiss hotel management academy Schweizerische Hotelfachschule Luzern, Dhanesh experienced a smooth transition from secondary school to university. He believes that BISW particularly “taught leadership, communication, and teamwork and helped me find the fun in serious situations.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat-content">
+                    <h1>STATS WE SHARE WITH PRIDE</h1>
+                    <p>DNPS produces fantastic results.</p>
+                </div>
+                <div class="stat-boxes">
+                    <div class="stat1box">
+                        <h1>94%</h1>
+                        <p>IBDP pass rate for the Class of 2021</p>
+                    </div>
+                    <div class="stat2box">
+                        <p>IB score range</p>
+                        <h1>40–45</h1>
+                        <p>16% achieved the highest range</p>
+                    </div>
+                    <div class="stat3box">
+                        <p>Average IB score</p>
+                        <h1>34.9</h1>
+                        <p>1.88 above the global average</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="motive" id="motive">
+                <div class="motive-container">
+                    <div class="motive-image">
+                        <img src="{{ url_for('static', filename='images/motive-image.jpg')}}" alt="image">
+                    </div>
+                    <div class="motive-text">
+                        <h3>A motivating work environment and invested teachers foster a learning space where curious students can thrive. BISW's diverse community allows me to engage with different cultures and provides me with new perspectives that enrich my life.</h3>
+                        <p>Andre</p>
+                        <p>DNSP Secondary School Student</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teach-container">
+                <div class="teach-image">
+                    <img src="{{ url_for('static', filename='images/teach-image.jpg')}}" alt="image">
+                </div>
+                <div class="teach-text">
+                    <h4>INSPIRING YOUR CHILD</h4>
+                    <h1>HOW WE TEACH</h1>
+                    <p>Our internationally experienced teachers can easily connect with your child within our small class sizes, and they’ll always put the interests of your student first.</p>
+                    <p>Our teachers define individualized goals under the English National Curriculum, and they passionately care about the progress your child will make – as they’re always determining the best way forward to ensure your child’s success.</p>
+                    <p>As a result, 92% of our parents enthusiastically believe that we’ve supported their child’s talents.</p>
+                    <a href="{{ url_for('curriculumguide')}}"><button>FIND OUT MORE</button></a>
+                </div>
+            </div>
+
+            <div class="teaching-container">
+                <div class="teaching-container1">
+                <div class="teaching-text">
+                    <h4>TEACHING EXCELLENCE</h4>
+                    <h1>LEARNING FROM THE BEST</h1>
+                    <p>DNPS’s outstanding teachers create the very best educational experiences in the world. That’s because over 90% of our teachers are experienced in British heritage education – which means your child is in the best hands with our expert teachers.</p>
+                    <p>They’re also equipped with unique training materials from our award-winning professional development platform, Nord Anglia University, as well as world-class resources from our collaborators, MIT and Juilliard.</p>
+                    <p>We always support our teachers through a regular performance review process, so that we’ll take the time to evaluate and reflect, thoughtfully ensuring that our educational techniques and tools are best-in-class.</p>
+                    <a href="{{ url_for('curriculumguide')}}"><button>FIND OUT MORE</button></a>
+                </div>
+                <div class="teaching-image">
+                    <img src="{{ url_for('static', filename='images/teaching-image.jpg')}}" alt="image">
+                </div>
+            </div>
+            </div>
+
+
+            <div class="outstanding-container">
+                <div class="outstanding-container1">
+                <div class="outstanding-text">
+                    <h1>OUTSTANDING LEARNING EXPERIENCES</h1>
+                    <p>As well as exceptional teachers, your child’s education will benefit from life-changing experiences beyond the classroom that allow them to explore, discover and think critically.</p>
+                    <a href="{{ url_for('outstanding_experience')}}"><button>OUTSTANDING EXPERIENCES</button></a>
+                </div>
+                <div class="outstanding-image">
+                    <img src="{{ url_for('static', filename='images/outstanding-image.png')}}" alt="image">
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='assets-js/accademicexcellence.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

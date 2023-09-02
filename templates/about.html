@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Dan School Abuja</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/accademicexcellence.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+            
+
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+                
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+              <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+     
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section>
+            <div class="container1">
+                <div class="containerh2">
+                <h1 class="containerheading3">ABOUT DAN SCHOOL CAMPUS</h1>
+                </div>
+                <div class="home-background-image10" id="home-background-image">
+                    
+                </div> 
+              <div class="image-slider">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                
+              </div>
+
+                <div class="facts-container">
+                    <div class="facts" id="facts">
+                      <h1>FACTS ABOUT DAN</h1>
+                      </div>
+                  <div class="facts" id="facts">
+                    <h1>750</h1>
+                    <h3>Students</h3>
+                  </div>
+                  <div class="facts" id="facts">
+                    <h1>70+</h1>
+                    <h3>Nationalities</h3>
+                  </div>
+                  <div class="facts" id="facts">
+                    <h1>2–18</h1>
+                    <h3>Ages</h3>
+                  </div>
+                </div>
+              </div>
+              
+              <aside class="excellence-aside" id="excellence-aside">
+                <div class="tailor-support">
+                <div class="exellence-content" id="excellence-content">
+                  <h1>A SUPPORTIVE ENVIRONMENT BUILT FOR SUCCESS</h1>
+                  <p>The British International School of Washington is committed to providing a safe, happy, student-centered learning environment where students are inspired to succeed. Our campus is conveniently close to the centre of Washington and next door to Dumbarton Oaks Park, the Naval Observatory, and the National Cathedral. We take full advantage of our fantastic location and also enjoy the many world-class museums at our doorstep.</p>
+                  <p>Our campus is fun and welcoming! Our students love that we’re all housed in one building – this helps us to develop a true sense of school spirit across all the ages, interests, and cultural backgrounds we have in our community.</p>
+                </div>
+                <div class="exellence-image" id="excellence-image">
+                  <img src="{{ url_for('static', filename='images/aside-excellence-image.png')}}" alt="aside image">
+                <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+                </div>
+            </div>
+              </aside>
+              
+
+              <article class="features" id="campus-features">
+                <div class="campus-features" id="campus-features1">
+                  <h4>OUR SCHOOL FACILITIES</h4>
+                  <h1>OUR SCHOOL FACILITIES</h1>
+                  <p>At the British International School of Washington, we have a unique one-building system that places all year groups under one roof. As a result, we have a close-knit community and highly integrated learning environment.</p>
+                  <p>Our welcoming facilities place your child in state-of-the-art, balanced spaces that brings their learning to life. With cutting-edge equipment and seamless interactive technology in your child’s classroom, your child will grow both in and out of the classroom.</p>
+                  <h3>BIS Washington campus features</h3>
+                  <ul>
+                    <li>Advanced science labs</li>
+                    <li>Music suite with a recording studio</li>
+                    <li>Performing arts theatre and an art studio</li>
+                    <li>International Baccalaureate (IB) lounge</li>
+                    <li>Library for our Primary School students</li>
+                    <li>Outdoor playgrounds and an indoor gym</li>
+                    <li>Dance studio</li>
+                  </ul>
+                  <a href="{{url_for('one_school')}}"><button>READ MORE</button></a>
+                </div>
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/campus-features-image.jpg')}}" alt="right-early-content image">
+                </div>
+              </article>
+              <section class="video-section">
+                <div class="video-container">
+                  <video class="video" id="video" controls autoplay loop muted>
+                    <source src="{{ url_for('static', filename='images/campus-vidio-background.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="content-overlay" id="overlay">
+                  <div class="video-controls">
+                    <button class="video-button" id="play-pause">&#9658;</button>
+                    <button class="video-button" id="forward">30s &raquo;</button>
+                    <button class="video-button" id="close">&#10005;</button>
+                  </div>
+                </div>
+                <div class="video-content">
+                  <h1>Welcome to Our Campus</h1>
+                  <p>Discover our state-of-the-art facilities and vibrant learning environment.</p>
+                </div>
+              </section>   
+              
+              
+              <article class="features" id="campus-features">
+                <div class="campus-features" id="campus-features1">
+                  <h4>OWNING IT</h4>
+                  <h1>SHINING BRIGHT ALL AROUND US</h1>
+                  <p>Our talented and passionate teachers and staff are dedicated to ensuring a safe, happy, student-centred learning environment where our students are continually motivated to succeed.</p>
+                </div>
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/shining-bright.jpg')}}" alt="right-early-content image">
+                  <p>We enjoy making original music and getting creative in our recording studio.</p>
+                </div>
+              </article>
+
+<!--map for the page-->
+<div id="map-container">
+    <div id="info-container">
+        <h1>FIND US IN NIGERIA ABUJA</h1>
+        <p>CURRENT TIME IN NIGERIA ABUJA</p>
+        <hr>
+        <h1 id="current-time"></h1>
+        <p>Monday–Friday: 8.00am–6.00pm</p><hr>
+        <h1 id="current-weather"></h1>
+        <p>CURRENT WEATHER</p><hr>
+       
+        <h1>OUR ADDRESS</h1>
+        <p>222, Central Business District (CBD), Abuja-Nigeria</p><hr>
+    </div>
+    <div id="map"></div>
+</div>
+
+
+              <article class="teachnology" id="teachnology">
+                <div class="teachnology-content">
+                    <img src="{{ url_for('static', filename='images/teaching-purposeful.jpg')}}" alt="right-early-content image">
+                </div>
+                <div class="teachnology-text">
+                    <h4>INTEGRATING SMART TECHNOLOGY</h4>
+                    <h1>TECH FOR PURPOSEFUL LEARNING</h1>
+                    <p>In our teacher-led, tech-enabled classrooms, your child will have all the tech they need at their fingertips for purposeful learning.</p>
+                    <p>Whether they're in STEAM classes in Primary School, computer science modules in Secondary School, or special elective classes, our students feel empowered to use a variety of tools, including ones with all the digital skills they need to thrive in our world.</p>
+                    <p>In fact, we’re excited to open our newly renovated, state-of-the-art Makerspace from the 2022–23 school year, where our students will continue to create incredible projects for years to come.</p>
+                </div>
+            </article>
+            
+
+            <article class="start-the-journey" id="start-the-journey">
+                <div class="teachnology" id="teachnology">
+                <div class="teachnology-content">
+                    <img src="{{ url_for('static', filename='images/start-the-journey-image.png')}}" alt="right-early-content image">
+                </div>
+                <div class="teachnology-text">
+                    <h1>START THE JOURNEY OF A LIFETIME</h1>
+                    <p>Joining a new school can be daunting but we are here to help. We look forward to answering your questions and welcoming you to our school community, which includes families from over 50 nations.</p>
+                    <a href="{{url_for('admissions')}}"><button>LEARN MORE ABOUT ADMISSION</button></a>
+                </div>
+            </div>
+        </article>     
+
+               
+               
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoJbY005IpbtNnYApTV7lr5zJMeuzulx0&callback=initMap" async defer></script>
+    <script src="{{ url_for('static', filename='assets-js/about.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+</body>
+  
+  </html>

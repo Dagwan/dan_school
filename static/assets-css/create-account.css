@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+  }
+  
+  .create-account {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+  }
+  
+  form {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  form input{
+    margin: 20px;
+  }
+
+form input,
+form select {
+    display: block;
+    margin-bottom: 10px; /* Adjust this value to control the spacing */
+}
+  .create-details {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .reg h2 {
+    background-color: darkblue;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+  }
+  .create-text1 {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .create-text1 h2,
+  .create-text1 h3 {
+    margin-top: 0;
+  }
+  
+  .create-text1 p {
+    margin-bottom: 10px;
+  }
+  
+  .create-text1 input[type="text"],
+  .create-text1 input[type="email"],
+  .create-text1 input[type="password"],
+  .create-text1 input[type="retypeEmail"],
+  .create-text1 input[type="retypePassword"],
+  .create-text1 select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .create-text1 button.create {
+    width: 20%;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .create-account .p {
+    text-align: center;
+    font-style: italic;
+  }
+  .create-text1 button.create:hover {
+    background-color: #1e90ff;
+  }
+  
+  /* Flexible Media Queries */
+  @media (max-width: 768px) { /* 40em is equivalent to 640px */
+    .create-account {
+      flex-direction: column;
+    }
+  
+    .create-details {
+      padding: 10px;
+      max-width: 100%; /* Set the max-width to 100% for small devices */
+      margin: 0 auto;
+    }
+  
+    .create-text1 {
+      margin: 10px 0;
+    }
+  
+    .create-text1 input[type="text"],
+    .create-text1 input[type="email"],
+    .create-text1 input[type="password"],
+    .create-text1 select {
+      width: 100%;
+    }
+
+    
+  .create-text1 button.create {
+    width:100%;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  }
+  

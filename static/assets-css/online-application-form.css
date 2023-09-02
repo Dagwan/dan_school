@@ -1,0 +1,416 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+  
+/* Sticky Container */
+.sticky-container {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    background-color: white;
+}
+
+/* Left Image and Text */
+.sticky-background-image {
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.sticky-background-image img {
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sticky-background-image .text-on-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+}
+
+/* Right Content */
+.right-text {
+    padding: 20px;
+    margin-left: 10%; /* Add margin to increase spacing */
+    font-size: 1.2rem;
+}
+
+.right-text button {
+    background-color: darkblue;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.right-text button:hover {
+    background-color: blue;
+}
+
+.right-text ul li {
+    line-height: 1.8;
+}
+
+
+.text-on-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1;
+    white-space: nowrap;
+    animation: slide 10s linear infinite; /* Adjust the animation duration as needed */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+/* Show resume form when checkbox is checked */
+#resumeForm:checked ~ .right-text #resumeForm {
+    display: block;
+}
+
+/* Align Page 2 to the right */
+.page#page2 .page#page1 .page#page3 {
+    margin-left: 20px;
+}
+
+/* New styles for right-content */
+.right-content {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+/* Page 2 styles */
+#page2 {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: white;
+    display: none;
+}
+
+/* Show resume and identity forms when checkboxes are checked */
+#resumeForm:checked ~ .right-content #resumeForm,
+#identityForm:checked ~ .right-content #identityForm {
+    display: block;
+}
+
+/* Add this CSS to your existing styles */
+/* Page 2 Content */
+.page#page2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+}
+
+.page#page2 .right-text {
+    max-width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.page#page2 .right-text form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    width: 25%; /* Adjust as needed */
+}
+
+
+
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .sticky-container {
+        flex-direction: column;
+    }
+    .sticky-background-image {
+        width: 100%;
+        height: 50vh; /* Adjust the height as needed */
+    }
+    .right-text {
+        width: auto;
+        margin-left: 0; /* Reset margin for mobile view */
+    }
+
+    .sticky-background-image .text-on-image {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/* Style for the Resume Form */
+#resumeForm {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#resumeForm h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#resumeForm p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#resumeForm label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+#resumeForm input[type="email"],
+#resumeForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#resumeForm button {
+    background-color: darkblue;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#resumeForm button:hover {
+    background-color: blue;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    #resumeForm {
+        max-width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+/* Style for the Identity Check Form */
+#identityForm {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#identityForm h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#identityForm p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#identityForm label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+#identityForm input[type="email"],
+#identityForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#identityForm button {
+    background-color: darkblue;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#identityForm button:last-child {
+    margin-right: 0;
+}
+
+#identityForm button:hover {
+    background-color: blue;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    #identityForm {
+        max-width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+
+/* Style for Styled Checkbox */
+.styled-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.styled-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-text {
+    margin-right: auto;
+}
+
+/* Style for Styled Radio Buttons */
+.styled-radio {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.styled-radio input[type="radio"] {
+    margin-right: 5px;
+}
+
+.styled-radio label {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+
+/*parent form styling*/
+/* Form Heading */
+.form-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: #f6f6f6;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-left: 0;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form select,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="password"],
+.contact-form input[type="tel"],
+.contact-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.contact-form select {
+    height: 36px;
+}
+
+.contact-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.contact-form h2 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-form a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form select {
+        width: 100%;
+    }
+}
+

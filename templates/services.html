@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Dan School Abuja</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/services.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/index.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+            
+
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+                
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+              <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+     
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section>
+            <div class="container1">
+                <div class="containerh2">
+                <h1 class="containerheading3">OUR SERVICES AT DAN SCHOOL ABUJA</h1>
+                </div>
+                <div class="home-background-image10" id="home-background-image">
+                    
+                </div> 
+              <div class="image-slider">
+                <img src="{{ url_for('static', filename='images/our-service-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/our-service-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/our-service-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/our-service-image.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/our-service-image.jpg')}}" alt="home image background">
+                
+              </div>
+
+                <div class="facts-container">
+                  <div class="facts" id="facts">
+                    <p>We're shaping a generation of creative and resilient global citizens, who leave our schools with everything they need for success - whatever they choose to be or do in life.</p>
+                  </div>
+                </div>
+              </div>              
+
+              <article class="features" id="campus-features">
+                <div class="campus-features" id="campus-features1">
+                    <h4>WHY US?</h4>
+                  <h1>WHY CHOOSE DAN SCHOOL?</h1><hr>
+                 <p>As the world’s leading premium international schools organisation, we make every moment of your child’s education count. Our strong academic foundations combine world-class teaching and curricula with cutting-edge technology and facilities, to create learning experiences like no other. Inside and outside of the classroom, we inspire our students to achieve more than they ever thought possible.</p>
+                
+                 <p>No two children learn the same way, which is why a Nord Anglia education personalises learning to what works best for your child. Our approach means that your child leaves school with everything they need to succeed in whatever they choose to be or do in life. </p>
+                </div>
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/why-us-image.jpg')}}" alt="right-early-content image">
+                </div>
+              </article>     
+              
+              <section class="video-section">
+                <div class="video-container">
+                  <video class="video" id="video" controls autoplay loop muted>
+                    <source src="{{ url_for('static', filename='images/ourservice.mp4')}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="content-overlay" id="overlay">
+                  <div class="video-controls">
+                    <button class="video-button" id="play-pause">&#9658;</button>
+                    <button class="video-button" id="forward">30s &raquo;</button>
+                    <button class="video-button" id="close1">&#10005;</button>
+                  </div>
+                </div>
+                <div class="video-content">
+                  <h1>Welcome to our School Life</h1>
+                  <p>Discover our state-of-the-art facilities and vibrant learning environment.</p>
+                </div>
+              </section>
+              
+             
+              <article class="teachnology" id="teachnology">
+                <div class="teachnology-content">
+                    <img src="{{ url_for('static', filename='images/create-future-image.jpg')}}" alt="right-early-content image">
+                </div>
+                <div class="teachnology-text">
+                    <h4>CREATE YOUR FUTURE</h4>
+                    <h1>A LEARNING EXPERIENCE DESIGNED FOR THE FUTURE</h1>
+                    <p>We’re proud that our students achieve some of the best academic results in the world and study at the world’s top universities.</p>
+                    <p>But that’s just part of the story because what we offer is much more than just academic excellence. We help our students get ready for the future. To think creatively and outside the box, to keep trying, and to be team players. Inspired by the world’s best teachers in incredible learning environments, a Nord Anglia education is like no other. </p>
+                    <a href="{{ url_for('admissions') }}"><button class="find-out-more" id="findt-out-more">FIND OUT MORE</button></a>
+                </div>
+            </article>
+            <div class="container">
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="image-container">
+                      <img src="{{ url_for('static', filename='images/chief-exective-image.jpg') }}" alt="accademic excellence">
+                    </div>
+                    <div class="content">
+                      <h2>Andrew Fitzmaurice</h2>
+                      <p><span>Chief Executive Officer</span></p>
+                      <p>Andrew Fitzmaurice is Chief Executive Officer of Nord Anglia Education.</p>
+                      <p><button class="pop-onlick">LEARN MORE</button></p>
+                    </div>
+                  </div>
+                </section>
+                <!-- The modal -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="hidden-content">
+                      <img src="{{ url_for('static', filename='images/chief-exective-image.jpg') }}" alt="images to hide" class="hidden-image">
+                      <h1 class="text-to-hide">Andrew Fitzmaurice</h1>
+                      <p>Following Andrew’s appointment as CEO in 2003, Nord Anglia has established itself as the world’s leading premium schools organisation.</p>
+          
+                      <p>Under Andrew’s leadership, Nord Anglia provides personalised learning to thousands of students aged 2–18 years old in premium international day and boarding schools. Nord Anglia’s global family of schools are located in more than 30 countries across Asia, the Americas, the Middle East and Europe. Andrew graduated from the University of Wales Cardiff, Magna Cum Laude, with a degree in Economics. He also holds a master's degree in International Education from King’s College London, one of the world’s leading universities. Earlier in his career, Andrew held a number of senior leadership positions including Chief Executive Officer of easyCar.com, an international online automobile rental company. He also spent 13 years at TNT Express UK as a member of its senior leadership team.</p>
+                    </div>
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="image-container">
+                      <img src="{{ url_for('static', filename='images/chief-finance-image.jpg') }}" alt="accademic excellence">
+                    </div>
+          
+                    <div class="content">
+                        <h2>Ton van Vilsteren</h2>
+                        <p><span>Chief Financial Officer</span></p>
+                        <p>Ton van Vilsteren is the Chief Financial Officer of Nord Anglia Education.</p>
+                        <p><button class="pop-onlick">LEARN MORE</button></p>
+                    </div>
+                  </div>
+                </section>
+          
+                <!--the mode -->
+                <div id="modal2" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="hidden-content">
+                      <img src="{{ url_for('static', filename='images/chief-finance-image.jpg') }}" alt="images to hide" class="hidden-image">
+                      <h1 class="text-to-hide">Ton van Vilsteren</h1>
+                      <p>He has more than two decades of experience in the hospitality sector, including senior finance leadership roles across Asia Pacific, Europe, the Middle East and Latin America. Ton previously led the financial direction of hotels, commercial real estate, retail operations and education at the Jumeirah Group based in Dubai. Prior to that, he was based in Singapore as Head of Finance for Asia Pacific at Hilton Worldwide, where he was accountable for the region’s financial delivery across more than 20 countries. Ton’s career history includes a number of international postings within the Hilton group.</p>
+                      <p>Ton holds an Executive MBA from the International Institute for Management Development in Switzerland and a bachelor’s degree in Finance from “Hotelschool The Hague” in the Netherlands. He also studied at the Chartered Institute of Management Accountants in London.</p>
+                    </div>
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="image-container">
+                      <img src="{{ url_for('static', filename='images/chief-oparating-image.jpg') }}" alt="accademic excellence">
+                    </div>
+                    <div class="content">
+                        <h2>George Ghantous</h2>
+                        <p><span>Chief Operating Officer</span></p>
+                        <p>George Ghantous is the Chief Operating Officer of Nord Anglia Education.</p>
+                        <p><button class="pop-onlick">LEARN MORE</button></p>
+                    </div>
+                  </div>
+                </section>
+                <!--the mode -->
+                <div id="modal3" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="hidden-content">
+                      <img src="{{ url_for('static', filename='images/chief-oparating-image.jpg') }}" alt="images to hide" class="hidden-image">
+                      <h1 class="text-to-hide">George Ghantous </h1>
+                      <p>He started his working career in 1993 as an engineer in the oil and gas industry, followed by a successful career in the construction industry. In 2006, George moved to a career in investment banking/Private Equity across the Middle East and Southeast Asia markets. In October 2013, George joined Nord Anglia Education as Regional Managing Director for the Middle East & Southeast Asia followed by a brief stint as Regional Managing Director for North America. George is also a member of Nord Anglia’s Executive Committee and has been since 2013. He holds an Executive MA in International Education from King’s College London. Outside of work, George has a keen interest in coaching and was a Board Member of Dubai Little League, a non-profit organisation teaching kids the game of baseball.</p>
+                    </div>
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="image-container">
+                      <img src="{{ url_for('static', filename='images/chief-education-image.jpg') }}" alt="accademic excellence">
+                    </div>
+                    <div class="content">
+                        <h2>Dr Elise Ecoff</h2>
+                        <p><span>Chief Education Officer</span></p>
+                        <p>Dr Elise Ecoff is the Chief Education Officer of Nord Anglia Education.</p>
+                        <p><button class="pop-onlick">LEARN MORE</button></p>
+                    </div>
+                  </div>
+                </section>
+                <!--the mode -->
+                <div id="modal4" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="hidden-content">
+                      <img src="{{ url_for('static', filename='images/chief-education-image.jpg') }}" alt="images to hide" class="hidden-image">
+                      <h1 class="text-to-hide">Dr Elise Ecoff </h1>
+                      <p>Dr Elise Ecoff is Nord Anglia Education's Chief Education Officer. Under her leadership, the Education Team ensure that our schools' educational practice, curricula and programmes are second to none. Comprised of senior education experts, the team drives a research-led approach to educational excellence. In addition to providing specialist support to our principals and teachers, they lead best practice and continuous improvement programmes informed by the latest thinking in teaching and learning, ensuring our schools offer the finest educational experience.</p>
+          
+                      <p>Prior to taking up this role in 2020, Elise was Principal at North Broward Preparatory School from 2012 where she had served since 2004 as a division leader, curriculum specialist, and Assistant Head of School. She also spent fifteen years working in Broward County Public Schools in Florida.</p>
+                      <p>Serving more than 34 years in education in teaching and leadership roles has enabled Elise to learn much from students, families, teachers, and education experts.  Her time leading schools fulfilled a lifelong dream and taught her more than she expected about the power of education, and the many and various ways learning empowers.</p>
+                      <p>Elise is also committed to helping schools on their continuous improvement journey and as such spent four years as a member of the board of directors of the Florida Council of Independent Schools.</p>
+                      <p>As the founder of MNT2LEAD, a website designed to serve as a ‘digital mentor,’ Elise strives to build community and pathways for aspiring female educational leaders.</p>
+                      <p>Elise holds a doctorate in Educational Leadership from Lynn University, a master’s degree in Educational Leadership from Nova Southeastern University and a bachelor’s degree in Elementary Education, with a minor in Special Education and certification in ESOL, from Florida International University.</p>
+                    </div>
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="image-container">
+                      <img src="{{ url_for('static', filename='images/group-strategic-image.png') }}" alt="accademic excellence">
+                    </div>
+                    <div class="content">
+                      <h2>Vanessa Nicholls</h2>
+                      <p><span>Group Strategic Programmes Director</span></p>
+                      <p>Vanessa Nicholls is Group Strategic Programmes Director for Nord Anglia Education.</p>
+                      <p><button class="pop-onlick">LEARN MORE</button></p>
+                    </div>
+                  </div>
+                </section>
+                <!--the mode -->
+                <div id="modal5" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="hidden-content">
+                      <img src="{{ url_for('static', filename='images/group-strategic-image.png') }}" alt="images to hide" class="hidden-image">
+                      <h1 class="text-to-hide" id="">Vanessa Nicholls</h1>
+                      <p>Vanessa joined Nord Anglia in January 2023 in the newly created role of Group Strategic Programmes Director. She provides executive leadership for both the group’s edtech programme and its global alumni programme.</p>
+          
+                      <p>Prior to her 25-year career in the UK Civil Service, Vanessa worked for the National Society for the Prevention of Cruelty to Children as well as within a secondary school in London. Her Civil Service Career began in the Department for Education where she worked on programmes to support parents, children in care, and access to Higher Education. She has held various senior leadership positions in government, overseeing the delivery of major programmes on improving opportunities for young people, international partnerships, and organisational performance.</p>
+          
+                      <p>Vanessa cares deeply about encouraging leadership development, creating environments where people flourish, and supporting younger women to develop their careers.</p>
+                    </div>
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="image-container">
+                      <img src="{{ url_for('static', filename='images/chief-human-image.jpg') }}" alt="accademic excellence">
+                    </div>
+                    <div class="content">
+                        <h2>Scott Kelly</h2>
+                        <p><span>Chief Human Resources Officer</span></p>
+                        <p>Scott Kelly is the Chief Human Resources Officer of Nord Anglia Education.</p>
+                        <p><button class="pop-onlick">LEARN MORE</button></p>
+                    </div>
+                  </div>
+                </section>
+          
+                <!--the mode -->
+                <div id="modal6" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="hidden-content">
+                      <img src="{{ url_for('static', filename='images/chief-human-image.jpg') }}" alt="images to hide" class="hidden-image">
+                      <h1 class="text-to-hide">Scott Kelly</h1>
+                      <p>Scott Kelly joined Nord Anglia Education as the Chief Human Resources Officer in January 2022.</p>
+          
+                      <p>He has nearly 30 years of international experience in strategic HR, with a strong track record in growing and developing talent, culture building, and creating engagement across global organisations. </p>
+          
+                      <p>Scott previously worked for Telenav, a global software company, and formerly held executive HR and operational leadership roles at Hitachi Vantara and Hitachi Data Systems.</p>
+          
+                      <P>One of Scott’s many achievements at Hitachi Data Systems was helping the company be recognised by Fortune magazine as one of the 100 Best Companies to Work For and one of its 100 Best Workplaces for Millennials.</P>
+                     <p>Scott holds a post graduate degree in Human Resource Management from the University of Strathclyde, a bachelor’s in biology/biotechnology from the University of Paisley, and has taken part in various leadership courses from prestigious institutions including Dartmouth’s School of Business and the IMD Business School Lausanne, Switzerland.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="close">X</button>
+              </div>
+
+              <div class="heading">
+                <h4>PARENT FEEDBACK</h4>
+                <h1>WHAT OUR PARENTS SAY</h1>
+            </div>
+              <div class="container">
+                
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="content">
+                      <h2>João Xavier</h2>
+                      <p><span>27-Aug-2023</span></p>
+                      <p>Our children attended ISM campus Rosinka for a total of 24 months and there they found a place where they felt welcomed, supported and truly happy, while gettin...</p>
+                      <p class="pop-onlick"></p>
+                    </div>
+                  </div>
+                </section>
+                <!-- The modal -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="content">
+                        <h2>Екатерина Копыл</h2>
+                        <p><span>23-Aug-2023</span></p>
+                        <p>When I think of happy childhood, ISM Rosinka comes to my mind. Here students are happy to come every day, their day is filled in with various activities, events...</p>
+                        <p class="pop-onlick"></p>
+                      </div>
+                  </div>
+                </section>
+          
+                <!--the mode -->
+                <div id="modal2" class="modal">
+                  <div class="modal-content">
+                    
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="content">
+                        <h2>Kishor Deotare</h2>
+                        <p><span>23-Aug-2023</span></p>
+                        <p>I was in this school for 2 years and it had pretty good food and a huge library.the school system is very great and if you ever gonna go to this school I wish you...</p>
+                        <p class="pop-onlick"></p>
+                      </div>
+                  </div>
+                </section>
+                <!--the mode -->
+                <div id="modal3" class="modal">
+                  <div class="modal-content">
+                    
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="content">
+                        <h2>Maksim Evdokimov</h2>
+                        <p><span>20-Aug-2023</span></p>
+                        <p>ISM Rosinka is a wonderful primary school. Both our kids studied there since nursery. It provides a great combination of academic and social sciences, sports and...</p>
+                        <p class="pop-onlick"></p>
+                      </div>
+                  </div>
+                </section>
+                <!--the mode -->
+                <div id="modal4" class="modal">
+                  <div class="modal-content">
+                   
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="content">
+                        <h2>Paul Curry</h2>
+                        <p><span>19-Aug-2023</span></p>
+                        <p>ISM is an excellent school and I am very happy and proud to work there as a teacher of enthusiastic and talented students. It is by far, in my experience, the ...</p>
+                        <p class="pop-onlick"></p>
+                      </div>
+                  </div>
+                </section>
+                <!--the mode -->
+                <div id="modal5" class="modal">
+                  <div class="modal-content">
+                    
+                  </div>
+                </div>
+                <section class="learning-experience-design">
+                  <div class="accademic-excellence">
+                    <div class="content">
+                        <h2>Stephen Coburn</h2>
+                        <p><span>19-Aug-2023</span></p>
+                        <p>Students enjoy going to school every day and develop both their academic and pastoral skills. The academic year is full of special events such as STEAM Week and ...</p>
+                        <p class="pop-onlick"></p>
+                      </div>
+                  </div>
+                </section>
+          
+                <!--the mode -->
+                <div id="modal6" class="modal">
+                  <div class="modal-content">
+                    
+                  </div>
+                </div>
+                <button class="close">X</button>
+              </div>
+                <!--map for the page-->
+                <div id="map-container">
+                    <div id="info-container">
+                        <h1>FIND US IN NIGERIA ABUJA</h1>
+                        <p>CURRENT TIME IN NIGERIA ABUJA</p>
+                        <hr>
+                        <h1 id="current-time"></h1>
+                        <p>Monday–Friday: 8.00am–6.00pm</p><hr>
+                        <h1 id="current-weather"></h1>
+                        <p>CURRENT WEATHER</p><hr>
+                        <h1>OUR ADDRESS</h1>
+                        <p>222, Central Business District (CBD), Abuja-Nigeria</p><hr>
+                    </div>
+                    <div id="map"></div>
+                </div>
+
+                
+              <article class="teachnology" id="teachnology">
+                <div class="teachnology-content">
+                    <img src="{{ url_for('static', filename='images/working-for-dan-image.jpg')}}" alt="right-early-content image">
+                </div>
+                <div class="teachnology-text">
+                    <h4>WHY US?</h4>                       
+                    <h1>WORKING FOR DAN SCHOOL?</h1><hr>
+                    <p>Outstanding teachers make outstanding schools, which is why our educators are the best in the world. Our teachers never stop learning through our world-class professional development programme, including opportunities with MIT, King’s College London and Juilliard. </p>
+                    <p>We combine a wealth of experience with a passion for education – and nowhere is this more evident than in our leadership team.</p>
+                    <p>Our regional leaders bring a wealth of experience to the management of Nord Anglia schools, no matter where they are around the world.</p>
+                    <p>The Education Advisory Board provides valuable external perspectives to develop our offering. Working closely with Nord Anglia’s leadership team, they support the continuous development of programmes, curricula, teaching and learning to deliver outstanding academic, social and personal outcomes for students.</p>
+                    <a href="{{ url_for('admissions') }}"><button class="find-out-more" id="findt-out-more">FIND OUT MORE</button></a>
+                </div>
+            </article>
+            <aside class="global">
+            <article class="teachnology" id="teachnology">
+                <div class="teachnology-text">                    
+                    <h1>Our global family of premium international day and boarding schools </h1><hr>
+                    <p>With across the globe and tens of thousands of students worldwide, we are a truly global community that spans both continents and cultures. By joining us as a student and parent, you become part of our international family.</p>
+                    <a href="{{ url_for('about') }}"><button class="find-out-more" id="findt-out-more">FIND OUT MORE ABOUT OUR SCHOOLS</button></a>
+                </div>
+                <div class="teachnology-content">
+                    <img src="{{ url_for('static', filename='images/our-global-family-image.png')}}" alt="right-early-content image">
+                </div>
+            </article>
+        </aside>
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoJbY005IpbtNnYApTV7lr5zJMeuzulx0&callback=initMap" async defer></script>
+    <script src="{{ url_for('static', filename='assets-js/services.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+</body>
+  
+  </html>

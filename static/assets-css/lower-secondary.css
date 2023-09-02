@@ -1,0 +1,332 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+
+/* General styles */
+.early-years-section,
+.learning-section {
+  max-width: 100vw; /* Set max-width to viewport width */
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.early-years-section1 {
+  max-width: 700px; /* Set max-width to 700px */
+  margin: 0 auto;
+  color: white;
+}
+
+.early-years-section1 {
+  max-width: 700px; /* Set max-width to 700px */
+  margin: 0 auto;
+  color: white;
+}
+
+.title-early {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.early-years-section h1,
+.learning-section h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+.learning-section {
+  max-width: 700px;
+  font-size: 1.2rem;
+}
+
+.early-years-section p,
+.learning-section p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.early-class-home-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.early-class-home-image img {
+  width: 100%; /* Cover the full width of the container */
+  height: 100%; /* Cover the full height of the container */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 700px) {
+  .early-years-section,
+  .learning-section {
+    padding: 20px;
+  }
+  
+  .early-years-section h1,
+  .learning-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .early-years-section p,
+  .learning-section p {
+    font-size: 1rem;
+  }
+  .title-early {
+    max-width: 100%;
+    margin-left: 20px;
+  }
+  
+}
+
+
+/* General styles */
+.early-aside-section {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: darkblue;
+    color: white;
+}
+
+.early-aside-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.early-aside-content h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.early-aside-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.early-aside-content a button {
+    background-color: white;
+    color: darkblue;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.early-aside-content a button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.early-asside-background-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 800px) {
+    .early-aside-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .early-aside-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .early-aside-content p {
+        font-size: 1rem;
+    }
+
+    .early-aside-content a button {
+        font-size: 0.9rem;
+    }
+}
+
+/* General styles */
+.early-aside-section {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: darkblue;
+    color: white;
+}
+
+.early-aside-section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.early-aside-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.early-aside-content h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.early-aside-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.early-aside-content a button {
+    background-color: white;
+    color: darkblue;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.early-aside-content a button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.early-asside-background-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 800px) {
+    .early-aside-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .early-aside-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .early-aside-content p {
+        font-size: 1rem;
+    }
+
+    .early-aside-content a button {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* General styles */
+.early-aside-section {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color:blue;
+  color: white;
+}
+
+.early-aside-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.early-aside-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.early-aside-content h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-top: 0;
+  color: lightblue;
+}
+
+.early-aside-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.early-aside-content a button {
+  background-color: darkblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.early-aside-content a button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.early-asside-background-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 800px) {
+  .early-aside-section {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .early-aside-section1 {
+      flex-direction: column;
+  }
+
+  .early-aside-content {
+      padding-right: 0;
+      padding-bottom: 20px;
+  }
+
+  .early-aside-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .early-aside-content p {
+      font-size: 1rem;
+  }
+
+  .early-aside-content a button {
+      font-size: 0.9rem;
+  }
+
+  .early-asside-background-image {
+      text-align: center;
+  }
+
+  .early-asside-background-image img {
+      max-width: 80%;
+      margin-top: 20px;
+  }
+}
+

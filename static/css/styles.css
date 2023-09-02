@@ -1,0 +1,265 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+
+
+nav {
+  margin-right: 30px;
+}
+
+.scrolled {
+  background-color: #bfe1f9; /* Light blue background color */
+}
+
+/* Header styles */
+.header-container {
+  display: flex;
+  align-items: center; /* Align content vertically */
+  background-color: #0c1a2b; /* Dark blue background color */
+  padding: 10px;
+  color: #ffffff; /* Text color in the header */
+  top: 0; /* Position it at the top of the viewport */
+  width: 100%; /* Make it full-width */
+  z-index: 999; /* Set a higher z-index to keep it on top of other elements */
+}
+
+.header {
+  display: flex; /* Align logo and h1 side by side */
+  align-items: center;
+  justify-content: space-between; /* Distribute items evenly */
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  
+}
+
+header h1 {
+  font-size: 2rem; /* Reduced font size */
+  margin-left: 10px;
+ 
+  
+}
+
+.logo img {
+  max-height: 60px; /* Adjust logo height as needed */
+  padding: 10ox;
+  margin: 10px;
+}
+
+.menu-icon {
+  display: none; /* Hide the menu icon on larger screens */
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  font-size: 0.9rem; /* Reduced font size */
+  margin: 0 auto; /* Add space between logo/h1 and navigation */
+
+}
+
+.menu-list li {
+  margin-right: 15px; /* Adjust spacing between menu items */
+}
+
+.menu-list li:last-child {
+  margin-right: 0;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: #ffffff; /* Menu link color */
+  transition: color 0.3s ease;
+  border-bottom: none; /* Remove underline from menu links */
+  list-style: none;
+}
+
+.menu-list li a:hover {
+  background-color: #333;
+  padding: 8px;
+  color: #f2f2f2; /* Menu link color on hover */
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10%; /* This is the key property for making the background round */
+  transition: background-color 0.3s ease;
+}
+
+/* Media Query: Show the menu icon and hide the menu list on smaller screens */
+@media screen and (max-width: 768px) {
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #4c2a85;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .menu-list.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icon .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 6px 0;
+  }
+
+  .menu-icon.hover .bar {
+    background-color: #f2f2f2;
+  }
+
+  .menu-list li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    margin: 10px;
+  }
+}
+
+
+/* Reset some default styles for the footer */
+/* Footer styles */
+.footer1 {
+  background-color: #0c1a2b; /* Dark blue background color */
+  color: #ffffff; /* Text color in the footer */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer columns styles */
+.footer-column {
+  margin-top: 30px;
+  margin-left: 7%;
+  margin-right: 7%;
+  flex: 1;
+  margin-right: 20px; /* Adjust spacing between columns */
+}
+
+.footer-column:last-child {
+  margin-right: 0;
+}
+
+.footer-column p {
+  font-size: 0.7rem; /* Reduce text size in footer */
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+.footer-column ul li a {
+  color: #ffffff; /* Footer link color */
+  text-decoration: none; /* Remove underline from footer links */
+  font-size: 12px; /* Reduce link text size in footer */
+}
+
+/* Social column styles */
+.social-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-column ul li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between social icons */
+}
+
+.social {
+  max-height: 25px; /* Reduce the size of social media icons */
+}
+
+/* Media queries for the footer */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .footer-column {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer-column p {
+    font-size: 0.9rem; /* Reduce text size in footer for smaller screens */
+  }
+
+  .footer-column ul li a {
+    font-size: 12px; /* Reduce link text size in footer for smaller screens */
+  }
+
+  .social {
+    max-height: 20px; /* Reduce the size of social media icons for smaller screens */
+  }
+}
+
+
+/* Footer styles */
+
+#footer {
+  background-color: #333;
+  color: #f2f2f2;
+  
+}
+#footer p {
+  margin: 0;
+}
+.copy {
+  text-align: center;
+  color: #333;
+  font-size: 12px;
+  font-style: bold;
+}
+
+.copy p {
+  color: #fff;
+  margin: 20px;
+  padding: 5px;
+}
+.copy-date {
+  font-size: 1.2rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .copy {
+    padding: 10px;
+  }
+  #footer  p{
+    font-size: 0.9rem;
+    
+  }
+  #footer {
+    max-height: 80px;
+  }
+}

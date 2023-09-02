@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip | Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/support.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+    <!--slider-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+    
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+           
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+               <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <main>
+        <section class="trip" id="trip">
+            <div >
+                <h1 class="heading">DNPS Model United Nations NYC Trip</h1>
+                <p>BISW Model United Nations attended the NHSMUN conference in New York City, which included a private tour of the
+                    UN and a delegate social. Plus, they saw popular NYC sights along the way.</p>
+                <p>The Model United Nations club had an eventful and productive trip to New York City, where they attended the
+                    National High School Model United Nations (NHSMUN) conference. The experience was educational but also
+                    facilitated bonding time among the students and strengthened their self-confidence.</p>
+                <p>On Thursday, the group took Amtrak from DC to NYC, and upon arrival, they familiarized themselves with the
+                    subway. Once they arrived at their hotel, they ordered pizza and went to bed early to prepare for the upcoming
+                    days.</p>
+                
+                    <div class="full-width-image">
+                    <div class="slide"><img src="{{ url_for('static', filename='images/trip-image2.jpg')}}" alt="trip image"></div>
+                    
+                    </div>
+               
+                
+            </div>
+            <div class="breadcrumbs">
+                <hr>
+                <h5>&gt; Academic Excellence &gt; DNPS Model United Trip</h5>
+                <hr>
+            </div>
+            <div class="trip-details">
+                <h1 class="heading">DNPS Model United Trip</h1>
+                <p>DNPS Model United Nations attended the NHSMUN conference in New York City, which included a private tour
+                    of the UN and a delegate social. Plus, they saw popular NYC sights along the way.</p>
+                <p>On Saturday, the students spent the whole day in sessions at the UN. At one point, they heard from a
+                    youth speaker involved in refugee work, and it inspired the students to help others and make a
+                    difference. They also had a chance to sit on the UN General Assembly room floor, where ambassadors
+                    usually sit, to feel the sense of importance and excitement in those chairs. On Saturday night, the
+                    students on the crisis committee had a particularly intense crisis session at 12:30 PM and worked
+                    together until 4:00 AM to resolve it. This exercise gave the students a glimpse of what happens in real
+                    life when international crises arise at nighttime.</p>
+                <p>The students enjoyed delicious meals throughout the trip at various NYC eateries, including Ellen's
+                    Stardust Diner, Wagamama, and Carmines. One day, Year 12 students had free time to explore the city
+                    independently, while others visited Rockefeller Center and shopped on Fifth Avenue before having ice
+                    cream.</p>
+                <p>The trip was educational but also fostered camaraderie and social connections among the 5,000
+                    participants from around the world. On Sunday, there was a delegate social where all MUN groups came
+                    together to celebrate their achievements from the week and interact socially outside of committee
+                    sessions.</p>
+                <p>The MUN trip was a success and had a lasting impact on the students. By encouraging the students to step
+                    outside their comfort zones, the trip helped participants challenge themselves and grow in confidence.
+                    As a result, our students returned with wonderful memories that will inspire them to pursue other
+                    opportunities to learn, grow, make new connections, and demonstrate the characteristics of responsible
+                    global citizens.</p>
+                <p>Thank you to School Counsellor Devon DeCataldo, MUN General Secretary Verity and MUN Director General
+                    Chiara for sharing details about this exciting trip.</p>
+            </div>
+
+        </section>
+
+        <article class="latest-news" id="latest-news">
+            <div class="left-text" id="left-text">
+              <h4>THE LATEST DNPS NEWS</h4>
+              <h1>OUR NEWS</h1>
+            </div>
+            <div class="latest-news-right-text" id="right-text">
+                <a href="{{ url_for('modeltrip') }}"> <p><button>READ MORE</button></p></a>
+            </div>
+          </article>
+          <div class="article-news">
+            <article class="new" id="new">
+              
+              <div class="featured">
+                <a href=" {{ url_for('studentsupport') }}">
+                  <img src="{{ url_for('static', filename='images/news-image2.jpg') }}" alt="news image">
+                  <p>NEWS</p>
+                  <h2>DNPS Students Community Development Support</h2>
+                </a>
+                <p>DNPS students coordinated multiple efforts to support earthquake relief in Syria and Turkey.</p>
+                <a href=" {{ url_for('studentsupport') }}"><button>READ MORE</button></a>
+              </div>
+              <div class="featured">
+                <a href="{{ url_for('dnpschallenge') }}">
+                  <img src="{{ url_for('static', filename='images/news-image3.jpg') }}" alt="news image">
+                  <p>NEWS</p>
+                  <h2>The 2023 Great Kindness Challenge at DNPS</h2>
+                </a>
+                <p>DNPS participated in The Great Kindness Challenge from January 23 to 27.</p>
+                <a href="{{ url_for('dnpschallenge') }}"><button>READ MORE</button></a>
+              </div>
+              <div class="featured">
+                <a href="{{ url_for('housesystem') }}">
+                  <img src="{{ url_for('static', filename='images/house-image.jpg') }}" alt="news image">
+                  <p>BLOG</p>
+                  <h2>The House System</h2>
+                </a>
+                <p>Learn about the house system at the British International School of Washington, which gives children a sense of belonging and community.</p>
+                <a href="{{ url_for('housesystem') }}"><button>READ MORE</button></a>
+              </div>
+              <div class="featured">
+                <a href="{{ url_for('homework') }}">
+                  <img src="{{ url_for('static', filename='images/homework-image.jpg') }}" alt="news image">
+                  <p>BLOG</p>
+                  <h2>Homework</h2>
+                </a>
+                <p>Read about homework at the British International School of Washington, including information about its importance and how parents can help at home.</p>
+                <a href="{{ url_for('homework') }}"><button>READ MORE</button></a>
+              </div>
+            </article>
+          </div>
+
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='assets-js/index.js') }}"></script> 
+    <script src="{{ url_for('static', filename='assets-js/article_news.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

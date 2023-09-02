@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Years | Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/early.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+              
+  
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+                  
+                
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+               <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+              
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <main>
+        <section class="early-years-section">
+            <div class="early-years-section1">
+            <h5>Ages 2 to 5</h5>
+            <hr>
+            <h1>EARLY YEARS CURRICULUM</h1>
+            <p>
+                Our Early Years curriculum for children in Nursery (Pre-school) and Reception (Junior Kindergarten)
+                unites the best components of the International Primary Curriculum, and follows the Early Years
+                Foundation Stage framework.
+            </p>
+            <div class="early-class-home-image">
+                <img src="{{ url_for('static', filename='images/early-home-image.jpg')}}" alt="early home page images">
+                <hr>
+            </div>
+        </div>         
+           
+        </section>
+        <div class="title-early">
+            <h5> >Academic Excellence > Early Years</h5><hr>
+        </div>
+        
+        <section class="learning-section">
+            <h1>Learning that's playful and purposeful</h1>
+            <p>Following the framework of the International Early Years Curriculum - our teachers introduce children to
+                a variety
+                of engaging topics throughout the year – such as 'Once Upon a Time' and 'Happy, Healthy Me'. Our
+                teachers also support
+                individual learning needs by using the children's interests to plan purposeful learning opportunities.
+            </p>
+            <p>
+                We ensure your child is highly involved in their own learning, and we support their curiosity by
+                empowering them to take on new and exciting learning opportunities.
+            </p>
+            <h1>
+                Our Curriculum</h1>
+            <ul>
+                <li>Focuses on the development of the whole child</li>
+                <li>Is based on principles of learning through purposeful play</li>
+                <li>Tailors fun and practical activities to develop literacy and math concepts</li>
+            </ul>
+        
+            <p>Seven key areas</p>
+            <ul>
+                <li>Communication and language</li>
+                <li>Physical development</li>
+                <li>Personal, social, and emotional development</li>
+                <li>Literacy</li>
+                <li>Mathematics</li>
+                <li>Understanding the world</li>
+                <li>Expressive arts and design</li>
+            </ul>
+            <h1>A balance of support and challenge</h1>
+            <p>We approach these age-related objectives with the understanding that your child may have areas where they’ll
+                need to be challenged beyond the objectives; or alternatively, may have areas where they need to be
+                supported to achieve their goals.</p>
+            <p>To this end, we’ll track and document your child’s progress on an online learning profile, where our
+                teachers highlight key experiences and learning moments.</p>
+        </section>
+        
+        <section class="early-aside-section">
+            <div class="early-aside-section1">
+                <aside class="early-aside-content">
+                    <h1>CREATING OPPORTUNITIES THROUGH ACHIEVEMENT</h1>
+                    <p>At DNPS, we offer a truly global experience with outstanding teachers and exceptional educational opportunities. Here, our youngest students get the best possible start to their educational journey.</p>
+                    <a href="{{ url_for('accademicexcellence')}}"><button>MORE ABOUT ACADEMIC EXCELLENCE</button></a>
+                </aside>
+                <aside class="early-asside-background-image">
+                    <img src="{{ url_for('static', filename='images/aside-background-image.png')}}" alt="">
+                </aside>
+            </div>
+        </section>
+        
+        
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='assets-js/index.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Dan School</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/index.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+            
+
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+             
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+             <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+            </ul>
+            
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+  <section id="home">
+    <div class="welcome">
+      <div class="text-container">
+        <h4>WELCOME TO</h4>
+        <h1>DAN NURSERY & PRIMARY SCHOOL ABUJA</h1>
+        <p>DNPS is the leading private international school in Abuja, Our teachers and staff are dedicated to shaping
+          a generation of successful, creative, and resilient global citizens.</p>
+      </div>
+      <div class="image-slider">
+        <img src="{{ url_for('static', filename='images/homepic.jpg') }}">
+        <img src="{{ url_for('static', filename='images/homepic.jpg') }}">
+        <img src="{{ url_for('static', filename='images/homepic.jpg') }}">
+        <img src="{{ url_for('static', filename='images/homepic.jpg') }}">
+        
+      </div>
+    </div>
+  </section>
+  <main>
+    <section id="main-container">
+      <div class="left-content">
+        <h1>DAN HERITAGE. GLOBAL EDUCATION.</h1>
+        <p>
+          At the Dan Nursery & Primary School Abuja (DNPSA), our personalized approach to learning will inspire your
+          child to achieve more. Our school program combines the best international practice, perfected across our
+          family of international schools, with innovative, highly respected curricula to open pathways to the world's
+          best universities.
+        </p>
+
+        <div class="class-range">
+          <a href="{{ url_for('early') }}">
+            <div class="image-description">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/early-years-image.jpg')}}" alt="early years images">
+              </div>
+              <div class="description">
+                <h4>Early Years</h4>
+                <p>Ages 2 to 5</p>
+              </div>
+            </div>
+          </a>
+          <a href="{{ url_for('primary') }}">
+            <div class="image-description">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/primary-image.jpg') }}" alt="primary school images">
+              </div>
+              <div class="description">
+                <h4>Primary</h4>
+                <p>5 to 11</p>
+              </div>
+            </div>
+          </a>
+          <a href="{{ url_for('lowersecondary') }}">
+            <div class="image-description">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/lower-secondary-images.jpg')}}" alt="lower secondary image">
+              </div>
+              <div class="description">
+                <h4>Lower Secondary</h4>
+                <p>11 to 14</p>
+              </div>
+            </div>
+          </a>
+          <a href="{{ url_for('accademicexcellence')}}">
+            <div class="image-description">
+              <div class="image-container">
+                <img src="{{ url_for('static', filename='images/upper-secondar-image.jpg') }}" alt="upper secondary image">
+              </div>
+              <div class="description">
+                <h4>Upper Secondary</h4>
+                <p>14 to 18</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <aside class="right-content-images">
+        <div>
+          <img src="{{url_for('static', filename='images/right-content-images.jpg') }}" alt="right content image">
+        </div>
+      </aside>
+    </section>
+    <aside class="principal">
+      <div class="principal-image">
+        <img src="{{ url_for('static', filename='images/principal-image.jpg')}}" alt="images of principal">
+      </div>
+      <div class="principal-content">
+        <p>Our internationally minded school attracts students of all ages from both local and global families. We aim
+          to ensure students leave BISW with the necessary skills, confidence, and appreciation of others to become
+          successful and impactful global citizens.</p>
+        <div class="princip">
+          <p class=""><b>Ian Piper</b><br>Principal, British International School of Washington</p>
+          <a href="{{ url_for('principal_welcome_message') }}">
+            <p><button>READ MORE</button></p>
+          </a>
+        </div>
+
+      </div>
+    </aside>
+    <hr>
+    <aside class="home-image-and-content-left">
+      <div class="left-container">
+        <div class="top-content-and-image">
+          <img src="{{ url_for('static', filename='images/aside-home-images-left.png') }}" alt="Aside home image left">
+        </div>
+        <div class="content">
+          <h5>BUILDING INDIVIDUAL STRENGTHS</h5>
+          <h1>NO TWO STUDENTS LEARN THE SAME WAY</h1>
+          <p>We place each student at the center of their own learning experience. Teachers consider learning styles as
+            well as existing knowledge, skills, and understanding to develop lessons and activities that offer personal
+            challenge, growth, and success.</p>
+          <p>Our approach is based on the latest education research. BISW teachers challenge and stretch students'
+            abilities through teacher-led and student-led learning across individual and group activities. Your child
+            will be inspired to go beyond the books and truly engage with their personal learning journey.</p>
+          <p>We don’t stop at just <a href="{{ url_for('academicsuccess') }}">academic success</a>. Our approach is
+            designed to develop your child into a socially-confident global citizen. We foster leadership skills,
+            ambition, dedication, respect, cultural awareness, and sensitivity. Our school will prepare your child to
+            succeed anywhere in the world. </p>
+          <a href="{{ url_for('accademicexcellence') }}">
+            <button>FIND OUT MORE</button>
+          </a>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="right-content-and-image">
+          <img src="{{ url_for('static', filename='images/right-content-and-image.jpg') }}" alt="Right content image">
+          <div class="empty-field">
+            <hr>            <hr>            <hr>            <hr>
+            <hr>            <hr>            <hr>            <hr>
+            <hr>            <hr>            <hr>            <hr>
+            <hr>            <hr>            <hr>            <hr>
+            <hr>            <hr>            <hr>            <hr>
+            <hr>            <hr>            <hr>
+
+          </div>
+        </div>
+      </div>
+    </aside>
+    <article class="for-all-experiences" id="for-all-experiences">
+      <div class="learning-experience-background-image">
+        <img src="{{ url_for('static', filename='images/learning-experience-image-background.png') }}" alt="learning experience background image">
+      </div>
+      <div class="learning-experience-content-text">
+        <h1>LEARNING EXPERIENCES DESIGNED FOR THE FUTURE</h1>
+        <p>Our globally recognized curricula are created by world-leading education experts, and also complemented by
+          our school’s British heritage and international outlook. We organize our learning by six themes.</p>
+      </div>
+    </article>
+    <div class="container">
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/accademic-excellence1.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>Academic excellence</h4>
+            <p>Our individualized approach to learning means that your child will receive the right amount of both
+              support and challenge to achieve their best results. We know that with the confidence provided by their
+              results, they’ll have exciting pathways ahead to the <a href="{{ url_for('best_universities') }}">world’s best
+                universities</a>.</p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!-- The modal -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/image-to-hide1.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">Academic excellence</h1>
+            <p>Whether it's using “personal learning portfolios” in Primary School or the structured assessments of the
+              International Baccalaureate Diploma Programmes (IBDP) in Secondary School, we’ve got best-in-class tools
+              and resources to measure you child’s academic growth.</p>
+
+            <p>At the heart of it all, we're developing our students' lifelong love of learning in a place where they
+              feel comfortable and supported to grow into their best selves – and this naturally gives them the
+              motivation and resilience to eventually go on to their first-choice university.</p>
+
+            <p>Our teachers have the latest research in education at their fingertips, and they also know that no two
+              students learn in the same way. And while success looks different for every student, our teachers care
+              deeply about bringing that success to life.</p>
+
+            <p>Our strong results in the International Baccalaureate Diploma Programme – where our school’s average
+              score of 33 is four points higher than the IB global average – prove that we’re confidently ahead of the
+              curve.</p>
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/accademic-excellence2.jpg') }}" alt="accademic excellence">
+          </div>
+
+          <div class="content">
+            <h4>Exceptional learning experiences</h4>
+            <p>At the British International School of Washington, your child will grow through our world-class
+              curriculum that’s personalized to each student, and also through our many initiatives beyond the
+              classroom. These support our students in developing their confidence, resilience, and teamwork skills –
+              which they’ll need to make their positive mark on the world.</p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+
+      <!--the mode -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/image-to-hide2.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">Exceptional learning experiences</h1>
+            <p>Under our world-class curricula, our teachers lead lessons by a topic or theme that encourages our
+              students to think across different subjects. For example, we might have a lesson that connects English,
+              science, and art.</p>
+            <p>In response to these classroom challenges, our students learn to think outside the box! Our students also
+              benefit from being in the heart of Washington, DC when they apply their thoughts beyond the classroom – as
+              we can frequently take inspiring morning, afternoon, or full-day trips to amazing sites in the city (like
+              world-class museums or parks), and can easily get involved with community service activities, too.</p>
+
+            <p>We want your child to be excited when challenged. We'll support your child through their growing body,
+              mind, and heart with fun opportunities like extended overnight trips. Year 2 students have stayed
+              overnight in Delaware, for example, while Years 7–9 have attended the North Bay Adventure Camp in
+              Maryland. Years 10 and 11 have gone camping in Virginia’s Blue Ridge Mountains. And our Year 12 students
+              take a service trip each year to spend ten days helping with local construction projects and other
+              community initiatives.</p>
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/accademic-excellen') }}ce3.jpg" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>The world's best teachers</h4>
+            <p>Our passionate, dedicated teachers create a culture of lifelong learning and self-improvement in all
+              aspects of our school.
+              We’re proud that our teachers are leaders in their fields – and so that we can support them further, we’ll
+              always invest in
+              their ongoing professional development.</p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!--the mode -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/image-to-hide3.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">The world's best teachers </h1>
+            <p>We hire the best teachers in the world to support BISW’s international curricula. Over 90% of our
+              teachers
+              have experience with British education and are specifically trained in our curricula, allowing them to be
+              true masters of their subjects. Our global education team and advisory board are led by world-renowned
+              academics, and also offer IBO (International Baccalaureate Organisation) for our IB Diploma Programme
+              teachers.</p>
+
+            <p>We provide our teachers with excellent resources at Nord Anglia University to stay current with the
+              newest
+              practices in education – and they also use tools from our collaborations with world-class institutions
+              like
+              MIT and The Juilliard School.</p>
+
+            <p>Our internationally experienced teachers are also important for creating a culture that celebrates
+              diversity
+              at BISW – they'll help your child discover new cultures and nurture their global citizenship.</p>
+            <p>In response to these classroom challenges, our students learn to think outside the box!
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/accademic-excellence4.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>The Nord Anglia Education family</h4>
+            <p>When you join our diverse school community, you become part of the Nord Anglia Education family of
+              successful students, parents, and alumni, who participate in a fantastic network of global opportunities.
+            </p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!--the mode -->
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/image-to-hide4.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">The Nord Anglia Education family </h1>
+            <p>When your child joins BISW, you’re joining our whole community. Thanks to our active BISW Parents’
+              Association, who organize many events to bring the entire school together, our connected students and
+              families remain a key part of school life.</p>
+
+            <p>Our parents stay closely in touch with their children’s learning and development and, in turn, our
+              parents
+              also give their helping hands at various opportunities like career days and international holidays, or by
+              providing guided transportation to different facilities around DC.</p>
+            <p>As part of the greater Nord Anglia family, your family also joins our large global community of
+              international students, parents, teachers, and alumni. From Boston to Beijing, Hanoi to Hyderabad, and
+              Dubai
+              to Dublin, we stretch across many borders! We love that our NAE students can additionally meet and
+              collaborate through Global Campus – our Nord Anglia online learning platform – where they work together on
+              common global challenges.</p>
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/accademic-excellence5.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>Our social purpose</h4>
+            <p>DNPS has a special curriculum for each student to develop their social purpose – that’s what motivates
+              them
+              to become a positive agent of change within the world around them. We collaborate with UNICEF and local
+              impact programs so that your child grows tremendously and recognizes their place in the world.
+            </p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!--the mode -->
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/image-to-hide5.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide" id="">Our social purpose</h1>
+            <p>At DNPS, we’ll open your child’s eyes to the world around them so that they can one day become the future
+              leader that our world needs. We educate our students about the rights of children around the world through
+              our global partnership with UNICEF, for instance, and also work on exciting initiatives in response to the
+              UN’s Sustainable Development Goals.</p>
+
+            <p>Our students’ opportunities to explore social impact are particularly built into the IB Diploma
+              Programme’s
+              CAS (Creativity, Activity, and Service) component as well as our (ToK) Theory of Knowledge student-led
+              service projects. We connect your child to communities with authentic needs, whether close to home or on
+              the
+              other side of the world.</p>
+
+            <p>Locally, at DNPS, our IB students are making a difference: they’re volunteering in hospitals, organizing
+              car
+              washes for hurricane relief, and creating art for fundraising for charities like Martha’s Table, Diaper
+              Bank
+              DC, So Others Might Eat, and Bread for the City. Internationally, they’re also assisting populations in
+              need.</p>
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/accademic-excellence6.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+
+            <h4>An advanced learning environment</h4>
+            <p>We’re committed to providing a safe and happy learning environment so that your child can explore their
+              individual interests and be supported in their learning goals. We’ll make sure they’re always inspired to
+              succeed.
+            </p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+
+      <!--the mode -->
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/image-to-hide6.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">An advanced learning environment</h1>
+            <p>Because DNPS is located in the beautiful neighborhood of Georgetown, we’re right next door to Dumbarton
+              Oaks National Park – our students’ favorite natural space to explore and relax in – and nearby world-class
+              museums that inspire our students with their immersive events, exhibits, and more. We love to take
+              advantage
+              of the city we live in, so we’ll expand on our classroom activities by going to exciting sites in the
+              city.
+              Your child will forget they’re even learning!</p>
+
+            <p>Inside our school building, our learning spaces are warm, open, and designed for the future as we’re
+              always
+              looking to encourage seamless connections between students and staff. </p>
+
+            <p>We’ll also quickly connect our parents to our students’ success and achievement through our online
+              platforms, such as SeeSaw, where our teachers can communicate with parents and students can showcase what
+              they’re proud of, for both teachers and parents to talk about.</p>
+
+            <P>At DNPS, our facilities include:</P>
+            <ul>
+              <li>Specialist pre-nursery and nursery environments</li>
+              <li>Specialist environments for the sciences, visual arts, music, dance, and integrated technology</li>
+              <li>Learning support center</li>
+              <li>Library with learning spaces</li>
+              <li>Café and an on-site kitchen for school lunches</li>
+              <li>Nearby playing fields and gymnasium</li>
+              <li>College and university counselling</li>
+              <li>Mental health counselling and a nurse’s suite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="close">X</button>
+    </div>
+    <section class="video-section">
+      <div class="video-container">
+        <video class="video" id="video" controls autoplay loop muted>
+          <source src="{{ url_for('static', filename='images/campus-vidio-background.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="content-overlay" id="overlay">
+        <div class="video-controls">
+          <button class="video-button" id="play-pause">&#9658;</button>
+          <button class="video-button" id="forward">30s &raquo;</button>
+          <button class="video-button" id="close1">&#10005;</button>
+        </div>
+      </div>
+      <div class="video-content">
+        <h1>Welcome to our School Life</h1>
+        <p>Discover our state-of-the-art facilities and vibrant learning environment.</p>
+      </div>
+    </section>
+  
+  
+    <aside class="offer" id="offer">
+      <div class="content-offer">
+        <h1>We offer a highly personalized admissions process and are here to help you every step of the way.</h1>
+        <h4>JOIN OUR SCHOOL COMMUNITY</h4>
+        <ul>
+          <li>Contact us today to start your child's journey at the British International School of Washington.</li>
+          <li>Join us for a school tour or virtual discovery meeting</li>
+          <li>Submit our easy-to-complete online application form</li>
+        </ul>
+        <a href="{{ url_for('admissions') }}"><button class="find-out-more" id="findt-out-more">FIND OUT MORE</button></a>
+        
+      </div>
+      <div class="image-offer">
+        <img src="{{ url_for('static', filename='images/content-image.jpg') }}" alt="content image">
+      </div>
+    </aside>
+    <article class="latest-news" id="latest-news">
+      <div class="left-text" id="left-text">
+        <h4>THE LATEST DNPS NEWS</h4>
+        <h1>OUR NEWS</h1>
+      </div>
+      <div class="latest-news-right-text" id="right-text">
+        <a href="{{ url_for('modeltrip') }}"><p><button>READ MORE</button></p> </a>
+      </div>
+    </article>
+    <div class="article-news">
+      <article class="new" id="new">
+        <div class="featured">
+          <a href="{{ url_for('trip') }}">
+            <img src="{{ url_for('static', filename='images/news-image1.jpg') }}" alt="news image">
+            <p>NEWS</p>
+            <h2>DNPS Model United Nations NYC Trip</h2>
+          </a>
+          <p>DNPS MUN attended the NHSMUN conference, got a tour of the UN, had a delegate social and saw NYC sights.</p>
+          <a href="{{ url_for('trip') }}"><button>READ MORE</button></a>
+        </div>
+        <div class="featured">
+          <a href=" {{ url_for('studentsupport') }}">
+            <img src="{{ url_for('static', filename='images/news-image2.jpg') }}" alt="news image">
+            <p>NEWS</p>
+            <h2>DNPS Students Community Development Support</h2>
+          </a>
+          <p>DNPS students coordinated multiple efforts to support earthquake relief in Syria and Turkey.</p>
+          <a href=" {{ url_for('studentsupport') }}"><button>READ MORE</button></a>
+        </div>
+        <div class="featured">
+          <a href="{{ url_for('dnpschallenge') }}">
+            <img src="{{ url_for('static', filename='images/news-image3.jpg') }}" alt="news image">
+            <p>NEWS</p>
+            <h2>The 2023 Great Kindness Challenge at DNPS</h2>
+          </a>
+          <p>DNPS participated in The Great Kindness Challenge from January 23 to 27.</p>
+          <a href="{{ url_for('dnpschallenge') }}"><button>READ MORE</button></a>
+        </div>
+      </article>
+    </div>
+    
+    <article class="reach-for-the-start" id="reach-for-the-start">
+      <div class="reach-content" id="reach-content">
+        <div class="reach-image" id="reach-image">
+          <img src="{{ url_for('static', filename='images/reach-for-the-start-image.png') }}" alt="reach for the start image">
+        </div>
+    
+        <div class="reach-text" id="reach-text">
+          <h1>REACH FOR THE STARS</h1>
+          <p>Our students realize their talents, make a difference around them, and attend their top-pick university.</p>
+          <a href=" {{ url_for('admissions') }}"><button>MORE ABOUT OUR ADMISSION</button></a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <hr>
+  <footer class="footer1">
+      <div class="footer-column">
+          <p>CONTACT DAN INFO</p>
+          <ul>
+              <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+              <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+              <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+              <li>Dan Nursery & Primary School Abuja</li>
+          </ul>
+      </div>
+
+      <div class="footer-column">
+          <p>RESOURCES</p>
+          <ul>
+              <li><a href="#">A-Z Index</a></li>
+              <li><a href="#">DAN Mobile App (Android)</a></li>
+              <li><a href="#">DAN Mobile App (IOS)</a></li>
+              <li><a href="#">Student Development Services</a></li>
+              <li><a href="#">Employment At DAN</a></li>
+              <li><a href="#">Office Of Belonging</a></li>
+              <li><a href="#">Helping Distressed Students</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Office Of IT</a></li>
+              <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+              <li><a href="#">School Police & Parking</a></li>
+          </ul>
+      </div>
+
+
+      <div class="footer-column">
+          <p>OTHER DAN SCHOOLS</p>
+          <ul>
+              <li><a href="#">Dan Jos</a></li>
+              <li><a href="#">Dan Lagos</a></li>
+              <li><a href="#">Dan Logos</a></li>
+              <li><a href="#">Dan College Jos</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-column">
+          <div class="social-column">
+              <p>CONNECT</p>
+              <ul>
+                  <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                  </li>
+                  <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                  </li>
+                  <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                  </li>
+              </ul>
+          </div>
+          <ul class="connect-list">
+              <li><a href="#">DAN Alumni</a></li>
+              <li><a href="#">DAN Athletics</a></li>
+              <li><a href="#">DAN News</a></li>
+              <li><a href="#">DAN Store</a></li>
+              <li><a href="#">DANtv</a></li>
+          </ul>
+      </div>
+  </footer>
+
+  <footer class="footer-article">
+      <article class="copy" id="footer">
+          <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+          <p class="copy-date"></p>
+      </article>
+  </footer>
+  <script src="{{ url_for('static', filename='assets-js/index.js') }}"></script> 
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

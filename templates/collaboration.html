@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our collaborations | Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/collaboration.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+             
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+               <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <main>
+        <section class="tuition-fees1" id="tuition-fees">
+            
+            <div class="tuition-fees-text">
+            <h1>OUR COLLABORATIONS</h1>
+            <p>
+                We create life-changing experiences for our students through our global collaborations with world-leading institutions and organisations.
+            </p>
+            </div>
+            <div class="tuition-fees-image">
+                <img src="{{ url_for('static', filename='images/collaboration-image.jpg')}}" alt="tuition images">
+                
+            </div>
+            
+            <article class="features" id="campus-features">
+                
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/the-juilliard-school.jpg')}}" alt="right-early-content image">
+                  <p>Our students' confidence soars through our Juilliard experience</p><hr><br>
+                  <h1>THE JUILLIARD SCHOOL</h1>
+                  <p>The Juilliard School in New York City is one of the world’s leading institutions for performing arts education. This collaboration is one of Nord Anglia’s most unique and special, allowing our children access to the skill and experience of world-leading performing arts delivered by our outstanding teachers. The programme is designed to educate all students—those with career aspirations both in and beyond the arts. All our students benefit from the magic of dance, drama and music and those with existing passions will have their eyes opened by incredible world-leading teaching methods.</p>
+                  <p>Our exclusive collaboration offers unparalleled opportunities to learn new skills – from building confidence and an ability to unlock self-expression, right through to an immersion in – and appreciation for – different cultures. We know how important the performing arts are to your child's development, because creativity is a key that can unlock the imagination and significantly transform your child's education across every subject.</p>
+                  <p>We also provide students with the chance to participate in the Summer Performing Arts with Juilliard programmes in China and the USA; immersive experiences where students explore music, dance and drama in depth and form lasting relationships with others passionate about the arts from across the world. Unique programmes designed by The Juilliard School and taught by their teachers offer students an inspiring and fun-filled experience, during term-time and in the holidays.</p>
+                  <p>Our teachers enjoy the benefits of being trained by world-leading performing arts educators, with each school having designated Juilliard Curriculum Specialists assigned to work with them. This active community encourages collaboration and professional development through frequent communication and school visits. </p>
+                  <p>Learn more about The Juilliard School at <a href="https://www.juilliard.edu/" target="_blank"> juilliard.edu</a></p>
+                </div>
+              </article>
+
+                 
+            <article class="features" id="campus-features">
+                
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/mit-image.jpg')}}" alt="right-early-content image">
+                  <p> Our innovative, interdisciplinary approach to learning science and technology inspires children with hands-on activities.</p><hr><br>
+                  <h1>MIT</h1>
+                  <p>Creativity and thinking outside the box lead to great discoveries that impact our world in amazing ways. At Nord Anglia we aim to develop great thinkers and innovators, and our collaboration with MIT offers your child an introduction to interdisciplinary STEAM learning. We believe this provides a lifelong foundation for curiosity and real-world problem solving.</p>
+                  <p>Although often taught separately, science, technology, engineering, arts and maths combined can become powerful tools. Your child will enjoy the challenge of being bamboozled, and the thrill of working together with fellow students to tackle the same problems MIT professors and researchers are working on today. For example, thousands of Nord Anglia students from around the world worked together to develop filtration devices to be used on Mars after being challenged by Dr Jeff Hoffman, former astronaut and Deputy Principal Investigator of the MOXIE mission onboard the Mars Perseverance Rover! Each year, our STEAM students show that natural curiosity, when inspired by great minds through our MIT collaboration, can produce mind-blowing results.</p>
+                  <p>Our approach to STEAM learning also helps children explore multifaceted challenges through university-inspired learning and hands-on activities. We give our students the space to embrace collaboration and creativity, and to develop the skills they will need to thrive in our fast-changing world.</p>
+                  <p>Nord Anglia teachers receive hands-on training at MIT from renowned and influential researchers and academics. These workshops are with leading engineers and scientists on fascinating subjects, from climate change to bioengineering, space exploration, and beyond.</p>
+                                  
+                  <p>Learn more about MIT at <a href="https://www.mit.edu/" target="_blank"> mit.edu</a></p>
+                </div>
+              </article>
+
+              <article class="features" id="campus-features">
+                
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/unicef-image.jpg')}}" alt="right-early-content image">
+                  <p> Our innovative, interdisciplinary approach to learning science and technology inspires children with hands-on activities.</p><hr><br>
+                  <h1>UNICEF</h1>
+                  <p>We want children around the world to be empowered to make a difference, both in their local communities and globally. Our partnership with UNICEF helps us do this by developing challenges and learning materials based on the UN’s 17 Sustainable Development Goals (SDGs) that allow them to think practically about how to effect real change. These materials are then made available to teachers and students all over the world, as well as at our schools.</p>
+                  <p>These SDGs form the basis of our Social Impact Programme and our annual Global Challenge. This is a chance for our students to take on projects like recycling, making positive change in the local community – even learning how to turn plants into biofuel. We also use activities surrounding World Children’s Day to educate our students about their rights, how to protect them, and how to advocate for those who may not have a voice.</p>
+                  <p>For students interested in the policy side of making a difference, UNICEF gives them the opportunity to meet and interact with UN and government leaders at the UN High-Level Political Platform (HLPF). Student ambassadors who attend can participate in seminars and workshops, as well as getting the unique chance to speak at the UN’s headquarters in New York.</p>
+
+                  <p>Learn more about UNICEF at <a href="https://www.unicef.org/" target="_blank"> unicef.org</a></p>
+                </div>
+              </article>
+            
+        </section>
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

@@ -1,0 +1,189 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+    overflow: auto;
+}
+
+.tuition-fees-text h4,
+.tuition-fees-text h1,
+.tuition-fees-text p {
+  max-width: 960px;
+  padding: 20px 20px 0 20px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.tuition-fees-text h4 {
+  font-size: 1.5rem;
+  color: blue;
+  margin-top: 60px;
+}
+
+.tuition-fees-text h1 {
+  font-size: 3rem;
+}
+
+.tuition-fees {
+  max-width: 960px;
+  background-color: white;
+  padding: 20px 20px 10px 20px;
+  margin: 0 auto; /* Add this line to center the content */
+}
+
+.tuition-fees-text p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.tuition-fees-image img {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.tuition-fees hr {
+  border: 1px solid #ddd;
+  margin: 40px 0;
+  
+}
+
+.tuition-fees h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.tuition-fees a {
+  color: blue;
+  text-decoration: none;
+}
+
+.tuition-fees table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.tuition-fees
+
+.tuition-fees th,
+.tuition-fees td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+}
+
+.tuition-fees th {
+  background-color: #f2f2f2;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .tuition-fees {
+    padding: 20px;
+  }
+  
+  .tuition-fees-text h1 {
+    font-size: 2rem;
+  }
+  
+  .tuition-fees-text h4 {
+    font-size: 0.9rem;
+  }
+  
+  .tuition-fees-text p {
+    font-size: 1rem;
+  }
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.campus-features {
+  flex: 1;
+  padding: 0 20px;
+  text-align: left;
+  margin-left: 7%;
+}
+
+
+.campus-features-image h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.campus-features-image p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.campus-features ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.campus-features li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  line-height: 2.5;
+}
+
+.campus-features button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.campus-features button:hover {
+  background-color: #0056b3;
+}
+
+.campus-features-image img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .campus-features, .campus-features-image {
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .campus-features-image img {
+    margin-left: 0;
+  }
+
+  .campus-features-image h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    margin-bottom: 20px;
+  }
+  
+  .campus-features-image p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+
+  }
+
+}

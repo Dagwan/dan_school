@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Application | Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/online-application-form.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+              
+  
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+                  
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+              
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <main>
+        <div id="app">
+            <div class="sticky-container">
+                <div class="sticky-background-image">
+                    <img src="{{ url_for('static', filename='images/application-image.jpg')}}" alt="application image">
+                    <h1 class="text-on-image">WELCOME TO <br>DAN NURSERY & PRIMARY SCHOOL <br>ADMISSION APPLICATION PORTAL</h1>
+                  </div>
+                  
+                <div class="right-text">
+                    <div class="page" id="page1">
+                        <!-- Page 1 content -->
+                        <hr>
+                        <label>
+                            <input type="checkbox" name="saveProgress" onclick="toggleResumeForm()"> Save my progress
+                            and
+                            resume later
+                            <a href="#" id="resumeLink">Resume a previously saved form</a>
+                        </label>
+                        <hr>
+                        <h1>Welcome to Dan Nursery & Primary School of Abuja Application Form</h1>
+                        <!-- Other content here -->
+                        <ul>
+                            <li>Please complete your application to ensure we can proceed to the next stage</li>
+                            <li>Items marked with * are required to be filled in</li>
+                            <li>You can add a maximum of three (3) Parent/Guardian profiles</li>
+                            <li>You can add a maximum of five (5) Children profiles</li>
+                            <li>You can save your progress as you go, and return anytime using the link at the top of
+                                the
+                                page</li>
+                            <li>If you are experiencing technical issues, please contact our Admissions Team on <a
+                                    href="admissions@dnpsabuja.org">admissions@dnpsabuja.org</a></li>
+                        </ul>
+                        <button onclick="nextPage()">Next Page</button><br>
+
+                        <label>
+                            <input type="checkbox" name="saveProgress"> Save my progress and resume later <a
+                                href="#">Resume
+                                a previously saved form</a>
+                        </label>
+                        <p><a href="#">For more details on terms & conditions, please refer to our website here</a></p>
+                    </div>
+                    <div id="resumeForm" style="display: none;">
+                        <form id="resumeForm" style="display: none;">
+                            <form action=""></form>
+                            <!-- Resume Later form -->
+                            <h2>Resume Later</h2>
+                            <p>In order to be able to resume this form later, please enter your email and choose a
+                                password.
+                            </p>
+                            
+
+                            <label for="resumeEmail">Your Email:</label>
+                            <input type="email" id="resumeEmail" name="resumeEmail" required><br>
+
+                            <label for="resumePassword">A Password:</label>
+                            <input type="password" id="resumePassword" name="resumePassword" required><br>
+
+                            <label for="confirmPassword">Confirm Password:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+                            <button id="saveButton">Save</button>
+                        </form>
+
+                        <!--display form on users click "resume previouse saved form" from the link above-->
+                        <form id="identityForm" style="display: none;">
+                            <!-- Identity check form -->
+                            <h2>Identity Check</h2>
+                            <p>Please enter your email and password to resume this form.</p>
+                        
+                            <label for="identityEmail">Your Email:</label>
+                            <input type="email" id="identityEmail" name="identityEmail" required><br>
+                        
+                            <label for="identityPassword">Your Password:</label>
+                            <input type="password" id="identityPassword" name="identityPassword" required><br>
+                        
+                            <button>Resume this form</button>
+                            <button>Forgot your password?</button>
+                            <button>Need assistance with this form?</button>
+                        </form>
+
+                        <button class="next-button" id="nextButton" onclick="nextPage('page2')">Next</button>
+                    </div>
+
+
+                    <div class="page" id="page2" data-form-required="true" style="display: none;">
+                        <!-- Page 2 content -->
+                        <hr>
+                        <label class="styled-checkbox">
+                            <input type="checkbox" name="saveProgress" onclick="toggleResumeForm()">
+                            <span class="checkbox-text">Save my progress and resume later</span>
+                            <a href="#" id="resumeLink">Resume a previously saved form</a>
+                        </label>
+                        <hr>
+                        <h2>Parent/Guardian Information</h2>
+                        <p>How many Parent/Guardian profiles would you like to add? *</p>
+                        
+                        <div class="styled-radio">
+                            <input type="radio" name="profileCount" value="1" onclick="showForm('parentGuardianForm1')">
+                            <label>1</label>
+                        </div>
+                        <div class="styled-radio">
+                            <input type="radio" name="profileCount" value="2" onclick="showForm('parentGuardianForm2')">
+                            <label>2</label>
+                        </div>
+                        <div class="styled-radio">
+                            <input type="radio" name="profileCount" value="3" onclick="showForm('parentGuardianForm3')">
+                            <label>3</label>
+                        </div>                     
+
+            
+                        <button onclick="prevPage('page1')">Previous</button>
+                        <button class="next-button" id="nextButton" onclick="nextPage('page3')">Next</button><br>
+
+                        <label>
+                            <input type="checkbox" name="saveProgress"> Save my progress and resume later <a
+                                href="#">Resume
+                                a previously saved form</a>
+                        </label>
+                        <p><a href="#">For more details on terms & conditions, please refer to our website here</a></p>
+
+                        <!-- Parent/Guardian forms -->
+                        <div id="parentGuardianForm1" class="parent-guardian-form" style="display: none;">
+                            <!-- Form content for profile 1 ... -->
+                            <h2 class="form-heading">Parent/Guardian 1 Contact Information</h2>
+                            <form action="" class="contact-form">
+                                <label>Title</label>
+                            <select>
+                                <option value="mr.">Mr.</option>
+                                <option value="mrs.">Mrs.</option>
+                                <option value="miss">Miss</option>
+                                <option value="dr.">Dr.</option>
+                                <option value="prof.">Prof.</option>
+                                <option value="engr.">Engr.</option>
+                                <option value="arc.">Arc.</option>
+                                <!-- Add other options -->
+                            </select><br>
+
+                            <label>First Name *</label>
+                            <input type="firstName" required><br>
+
+                            <label>Last Name *</label>
+                            <input type="lastName" required><br>
+
+                            <label>Other Names</label>
+                            <input type="otherNam"><br>
+
+                            <label>Email Address *</label>
+                            <input type="email" required><br>
+
+                            <label>Primary Phone Number *</label>
+                            <input type="tel1" required><br>
+
+                            <label>Alternative Phone Number</label>
+                            <input type="tel2"><br>
+
+                            <label>Relationship to Child</label>
+                            <select>
+                                <option value="father">Father</option>
+                                <option value="mother">Mother</option>
+                                <option value="brother">Brother</option>
+                                <option value="sister">Sister</option>
+                                <option value="uncle">Uncle</option>
+                                <option value="mentor">Mentor</option>
+                                <option value="guidian">Guidian</option>
+                                <!-- Add other options -->
+                            </select><br>
+
+                            <label>Address Line 1</label>
+                            <input type="address1"><br>
+
+                            <label>Address Line 2</label>
+                            <input type="address2"><br>
+
+                            <label>Postal/Zip code</label>
+                            <input type="postalcode"><br>
+
+                            <label>Nationality</label>
+                            <select>
+                                <option value="country1">Country 1</option>
+                                <option value="country2">Country 2</option>
+                                <!-- Add other options -->
+                            </select><br>
+
+                            <label>Local Government Area</label>
+                            <select>
+                                <option value="lga1">LGA 1</option>
+                                <option value="lga2">LGA 2</option>
+                                <!-- Add other options -->
+                            </select><br>
+
+                            <label>City</label>
+                            <input type="city"><br>
+
+                            <label>State of Origin</label>
+                            <select>
+                                <option value="state1">State 1</option>
+                                <option value="state2">State 2</option>
+                                <!-- Add other options -->
+                            </select><br>
+
+                            <label>Employment History</label>
+                            <select>
+                                <option value="self-employed">Self employed</option>
+                                <option value="employer">Employer</option>
+                                <option value="business">Business</option>
+                                <!-- Add other options -->
+                            </select><br>
+
+                            <label>Name of employer or company</label>
+                            <input type="employerName"><br>
+
+                            <!-- Additional employment fields ... -->
+
+                            <label>Do you have legal custody of the child/children applying?</label>
+                            <input type="checkbox"><br>
+
+                            <label>Are you the Primary Contact?</label>
+                            <input type="checkbox"><br>
+
+                            <label>Are you responsible for Paying the Fees?</label>
+                            <input type="checkbox"><br>
+
+                            <label>Are you the Emergency Contact?</label>
+                            <input type="checkbox"><br>
+
+                            <h2>Parent/Guardian 1 Documents</h2>
+                            <label>Parent/Guardian 1 Documents</label>
+                            <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                            <label>Other (to be defined)</label>
+                            <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                            </form>
+
+                            
+                            
+                        <button onclick="prevPage('page1')">Previous</button>
+                        <button class="next-button" id="nextButton" onclick="nextPage('page3')">Next</button><br>
+
+                        <label>
+                            <input type="checkbox" name="saveProgress"> Save my progress and resume later <a
+                                href="#">Resume
+                                a previously saved form</a>
+                        </label>
+                        <p><a href="#">For more details on terms & conditions, please refer to our website here</a></p>
+
+                        </div>
+                    </div>
+
+                    <div id="parentGuardianForm2" class="parent-guardian-form" style="display: none;">
+                        <!-- Form content for profile 2 ... -->
+                        <h2 class="form-heading">Parent/Guardian 1 Contact Information</h2>
+                        <form action="" class="contact-form">
+                            <label>Title</label>
+                        <select>
+                            <option value="mr.">Mr.</option>
+                            <option value="mrs.">Mrs.</option>
+                            <option value="miss">Miss</option>
+                            <option value="dr.">Dr.</option>
+                            <option value="prof.">Prof.</option>
+                            <option value="engr.">Engr.</option>
+                            <option value="arc.">Arc.</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>First Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Last Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Other Names</label>
+                        <input type="text"><br>
+
+                        <label>Email Address *</label>
+                        <input type="email" required><br>
+
+                        <label>Primary Phone Number *</label>
+                        <input type="tel" required><br>
+
+                        <label>Alternative Phone Number</label>
+                        <input type="tel"><br>
+
+                        <label>Relationship to Child</label>
+                        <select>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="guidian">Guidian</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Address Line 1</label>
+                        <input type="address1"><br>
+
+                        <label>Address Line 2</label>
+                        <input type="text"><br>
+
+                        <label>Postal/Zip code</label>
+                        <input type="text"><br>
+
+                        <label>Nationality</label>
+                        <select>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Local Government Area</label>
+                        <select>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>City</label>
+                        <input type="text"><br>
+
+                        <label>State of Origin</label>
+                        <select>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Employment History</label>
+                        <select>
+                            <option value="self-employed">Self employed</option>
+                            <option value="employer">Employer</option>
+                            <option value="business">Business</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Name of employer or company</label>
+                        <input type="text"><br>
+
+                        <!-- Additional employment fields ... -->
+
+                        <label>Do you have legal custody of the child/children applying?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Primary Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you responsible for Paying the Fees?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Emergency Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <h2>Parent/Guardian 1 Documents</h2>
+                        <label>Parent/Guardian 1 Documents</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        <label>Other (to be defined)</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        </form>
+
+
+
+                        <h2 class="form-heading">Parent/Guardian 2 Contact Information</h2>
+                        <form action="" class="contact-form">
+                            <label>Title</label>
+                        <select>
+                            <option value="mr.">Mr.</option>
+                            <option value="mrs.">Mrs.</option>
+                            <option value="miss">Miss</option>
+                            <option value="dr.">Dr.</option>
+                            <option value="prof.">Prof.</option>
+                            <option value="engr.">Engr.</option>
+                            <option value="arc.">Arc.</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>First Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Last Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Other Names</label>
+                        <input type="text"><br>
+
+                        <label>Email Address *</label>
+                        <input type="email" required><br>
+
+                        <label>Primary Phone Number *</label>
+                        <input type="tel" required><br>
+
+                        <label>Alternative Phone Number</label>
+                        <input type="tel"><br>
+
+                        <label>Relationship to Child</label>
+                        <select>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="guidian">Guidian</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Address Line 1</label>
+                        <input type="text"><br>
+
+                        <label>Address Line 2</label>
+                        <input type="text"><br>
+
+                        <label>Postal/Zip code</label>
+                        <input type="text"><br>
+
+                        <label>Nationality</label>
+                        <select>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Local Government Area</label>
+                        <select>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>City</label>
+                        <input type="text"><br>
+
+                        <label>State of Origin</label>
+                        <select>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Employment History</label>
+                        <select>
+                            <option value="self-employed">Self employed</option>
+                            <option value="employer">Employer</option>
+                            <option value="business">Business</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Name of employer or company</label>
+                        <input type="text"><br>
+
+                        <!-- Additional employment fields ... -->
+
+                        <label>Do you have legal custody of the child/children applying?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Primary Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you responsible for Paying the Fees?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Emergency Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <h2>Parent/Guardian 1 Documents</h2>
+                        <label>Parent/Guardian 1 Documents</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        <label>Other (to be defined)</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        </form>
+
+
+                        
+                        <button onclick="prevPage('page1')">Previous</button>
+                        <button class="next-button" id="nextButton" onclick="nextPage('page3')">Next</button><br>
+
+                        <label>
+                            <input type="checkbox" name="saveProgress"> Save my progress and resume later <a
+                                href="#">Resume
+                                a previously saved form</a>
+                        </label>
+                        <p><a href="#">For more details on terms & conditions, please refer to our website here</a></p>
+
+                    </div>
+                    <div id="parentGuardianForm3" class="parent-guardian-form" style="display: none;">
+                        <!-- Form content for profile 3 ... -->
+                        <h2 class="form-heading">Parent/Guardian 1 Contact Information</h2>
+                        <form action="" class="contact-form">
+                            <label>Title</label>
+                        <select>
+                            <option value="mr.">Mr.</option>
+                            <option value="mrs.">Mrs.</option>
+                            <option value="miss">Miss</option>
+                            <option value="dr.">Dr.</option>
+                            <option value="prof.">Prof.</option>
+                            <option value="engr.">Engr.</option>
+                            <option value="arc.">Arc.</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>First Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Last Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Other Names</label>
+                        <input type="text"><br>
+
+                        <label>Email Address *</label>
+                        <input type="email" required><br>
+
+                        <label>Primary Phone Number *</label>
+                        <input type="tel" required><br>
+
+                        <label>Alternative Phone Number</label>
+                        <input type="tel"><br>
+
+                        <label>Relationship to Child</label>
+                        <select>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="guidian">Guidian</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Address Line 1</label>
+                        <input type="text"><br>
+
+                        <label>Address Line 2</label>
+                        <input type="text"><br>
+
+                        <label>Postal/Zip code</label>
+                        <input type="text"><br>
+
+                        <label>Nationality</label>
+                        <select>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Local Government Area</label>
+                        <select>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>City</label>
+                        <input type="text"><br>
+
+                        <label>State of Origin</label>
+                        <select>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Employment History</label>
+                        <select>
+                            <option value="self-employed">Self employed</option>
+                            <option value="employer">Employer</option>
+                            <option value="business">Business</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Name of employer or company</label>
+                        <input type="text"><br>
+
+                        <!-- Additional employment fields ... -->
+
+                        <label>Do you have legal custody of the child/children applying?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Primary Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you responsible for Paying the Fees?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Emergency Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <h2>Parent/Guardian 1 Documents</h2>
+                        <label>Parent/Guardian 1 Documents</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        <label>Other (to be defined)</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        </form>
+
+
+
+                        <h2 class="form-heading">Parent/Guardian 2 Contact Information</h2>
+                        <form action="" class="contact-form">
+                            <label>Title</label>
+                        <select>
+                            <option value="mr.">Mr.</option>
+                            <option value="mrs.">Mrs.</option>
+                            <option value="miss">Miss</option>
+                            <option value="dr.">Dr.</option>
+                            <option value="prof.">Prof.</option>
+                            <option value="engr.">Engr.</option>
+                            <option value="arc.">Arc.</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>First Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Last Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Other Names</label>
+                        <input type="text"><br>
+
+                        <label>Email Address *</label>
+                        <input type="email" required><br>
+
+                        <label>Primary Phone Number *</label>
+                        <input type="tel" required><br>
+
+                        <label>Alternative Phone Number</label>
+                        <input type="tel"><br>
+
+                        <label>Relationship to Child</label>
+                        <select>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="guidian">Guidian</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Address Line 1</label>
+                        <input type="text"><br>
+
+                        <label>Address Line 2</label>
+                        <input type="text"><br>
+
+                        <label>Postal/Zip code</label>
+                        <input type="text"><br>
+
+                        <label>Nationality</label>
+                        <select>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Local Government Area</label>
+                        <select>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>City</label>
+                        <input type="text"><br>
+
+                        <label>State of Origin</label>
+                        <select>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Employment History</label>
+                        <select>
+                            <option value="self-employed">Self employed</option>
+                            <option value="employer">Employer</option>
+                            <option value="business">Business</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Name of employer or company</label>
+                        <input type="text"><br>
+
+                        <!-- Additional employment fields ... -->
+
+                        <label>Do you have legal custody of the child/children applying?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Primary Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you responsible for Paying the Fees?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Emergency Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <h2>Parent/Guardian 1 Documents</h2>
+                        <label>Parent/Guardian 1 Documents</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        <label>Other (to be defined)</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        </form>
+
+
+
+
+                        <h2 class="form-heading">Parent/Guardian 3 Contact Information</h2>
+                        <form action="" class="contact-form">
+                            <label>Title</label>
+                        <select>
+                            <option value="mr.">Mr.</option>
+                            <option value="mrs.">Mrs.</option>
+                            <option value="miss">Miss</option>
+                            <option value="dr.">Dr.</option>
+                            <option value="prof.">Prof.</option>
+                            <option value="engr.">Engr.</option>
+                            <option value="arc.">Arc.</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>First Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Last Name *</label>
+                        <input type="text" required><br>
+
+                        <label>Other Names</label>
+                        <input type="text"><br>
+
+                        <label>Email Address *</label>
+                        <input type="email" required><br>
+
+                        <label>Primary Phone Number *</label>
+                        <input type="tel" required><br>
+
+                        <label>Alternative Phone Number</label>
+                        <input type="tel"><br>
+
+                        <label>Relationship to Child</label>
+                        <select>
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="brother">Brother</option>
+                            <option value="sister">Sister</option>
+                            <option value="uncle">Uncle</option>
+                            <option value="mentor">Mentor</option>
+                            <option value="guidian">Guidian</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Address Line 1</label>
+                        <input type="text"><br>
+
+                        <label>Address Line 2</label>
+                        <input type="text"><br>
+
+                        <label>Postal/Zip code</label>
+                        <input type="text"><br>
+
+                        <label>Nationality</label>
+                        <select>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Local Government Area</label>
+                        <select>
+                            <option value="lga1">LGA 1</option>
+                            <option value="lga2">LGA 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>City</label>
+                        <input type="text"><br>
+
+                        <label>State of Origin</label>
+                        <select>
+                            <option value="state1">State 1</option>
+                            <option value="state2">State 2</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Employment History</label>
+                        <select>
+                            <option value="self-employed">Self employed</option>
+                            <option value="employer">Employer</option>
+                            <option value="business">Business</option>
+                            <!-- Add other options -->
+                        </select><br>
+
+                        <label>Name of employer or company</label>
+                        <input type="text"><br>
+
+                        <!-- Additional employment fields ... -->
+
+                        <label>Do you have legal custody of the child/children applying?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Primary Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you responsible for Paying the Fees?</label>
+                        <input type="checkbox"><br>
+
+                        <label>Are you the Emergency Contact?</label>
+                        <input type="checkbox"><br>
+
+                        <h2>Parent/Guardian 1 Documents</h2>
+                        <label>Parent/Guardian 1 Documents</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        <label>Other (to be defined)</label>
+                        <input type="file" accept=".png, .jpeg, .jpg, .tiff, .pdf, .docx, .doc"><br>
+
+
+                        </form>
+
+                        
+                        <button onclick="prevPage('page1')">Previous</button>
+                        <button class="next-button" id="nextButton" onclick="nextPage('page3')">Next</button><br>
+
+                        <label>
+                            <input type="checkbox" name="saveProgress"> Save my progress and resume later <a
+                                href="#">Resume
+                                a previously saved form</a>
+                        </label>
+                        <p><a href="#">For more details on terms & conditions, please refer to our website here</a></p>
+
+                    </div>
+                     
+
+                </div>
+
+                <div class="page" id="page3" data-form-required="true" style="display: none;">
+                    <!-- Page 3 content -->
+                    <h4 class="form-heading">Your Children</h4>
+                    <form action="" class="contact-form">
+                    <!-- Radio Buttons for "Your Children" -->
+                    <label>Do you have any children currently enrolled at a Nord Anglia School?</label> <br>
+                    <input type="radio" name="childrenEnrolled" value="yes" onclick="showChildrenDetails()">Yes <br>
+                    <input type="radio" name="childrenEnrolled" value="no" onclick="showChildrenDetails()">No <br> <br>
+
+
+                    <!-- Conditional Section for "Yes" -->
+                    <div id="childrenDetails" style="display: none;"><br>
+                        <h2>Please provide details of School, Child’s Name and Year Group:</h2>
+                        <label>School Name</label>
+                        <input type="text" name="schoolName">
+                        <label>Child’s Name</label>
+                        <input type="text" name="childName">
+                        <label>Year Group</label>
+                        <input type="text" name="yearGroup">
+                    </div>
+
+                    <!-- Conditional Section for "No" -->
+                    <div id="enrolChildren">
+                        <label>How many children would you like to enrol?</label><br>
+                        <input type="radio" name="numChildren" value="1">1 <br>
+                        <input type="radio" name="numChildren" value="2">2 <br>
+                        <input type="radio" name="numChildren" value="3">3 <br>
+                        <input type="radio" name="numChildren" value="4">4 <br>
+                        <input type="radio" name="numChildren" value="5">5 <br>
+                    </div>
+
+                  
+
+                    <!-- Placeholders for child forms (1, 2, 3) -->
+                    <div id="childForms">
+                        <!-- Child 1 Form -->
+                        <div class="childForm" id="childForm1" style="display: none;">
+                            <!-- Child 1 Details -->
+                            
+                            <h2 class="form-heading">Child 1 Details</h2>
+                            <form action="" class="contact-form">
+                                <label>First Name (as per passport/ID)</label>
+                            <input type="text" name="child1FirstName">
+
+                            <label>Last Name (as per passport/ID)</label>
+                            <input type="text" name="child1LastName">
+
+                            <label>Preferred Name (optional)</label>
+                            <input type="text" name="child1PreferredName">
+
+                            <label>Child Date of Birth</label>
+                            <input type="date" name="child1DOB">
+
+                            <label>Gender</label>
+                            <select name="child1Gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+
+                            <label>Native Language</label>
+                            <input type="text" name="child1NativeLanguage">
+
+                            <label>Second Language (optional)</label>
+                            <input type="text" name="child1SecondLanguage">
+
+                            <label>First Nationality</label>
+                            <input type="text" name="child1FirstNationality">
+
+                            <label>Second Nationality (optional)</label>
+                            <input type="text" name="child1SecondNationality">
+
+                            <label>Country of Birth</label>
+                            <input type="text" name="child1CountryOfBirth">
+
+                            <label>City of Birth</label>
+                            <input type="text" name="child1CityOfBirth">
+
+                            <label>Ethnicity</label>
+                            <input type="text" name="child1Ethnicity">
+
+                            <label>Religion</label>
+                            <input type="text" name="child1Religion">
+
+                            <label>Passport/ID Number</label>
+                            <input type="text" name="child1PassportID">
+
+                            <label>Preferred Date of Enrolment</label>
+                            <input type="date" name="child1PreferredEnrolment">
+
+                            <label>Does your child need a Form I-20 to apply for a student visa?</label>
+                            <input type="radio" name="child1NeedI20" value="yes">Yes <br>
+                            <input type="radio" name="child1NeedI20" value="no">No <br>
+                            <div class="childForm" id="childForm" style="display: none;">
+                                <h3>Child Academic Information</h3>
+                                <label>English Language Proficiency - Spoken</label>
+                                <select name="child1LanguageProficiencySpoken">
+                                    <option value="good">Good</option>
+                                    <!-- ... Add other options ... -->
+                                </select>
+
+                                <label>English Language Proficiency - Written</label>
+                                <select name="child1LanguageProficiencyWritten">
+                                    <option value="good">Good</option>
+                                    <!-- ... Add other options ... -->
+                                </select>
+                            </div>
+                            <label>Does your child need a Form I-20 to apply for a student visa?</label>
+                            <input type="radio" name="child1NeedI20" value="yes">Yes <br>
+                            <input type="radio" name="child1NeedI20" value="no">No <br>
+
+                            <h3>Child Academic Information</h3>
+                            <label>English Language Proficiency - Spoken</label>
+                            <select name="child1EnglishSpoken">
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="average">Average</option>
+                                <option value="below_average">Below Average</option>
+                                <option value="poor">Poor</option>
+                            </select>
+
+                            <label>English Language Proficiency - Written</label>
+                            <select name="child1EnglishWritten">
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="average">Average</option>
+                                <option value="below_average">Below Average</option>
+                                <option value="poor">Poor</option>
+                            </select>
+
+                            <label>Do you have any concerns around your child's social or academic progress that we
+                                should know about?</label>
+                            <input type="radio" name="child1ProgressConcerns" value="yes">Yes <br>
+                            <input type="radio" name="child1ProgressConcerns" value="no">No <br>
+                            <textarea rows="8" cols="50" name="child1ProgressConcernsDetails"></textarea>
+
+                            <label>Does your child have any Additional Educational Needs (IEP/504) that you are aware
+                                of?</label>
+                            <input type="radio" name="child1AdditionalNeeds" value="yes">Yes <br>
+                            <input type="radio" name="child1AdditionalNeeds" value="no">No <br>
+
+                            <label>Has your child received any additional in-school/external support?</label>
+                            <input type="radio" name="child1ExternalSupport" value="yes">Yes <br>
+                            <input type="radio" name="child1ExternalSupport" value="no">No <br>
+                            
+                            <label>Please input your requested Year/Grade level</label>
+                            <textarea rows="8" cols="50" name="child1ExternalSupportDetails"></textarea>
+
+                            <h3>Child Medical Information</h3>
+                            <label>Does your child suffer from any medical conditions?</label>
+                            <input type="radio" name="child1MedicalConditions" value="yes">Yes <br>
+                            <input type="radio" name="child1MedicalConditions" value="no">No <br>
+                            <label>Please specify</label>
+                            <textarea rows="8" cols="50" name="child1MedicalConditionsDetails"></textarea>
+
+                            <label>Does your child have any allergies that you are aware of?</label>
+                            <input type="radio" name="child1Allergies" value="yes">Yes <br>
+                            <input type="radio" name="child1Allergies" value="no">No <br>
+                            <textarea rows="8" cols="50" name="child1AllergiesDetails"></textarea>
+
+                            <h3>Previous School Information</h3>
+                            <label>Has your child attended a previous school?</label>
+                            <input type="radio" name="child1AttendedPreviousSchool" value="yes">Yes <br>
+                            <input type="radio" name="child1AttendedPreviousSchool" value="no">No <br>
+
+                            <label>Current/Previous School Name</label>
+                            <input type="text" name="child1PreviousSchoolName">
+
+                            <label>Current/Previous Year Grade</label>
+                            <input type="text" name="child1PreviousYearGrade">
+
+                            <label>Attended From</label>
+                            <input type="date" name="child1AttendedFrom">
+
+                            <label>Attended To</label>
+                            <input type="date" name="child1AttendedTo">
+
+                            <label>Country</label>
+                            <input type="text" name="child1PreviousSchoolCountry">
+
+                            <label>City</label>
+                            <input type="text" name="child1PreviousSchoolCity">
+
+                            <label>Curriculum</label>
+                            <select name="child1PreviousSchoolCurriculum">
+                                <option value="curriculum1">Curriculum 1</option>
+                                <option value="curriculum2">Curriculum 2</option>
+                                <option value="curriculum3">Curriculum 3</option>
+                                <!-- Add more options as needed -->
+                            </select>
+
+                            <label>Language of Instruction</label>
+                            <select name="child1PreviousSchoolLanguage">
+                                <option value="english">English</option>
+                                <option value="french">French</option>
+                                <option value="spanish">Spanish</option>
+                                <!-- Add more options as needed -->
+                            </select>
+
+                            <label>May we contact your child’s previous school for a reference?</label>
+                            <input type="radio" name="child1ContactPreviousSchool" value="agree">Agree <br>
+                            <input type="radio" name="child1ContactPreviousSchool" value="disagree">Do not agree <br>
+                            <label>Reason for Leaving</label>
+                            <textarea rows="8" cols="50" name="child1ReasonForLeaving"></textarea>
+
+                            <label>Has your child ever been rejected, expelled or suspended from a school?</label>
+                            <input type="radio" name="child1ExpulsionHistory" value="yes">Yes <br>
+                            <input type="radio" name="child1ExpulsionHistory" value="no">No <br>
+                            <textarea rows="8" cols="50" name="child1ExpulsionDetails"></textarea>
+
+                            <label>In what activities has your child shown special interest or talent?</label>
+                            <textarea rows="8" cols="50" name="child1SpecialInterest"></textarea>
+
+                            <h3>Child 1 Documents</h3>
+                            <label>Scan of Student Passport/ID Card</label>
+                            <input type="file" name="child1PassportIDScan">
+                            <small>Max file size: 5MB. Supported files: .png, .jpeg, .jpg, .tiff, .pdf, .docx,
+                                .doc</small>
+
+                            <label>Scan of Student Photo</label>
+                            <input type="file" name="child1PhotoScan">
+                            <small>Max file size: 5MB. Supported files: .png, .jpeg, .jpg, .tiff, .pdf, .docx,
+                                .doc</small>
+
+                            <label>Copy of last school report</label>
+                            <input type="file" name="child1SchoolReport">
+                            <small>Max file size: 5MB. Supported files: .png, .jpeg, .jpg, .tiff, .pdf, .docx,
+                                .doc</small>
+
+                            <label>Copy of last medical report</label>
+                            <input type="file" name="child1MedicalReport">
+                            <small>Max file size: 5MB. Supported files: .png, .jpeg, .jpg, .tiff, .pdf, .docx,
+                                .doc</small>
+
+                            <label>Scan of vaccination record</label>
+                            <input type="file" name="child1VaccinationRecord">
+                            <small>Max file size: 5MB. Supported files: .png, .jpeg, .jpg, .tiff, .pdf, .docx,
+                                .doc</small>
+
+                            <label>Other (to be defined)</label>
+                            <input type="file" name="child1OtherDocument">
+                            <small>Max file size: 5MB. Supported files: .png, .jpeg, .jpg, .tiff, .pdf, .docx,
+                                .doc</small><br>
+
+                            </form><br>
+                            
+                            <button onclick="prevPage('page2')">Previous</button>
+                            <button onclick="submitForm()">Submit</button>
+
+                        </div>
+
+
+
+
+
+                        <!-- Add more page sections as needed -->
+
+                        <form id="parentGuardianForm" style="display: none;">
+                            <!-- Parent/Guardian Form -->
+                            <!-- Fields for Parent/Guardian 1 -->
+                            <button onclick="prevPage('page3')">Previous</button>
+                            <button onclick="nextPage('page4')">Next</button>
+                        </form>
+
+                        <form id="childForm1" style="display: none;">
+                            <!-- Child Form 1 -->
+                            <!-- Fields for Child 1 -->
+                            <button onclick="prevPage('page4')">Previous</button>
+                            <button onclick="nextPage('page5')">Next</button>
+                        </form>
+
+                        <!-- Add more child forms as needed -->
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- Add more page sections as needed -->
+
+                </div>
+
+
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='assets-js/online-application-form.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

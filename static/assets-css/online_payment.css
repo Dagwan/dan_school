@@ -1,0 +1,159 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+  
+  .make-payment {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .payment {
+    flex-basis: 100%;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .payment h1 {
+    background-color: darkblue;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .payment h1 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  
+  .view {
+    font-size: 1rem;
+    background-color: lightgray;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .comment-on-mouse-over-view-button {
+    display: none;
+    font-size: 0.8rem;
+    margin-left: 5px;
+  }
+  
+  .view-comment:hover .comment-on-mouse-over-view-button {
+    display: block;
+  }
+
+  
+  form input[type="email"],
+  form input[type="password"] {
+    flex-basis: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .payment button {
+    flex-basis: 30%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .payment button:hover {
+    background-color: #1e90ff;
+    font-size: 1.2rem;
+  }
+  
+  .payment-details {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    line-height: 1.5;
+  }
+  
+  .left-text1,
+  .right-text1 {
+    flex-basis: 48%;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: 30px;
+  }
+  
+  .left-text1 h2,
+  .right-text1 h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
+  .left-text1 p,
+  .right-text1 p {
+    font-size: 1rem;
+  }
+  
+  .payment-details button {
+    width: 100%;
+    background-color: darkblue;
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  /* Hover styles for buttons */
+  .make-payment-btn:hover,
+  .setup-plan-btn:hover {
+    background-color: #1e90ff;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .make-payment {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .payment-content {
+      margin-bottom: 10px;
+    }
+  
+    form input[type="email"],
+    form input[type="password"],
+    .form-buttons button {
+      flex-basis: 100%;
+    }
+  
+    .payment-details {
+      flex-direction: column;
+    }
+  
+    .left-text1,
+    .right-text1 {
+      flex-basis: 100%;
+    }
+  }
+  

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Program | Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/index.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+              
+  
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+                  
+              
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+               <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <main>
+        <section>
+            <h5>AGES 16–18</h5>
+            <hr>
+            <h1>THE IB DIPLOMA PROGRAMME</h1>
+            <p>
+                From Year 12 onward, students at DNPS all follow the The International Baccalaureate Diploma Programme.
+                The IB is a challenging two-year course of study that prepares students for success in higher education
+                and life in a global society. This program leads to the highly regarded qualification that is widely
+                recognized by the world’s leading universities.
+            </p>
+            <div class="ib-program-background-image">
+                <img src="/images/ib-program-background-image.jpg" alt="ib-program-background-image">
+                <hr>
+            </div>
+            <div>
+                <h5> >Academic Excellence > IB Programme</h5>
+                <hr>
+            </div>
+
+            <p>“Success in an IB program correlates well with success at Harvard. We are always pleased to see the
+                credentials of the IB Diploma Programme on the transcript. GPA is not nearly as important a factor in
+                university admission as the IB Diploma. If a student has to choose, then choose the Diploma over
+                protecting the GPA.”
+                – Assistant Dean of Admissions at Harvard.</p>
+
+            <p>IB students study six subjects; three at higher level and three at standard level. They must choose from
+                the following options:</p>
+
+            <ul>
+                <li>A literature-based language course (English Language and Literature)</li>
+                <li>A conversationally based second language course (French or Spanish)</li>
+                <li>A social science course (Economics, Geography, History, or Global Politics)</li>
+                <li>A science course (Biology, Chemistry, Environmental Systems, or Physics)</li>
+                <li>A mathematics course</li>
+                <li>An elective course (visual arts, a third language, or a second social science or science course)
+                </li>
+            </ul>
+
+            <p>Students must also complete three core requirements:</p>
+            <ul>
+                <li>An Extended Essay linked to a topic of individual interest, within one of the six chosen subjects.
+                    <ul>
+                        <li>This is an independent piece of research, finishing as a 4,000-word paper.</li>
+                    </ul>
+                </li>
+                <li>A Theory of Knowledge (ToK) course designed to encourage students to reflect on the nature of
+                    knowledge and on how we know what we claim to know.</li>
+                <li>Creativity, Action, and Service (CAS), which requires students to take part in a range of
+                    experiences and at least one project. All components must focus on creativity, action, and service.
+                </li>
+            </ul>
+
+            <p>The IB Diploma Programme encourages students to ask challenging questions, learn how to learn best,
+                develop a strong sense of their own identity and culture, and develop the ability to communicate with
+                and understand people from other countries and cultures. With over 70 different nationalities, an
+                experienced international staff, small class sizes, and a highly personalized approach to learning, DNPS
+                is an ideal choice for students interested in the IB Diploma.</p>
+
+            <p>We also have a full-time College Counselor who works with the students to prepare them thoroughly for
+                entry into universities and colleges throughout the world. Our College Counselor has extensive knowledge
+                of the entry requirements and procedures for private and public US and Canadian schools as well as the
+                differing requirements of UK and European universities.</p>
+
+            <aside class="ib-program-aside-content">
+                <div class="ib-content" id="ib-content">
+                    <h1>CREATING OPPORTUNITIES THROUGH ACHIEVEMENT</h1>
+                    <p>At DNPS, we offer a truly global experience with outstanding teachers and exceptional educational
+                        opportunities. Here, our youngest students get the best possible start to their educational
+                        journey.
+                    </p>
+                    <a href="/accademicexcellence.html"><button>MORE ABOUT ACADEMIC EXCELLENCE</button></a>
+                </div>
+                <div class="ib-image" id="ib-image">
+                    <img src="/images/ib-aside-background-image.png" alt="ib asside background image">
+                </div>
+            </aside>
+        </section>
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='assets-js/index.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

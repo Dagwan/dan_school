@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dan School Abuja</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/contact.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+            
+
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+                
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+              <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+     
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section>
+            <div class="container1">
+                <div class="containerh2">
+                <h1 class="containerheading3">CONTACT US</h1>
+                </div>
+                <div class="home-background-image10" id="home-background-image">
+                    
+                </div> 
+              <div class="image-slider">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                <img src="{{ url_for('static', filename='images/dan-campus.jpg')}}" alt="home image background">
+                
+              </div>
+
+                <div class="facts-container">
+                  <div class="facts" id="facts">
+                    <p>The Dan School of Abuja is located on the corner of Wisconsin Avenue and Whitehaven Street, NW. Our entrance is on the courtyard side of the building, off Whitehaven Street. The doors on the Wisconsin Avenue side of the building are emergency exits only.</p>
+                  </div>
+                </div>
+              </div>              
+
+              <article class="features" id="campus-features">
+                <div class="campus-features" id="campus-features1">
+                  <h1>DIRECTIONS</h1><hr>
+                 <h3>From the Beltway (I-495) North</h3>
+                 <p>From I-495, take at the Wisconsin Ave Exit (Exit 34). Head South towards Georgetown for approximately 6 miles. Pass the National Cathedral on your left, cross Massachusetts Ave, continue for 1 mile. Turn left on Whitehaven Street, just past the Trader Joe's on your left.</p>
+                 <h3>From the Key Bridge</h3>
+                 <p>After crossing the Key Bridge into Washington, turn right turn onto M Street. Turn left at the second traffic light onto 33rd Street. Follow 33rd Street to the top of the hill and turn left onto Wisconsin Ave heading North, continue for .3 miles. Turn right on Whitehaven Street, just past the Safeway Grocery Store on your right.</p>
+                 <h3>From McLean</h3>
+                 <p>Take Chain Bridge Road (VA-123N) towards Washington. Turn Left on Glebe Road and cross the Potomac. Turn Right on Canal Road. Turn left on Arizona Ave, Nw. At the first light, turn right on MacArthur Blvd, NW. Continue for 2.6 miles (MacArthur Blvd becomes Reservoir Road, NW). Turn left onto Wisconsin Ave heading North, continue for .3 miles. Turn right on Whitehaven Street, just past the Safeway Grocery on your right.</p>
+                 
+                </div>
+                <div class="campus-features-image" id="campus-features-image">
+                  <img src="{{ url_for('static', filename='images/school-direction-image.jpg')}}" alt="right-early-content image">
+                </div>
+              </article>             
+              
+             
+              <article class="teachnology" id="teachnology">
+                <div class="teachnology-content">
+                    <img src="{{ url_for('static', filename='images/contact-image.jpg')}}" alt="right-early-content image">
+                </div>
+                <div class="teachnology-text">
+                    <h1>CONTACT DETAILS</h1>
+                    
+                    <ul>
+                        <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                        <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                        <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                        <li>Dan Nursery & Primary School Abuja</li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                        </li>
+                        <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                        </li>
+                        <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+<!--map for the page-->
+<div id="map-container">
+    <div id="info-container">
+        <h1>FIND US IN NIGERIA ABUJA</h1>
+        <p>CURRENT TIME IN NIGERIA ABUJA</p>
+        <hr>
+        <h1 id="current-time"></h1>
+        <p>Monday–Friday: 8.00am–6.00pm</p><hr>
+        <h1 id="current-weather"></h1>
+        <p>CURRENT WEATHER</p><hr>
+       
+        <h1>OUR ADDRESS</h1>
+        <p>222, Central Business District (CBD), Abuja-Nigeria</p><hr>
+    </div>
+    <div id="map"></div>
+</div>
+
+
+<div class="form">
+
+<h1>Contact Us</h1>
+<form id="contact-form" onsubmit="return validateForm()" action="/auth/contact" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoJbY005IpbtNnYApTV7lr5zJMeuzulx0&callback=initMap" async defer></script>
+    <script src="{{ url_for('static', filename='assets-js/contact.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+</body>
+  
+  </html>

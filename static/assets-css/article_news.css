@@ -1,0 +1,96 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+
+
+.trip {
+    background-color: #f3f3f3;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.trip-details p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+   
+}
+
+.trip img {
+    display: block;
+    max-width: 100%; 
+    height: auto;
+}
+
+.trip-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.trip-slider .slide img {
+    width: 100%;
+    height: auto;
+}
+
+
+.trip h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 10px;
+}
+
+.breadcrumbs {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.breadcrumbs h5 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.trip-details {
+    padding: 20px;
+}
+
+.trip-details h1 {
+    font-size: 24px;
+}
+
+.trip-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+.trip-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .trip h1 {
+        font-size: 20px;
+    }
+
+    .breadcrumbs h5 {
+        font-size: 12px;
+    }
+
+    .trip-details h1 {
+        font-size: 20px;
+    }
+
+    .trip-details p {
+        font-size: 14px;
+    }
+}
