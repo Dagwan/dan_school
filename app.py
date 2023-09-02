@@ -12,10 +12,9 @@ load_dotenv()
 
 # Create a Flask application instance with custom static file settings
 app = Flask(__name__, static_url_path='/static', static_folder='static')
-
+ 
 # Create a basic Flask application instance without custom static file settings
 app = Flask(__name__)
-
 
 # Create a database connection
 db = create_db_connection()
