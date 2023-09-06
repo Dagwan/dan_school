@@ -69,6 +69,7 @@ html, body
   }
   
   form input[type="email"],
+  form input[type="username"],
   form input[type="password"] {
     flex-basis: 100%;
     padding: 10px;

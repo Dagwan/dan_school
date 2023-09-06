@@ -1,23 +1,35 @@
 # Import necessary modules and packages
-from flask import Flask, render_template, request, redirect, url_for
-from db_config import create_db_connection
+import MySQLdb
+
+import app as app
+from flask import Flask, render_template, request, redirect, url_for, session
 import bcrypt
-import secrets
-import os
-import re  # Import the re module for email validation
+import re
 from dotenv import load_dotenv
+import os
+import db_config  # Import the db_config module
+from flask_mysqldb import MySQL
 
 # Load environment variables from .env file
 load_dotenv()
 
+# Configure session secret key (replace 'your_secret_key_here' with a secure random string)
+app.secret_key = os.urandom(24).hex()
+
 # Create a Flask application instance with custom static file settings
 app = Flask(__name__, static_url_path='/static', static_folder='static')
- 
-# Create a basic Flask application instance without custom static file settings
-app = Flask(__name__)
 
-# Create a database connection
-db = create_db_connection()
+# Configure session secret key (replace 'your_secret_key_here' with a secure random string)
+app.secret_key = os.urandom(24).hex()
+
+# Initialize Flask-MySQLdb extension
+mysql = MySQL(app)
+
+# Use the database configuration directly from db_config
+app.config['MYSQL_HOST'] = db_config.mysql_db_config['host']
+app.config['MYSQL_USER'] = db_config.mysql_db_config['user']
+app.config['MYSQL_PASSWORD'] = db_config.mysql_db_config['password']
+app.config['MYSQL_DB'] = db_config.mysql_db_config['database']
 
 #home page
 @app.route('/')
@@ -78,9 +90,83 @@ def admissions():
     return render_template('admissions.html')
 
 #login page
-@app.route('/login')
+@app.route('/login', methods =['GET', 'POST'])
 def login():
-    return render_template('login.html')
+	msg = ''
+	if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+		username = request.form['username']
+		password = request.form['password']
+		cursor = db_config.mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+		cursor.execute('SELECT * FROM account WHERE username = % s AND password = % s', (username, password, ))
+		account = cursor.fetchone()
+		if account:
+			session['loggedin'] = True
+			session['id'] = account['id']
+			session['username'] = account['username']
+			msg = 'Logged in successfully !'
+			return render_template('application.html', msg = msg)
+		else:
+			msg = 'Incorrect username / password !'
+	return render_template('login.html', msg = msg)
+
+@app.route('/logout')
+def logout():
+	session.pop('loggedin', None)
+	session.pop('id', None)
+	session.pop('username', None)
+	return redirect(url_for('login'))
+
+# Define the route for the account registration
+@app.route('/account', methods=['GET', 'POST'])
+def account():
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        email = request.form['email']
+        
+        try:
+            # Validate email format using regular expression
+            if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+                msg = 'Invalid email address!'
+                
+            elif not re.match(r'[A-Za-z0-9]+', username):
+                msg = 'Username must contain only characters and numbers!'
+            elif not username or not password or not email:
+                msg = 'Please fill out the form!'
+            else:
+                # Hash password using bcrypt
+                salt = bcrypt.gensalt(10)
+                hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
+                
+                # Create a database cursor using the established connection
+                cursor = mysql.connection.cursor()
+
+                # Insert data into the 'account' table in the MySQL database, including 'created_at'
+                query = "INSERT INTO account (username, password, email, created_at) VALUES (%s, %s, %s, CURRENT_TIMESTAMP)"
+                values = (username, hashed_password, email)
+                cursor.execute(query, values)
+
+                # Commit the changes made to the database
+                mysql.connection.commit()
+
+                # Close the cursor to release resources
+                cursor.close()
+
+                msg = 'You have successfully registered!'
+                return render_template('thankcreatecount.html')
+        except Exception as e:
+            # Print the exception message for debugging purposes
+            print(e)
+            
+            # Roll back the changes in the database (if any)
+            mysql.connection.rollback()
+            msg = 'An error occurred while creating an account. Please try again.'
+
+    elif request.method == 'POST':
+        msg = 'Please fill out the form!'
+    
+    return render_template('account.html', msg=msg)
 
 #studentportal page
 @app.route('/studentportal')

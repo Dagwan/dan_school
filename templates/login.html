@@ -58,9 +58,10 @@
                         </span>
                     </h1>
                 </div>
-                <form id="login-form">
+                <form action="{{ url_for('login') }}" method="post">
+                    <div class="msg">{{ msg }}</div>
                     <h3>Please Log In</h3>
-                    <input type="email" name="email" id="email" placeholder="Email Address">
+                    <input type="email" name="email" id="email" placeholder="Username">
                     <input type="password" name="password" id="password" placeholder="Password">
                     <div class="remember-me">
                         <input type="checkbox" id="remember" name="remember">
@@ -71,10 +72,10 @@
                         <button type="button" class="forgot-btn" id="forgotPasswordBtn">Forgot Password?</button>
 
                     </div>
-                    <p id="error-message" class="error-message" style="display: none;">Please fill in all fields.</p>                    
+                                     
                 </form>
                 <p>Don't have an account?</p>
-                        <a href="{{ url_for('create_account')}}">Create one now</button></a>
+                        <a href="{{ url_for('account')}}">Create one now</button></a>
               
             </div>
     

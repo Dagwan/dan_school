@@ -1,18 +1,22 @@
 import os
 import mysql.connector
 from dotenv import load_dotenv
+from flask_mysqldb import MySQL
+import MySQLdb.cursors
+import MySQLdb
+import re
 
 # Load environment variables from .env file
 load_dotenv()
 
 # MySQL Configuration
-db_config = {
+mysql_db_config = {
     "host": os.getenv("DB_HOST"),
     "user": os.getenv("DB_USER"),
     "password": os.getenv("DB_PASSWORD"),
-    "database": os.getenv("DB_NAME")
+    "database": os.getenv("DB_NAME"),
 }
 
 # Create a database connection function
 def create_db_connection():
-    return mysql.connector.connect(**db_config)
+    return mysql.connector.connect(**mysql_db_config)
