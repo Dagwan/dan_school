@@ -1,20 +1,21 @@
 # Import necessary modules and packages
 import MySQLdb
-
-import app as app
+import MySQLdb.cursors
 from flask import Flask, render_template, request, redirect, url_for, session
+from flask_mail import Mail, Message
+from flask import request, jsonify
 import bcrypt
+import secrets
+from datetime import datetime, timedelta
 import re
 from dotenv import load_dotenv
 import os
-import db_config  # Import the db_config module
+import db_config
 from flask_mysqldb import MySQL
+import app as app
 
 # Load environment variables from .env file
 load_dotenv()
-
-# Configure session secret key (replace 'your_secret_key_here' with a secure random string)
-app.secret_key = os.urandom(24).hex()
 
 # Create a Flask application instance with custom static file settings
 app = Flask(__name__, static_url_path='/static', static_folder='static')
@@ -30,6 +31,16 @@ app.config['MYSQL_HOST'] = db_config.mysql_db_config['host']
 app.config['MYSQL_USER'] = db_config.mysql_db_config['user']
 app.config['MYSQL_PASSWORD'] = db_config.mysql_db_config['password']
 app.config['MYSQL_DB'] = db_config.mysql_db_config['database']
+
+# Configure Flask-Mail for email sending
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Gmail SMTP server
+app.config['MAIL_PORT'] = 587  # Port for TLS
+app.config['MAIL_USERNAME'] = 'dagwanpan@gmail.com'  # Your Gmail email address
+app.config['MAIL_PASSWORD'] = 'dagwapan0810'  # Your Gmail password
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+
+mail = Mail(app)
 
 #home page
 @app.route('/')
@@ -90,55 +101,64 @@ def admissions():
     return render_template('admissions.html')
 
 #login page
-@app.route('/login', methods =['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-	msg = ''
-	if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
-		username = request.form['username']
-		password = request.form['password']
-		cursor = db_config.mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-		cursor.execute('SELECT * FROM account WHERE username = % s AND password = % s', (username, password, ))
-		account = cursor.fetchone()
-		if account:
-			session['loggedin'] = True
-			session['id'] = account['id']
-			session['username'] = account['username']
-			msg = 'Logged in successfully !'
-			return render_template('application.html', msg = msg)
-		else:
-			msg = 'Incorrect username / password !'
-	return render_template('login.html', msg = msg)
+    msg = ''
+    if request.method == 'POST':
+        username = request.form.get('username')  # Use 'username' instead of 'email'
+        password = request.form.get('password')
+
+        if not username or not password:
+            msg = 'Please provide both username and password.'
+        else:
+            cursor = mysql.connection.cursor(cursorclass=MySQLdb.cursors.DictCursor)  # Use DictCursor to get results as dictionaries
+            cursor.execute('SELECT * FROM account WHERE username = %s', (username,))
+            account = cursor.fetchone()
+            cursor.close()
+
+            if account and bcrypt.checkpw(password.encode('utf-8'), account['password'].encode('utf-8')):
+                session['loggedin'] = True
+                session['id'] = account['id']
+                session['username'] = account['username']
+                msg = 'Logged in successfully!'
+                return render_template('application.html', msg=msg)
+            else:
+                msg = 'Incorrect username or password.'
+
+    return render_template('login.html', msg=msg)
+
 
 @app.route('/logout')
 def logout():
-	session.pop('loggedin', None)
-	session.pop('id', None)
-	session.pop('username', None)
-	return redirect(url_for('login'))
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('username', None)
+    return redirect(url_for('login'))
 
 # Define the route for the account registration
 @app.route('/account', methods=['GET', 'POST'])
 def account():
     msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form:
+    if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        confirm_password = request.form['confirmPassword']  # Get the confirm_password field
         email = request.form['email']
-        
+
         try:
-            # Validate email format using regular expression
             if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
                 msg = 'Invalid email address!'
-                
             elif not re.match(r'[A-Za-z0-9]+', username):
                 msg = 'Username must contain only characters and numbers!'
             elif not username or not password or not email:
                 msg = 'Please fill out the form!'
+            elif password != confirm_password:
+                msg = 'Passwords do not match!'
             else:
                 # Hash password using bcrypt
                 salt = bcrypt.gensalt(10)
                 hashed_password = bcrypt.hashpw(password.encode('utf-8'), salt)
-                
+
                 # Create a database cursor using the established connection
                 cursor = mysql.connection.cursor()
 
@@ -158,15 +178,103 @@ def account():
         except Exception as e:
             # Print the exception message for debugging purposes
             print(e)
-            
+
             # Roll back the changes in the database (if any)
             mysql.connection.rollback()
             msg = 'An error occurred while creating an account. Please try again.'
 
-    elif request.method == 'POST':
-        msg = 'Please fill out the form!'
-    
     return render_template('account.html', msg=msg)
+
+# Route for handling the "Forgot Password?" form submission
+@app.route('/forgot_password', methods=['POST'])
+def forgot_password():
+    try:
+        # Get the email address from the form
+        email = request.form.get('email')
+
+        # Generate a reset token (you can use a library like itsdangerous)
+        reset_token = generate_reset_token()
+
+        # Send an email with the reset link
+        send_reset_email_to_user(email, reset_token)
+
+        # Update the user's record in the database to store the reset token
+        update_reset_token_in_database(email, reset_token)
+
+        return 'Password reset email sent successfully!'
+    except Exception as e:
+        return str(e)
+
+# Route for sending the reset email
+@app.route('/send_reset_email', methods=['POST'])
+def send_reset_email():
+    try:
+        # Get the email address from the form (you may need to adjust the field name)
+        email = request.form.get('email')
+
+        # Generate a reset token (you can use a library like itsdangerous)
+        reset_token = generate_reset_token()
+
+        # Send an email with the reset link
+        send_reset_email_to_user(email, reset_token)
+
+        # Return a JSON response indicating success
+        return jsonify(success=True)
+    except Exception as e:
+        # Return a JSON response indicating failure with an error message
+        return jsonify(success=False, error=str(e))
+
+# Function to send an email with the reset link
+def send_reset_email_to_user(email, reset_token):
+    try:
+        # Create a message object
+        message = Message('Password Reset', sender='dagwanpan@gmail.com', recipients=[email])
+
+        # Customize the email content with the reset token
+        message.subject = 'Password Reset Request'
+        message.sender = 'dagwanpan@gmail.com'
+        message.recipients = [email]
+
+        # Create the email body with HTML content
+        message.html = f'''
+        <html>
+        <body>
+            <p>Hello,</p>
+            <p>We received a request to reset your password. Click the link below to reset your password:</p>
+            <p><a href="http://danschool.com/reset_password?token={reset_token}">Reset Password</a></p>
+            <p>If you didn't request a password reset, please ignore this email.</p>
+            <p>Best regards,</p>
+            <p>Dan School Team</p>
+        </body>
+        </html>
+        '''
+
+        # Send the email
+        mail.send(message)
+    except Exception as e:
+        print(e)
+
+# Function to generate a secure reset token 
+def generate_reset_token():
+    return secrets.token_urlsafe(32)  # Example token generation
+
+# Function to update the reset token in the database
+def update_reset_token_in_database(email, reset_token):
+    try:
+        # Create a cursor
+        cursor = mysql.cursor()
+
+        # Update the user's record in the 'account' table with the new reset_token
+        update_query = "UPDATE account SET reset_token = %s WHERE email = %s"
+        cursor.execute(update_query, (reset_token, email))
+
+        # Commit the changes to the database
+        mysql.commit()
+
+        # Close the cursor
+        cursor.close()
+    except Exception as e:
+        print(e)
 
 #studentportal page
 @app.route('/studentportal')

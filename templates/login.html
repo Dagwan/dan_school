@@ -15,7 +15,7 @@
   </head>
   
   <body>
-    <!-- index.html -->
+  
     <header>
       <div class="header-container">
           <div class="logo">
@@ -57,26 +57,29 @@
                             <p class="comment-on-mouse-over-view-button">Login with your school ID or your login credentials</p>
                         </span>
                     </h1>
+                    <h3>Please Log In</h3>
                 </div>
                 <form action="{{ url_for('login') }}" method="post">
+                    
                     <div class="msg">{{ msg }}</div>
-                    <h3>Please Log In</h3>
-                    <input type="email" name="email" id="email" placeholder="Username">
+                    
+                    <input type="username" name="username" id="username" placeholder="Username">
                     <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="checkbox" name="checkbox" id="showPassword">
+                    <label for="showPassword" id="showPasswordLabel">Show Password</label>
                     <div class="remember-me">
                         <input type="checkbox" id="remember" name="remember">
                         <label for="remember">Remember Me</label>
                     </div>
                     <div class="form-buttons">
-                        <button type="button" class="login-btn" id="loginBtn">Login</button>
-                        <button type="button" class="forgot-btn" id="forgotPasswordBtn">Forgot Password?</button>
-
-                    </div>
-                                     
-                </form>
-                <p>Don't have an account?</p>
-                        <a href="{{ url_for('account')}}">Create one now</button></a>
-              
+                        <button type="submit" class="btn" id="loginButton">Login</button>                       
+                        <button type="submit" class="forgot-btn" id="forgotPasswordBtn">Forgot Password?</button>
+                        
+                    </div>  
+                    <p class="bottom">Don't have an account? 
+                        <a class="bottom" href="{{url_for('account')}}"> Sign Up here</a></p> 
+                        <p id="error-message" class="error-message" style="display: none;"></p>  
+                </form>          
             </div>
     
             <div id="forgotPopup" class="popup">

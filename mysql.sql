@@ -20,14 +20,16 @@ DROP TABLE IF EXISTS parent_guardian;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS account;
 
--- create account -- Create account table
+-- Create the account table with the confirm_password column
 CREATE TABLE account (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL
+    confirm_password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 
 -- Create users table 

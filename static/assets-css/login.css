@@ -5,6 +5,7 @@ html, body
 {
     margin: 0px;
     font-family: Raleway;
+    overflow: auto;
 }
   
   .login-account {
@@ -69,7 +70,7 @@ html, body
   }
   
   form input[type="email"],
-  form input[type="username"],
+  form input[name="username"],
   form input[type="password"] {
     flex-basis: 100%;
     padding: 10px;
@@ -259,6 +260,11 @@ html, body
     form input[type="password"],
     .form-buttons button {
       flex-basis: 100%;
+    }
+
+    .form-buttons {
+      display: flex;
+      flex-direction: column;
     }
   
     .login-details {
