@@ -11,6 +11,9 @@ from flask_mysqldb import MySQL
 import logging
 from db_config import create_db_connection  # Import the create_db_connection function from db_config
 
+# Access environment variables using os.environ
+GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
+
 # Load environment variables from .env file
 load_dotenv()
 # Create a Flask application instance with custom static file settings
@@ -40,17 +43,20 @@ def index():
 # About us page
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    google_maps_api_key = os.getenv('GOOGLE_MAPS_API_KEY')
+    return render_template('about.html', google_maps_api_key=google_maps_api_key)
 
 # Services page
 @app.route('/services')
 def services():
-    return render_template('services.html')
+    google_maps_api_key = os.getenv('GOOGLE_MAPS_API_KEY')
+    return render_template('services.html', google_maps_api_key=google_maps_api_key)
 
 # Contact us page
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    google_maps_api_key = os.getenv('GOOGLE_MAPS_API_KEY')
+    return render_template('contact.html', google_maps_api_key=google_maps_api_key)
 
 # Route for contact form
 @app.route('/auth/contact', methods=['POST'])
