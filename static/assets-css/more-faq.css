@@ -1,0 +1,61 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+  
+  /* Section styles */
+  .more-faq {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .more-faq-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .more-faq-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.8);
+    padding: 20px;
+    color: white;
+  }
+  
+  .faq {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .faq h4 {
+    margin-top: 0;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .more-faq-image {
+      height: 200px;
+    }
+  
+    .image-text {
+      position: static;
+      width: 100%;
+    }
+  }
+  

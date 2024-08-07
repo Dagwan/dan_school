@@ -1,0 +1,57 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+  
+  .meal-service {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .meal h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .meal p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .meal-services {
+    margin-bottom: 30px;
+  }
+  
+  .tuition-fees {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .meal-services h2 {
+    margin-top: 20px;
+  }
+  
+  .meal-services p {
+    margin-bottom: 10px;
+  }
+  
+  .payment-options h4 {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .tuition-fees {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission | Home-Dan School</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/admissions.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+            
+
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+                
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+              <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+            
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <main>
+    <section id="home">
+      <div class="admission">
+        <h1>ADMISSIONS</h1>
+      </div>
+      <div class="image-admission">
+        <img src=" {{ url_for('static', filename='images/admission-pic.jpg') }}" alt="admission">
+        <div class="image-text"><hr>
+          <h4>JOIN US</h4>
+          <h2>We look forward to welcoming you into our international community!</h2>
+        </div>
+      </div>
+    </section>   
+    
+    <aside id="learn-more">
+      <div class="learn-text">
+        <h1>WANT TO LEARN MORE?</h1>
+        <p>
+          Join us for a campus tour or virtual meeting, to take the first step in your child’s most exciting academic
+          experience. We look forward to meeting you to discuss what makes BISW special, what we can offer your family,
+          and our admissions process.
+        </p>
+        <a href="{{ url_for('enquiry') }}"><button>INQUIRE NOW</button></a>
+      </div>
+    
+      <div class="learn-image">
+        <img src=" {{ url_for('static', filename='images/learn-more-image.png') }}" alt="learn">
+      </div>
+    </aside>
+    
+
+    <aside class="who-can-join" id="who-can-join">
+      <div class="who-can-join-image">
+        <img src="{{ url_for('static', filename='/images/who-can-join-image.jpg') }}" alt="who can join">
+      </div>
+      <div class="who-can-join-text">
+        <h4>ENTRY REQUIREMENTS</h4>
+        <h2>WHO CAN JOIN?</h2>
+        <p>Our school community is made up of a diverse, inclusive, multi-national student body. We offer personalized
+          education to students from early childhood to adolescence and young adulthood – ages 2 to 18. BISW is
+          academically non-selective because we believe that no child has a limit to their potential.</p>
+    
+        <p>However, when considering applicants, we look to see if they share our values of respect, tolerance, and
+          open-mindedness, and whether we can help their individual needs to ensure they receive the best possible
+          education.</p>
+        <a href=" {{ url_for('application_requirments') }}"><button>FIND OUT MORE</button></a>
+      </div>
+    </aside>
+    
+
+    <aside class="ready-to-help" id="ready-to-help">
+      <div class="ready-to-help-text">
+        <h1>READY TO HELP</h1>
+        <div class="paragraph">
+          <p>Our friendly team is here to help as you navigate our easy-to-complete admissions process.</p>
+          <ul>
+            <li>Contact our admissions team</li>
+            <li>Schedule a campus tour or virtual meeting</li>
+            <li>Submit the online application</li>
+            <li>Schedule a taster day (optional)</li>
+            <li>Request your teacher evaluations</li>
+            <li>Schedule your child’s CAT4 assessment (Secondary School only)</li>
+          </ul>
+          <a href="{{ url_for('account') }}"><button>APPLY NOW</button></a>
+        </div>
+      </div>
+      <div class="read-to-help-image">
+        <img src="{{ url_for('static', filename='images/ready-to-help-image.jpg') }}" alt="ready to help">
+      </div>
+    </aside>
+    
+    <div class="section-wrapper">
+      <aside class="tuition-fees" id="tuition-fees">
+        <div class="tuition-fees-content">
+          <div class="tuition-fees-image">
+            <img src="{{ url_for('static',filename='images/tuition-fees-image.jpg') }}" alt="tuition">
+          </div>
+          <div class="tuition-fees-text">
+            <h1>TUITION FEES</h1>
+            <p>At the British International School of Washington, our tuition fees reflect the premium education we provide.</p>
+            <p>Our state-of-the-art facilities, extracurricular activities, and highly experienced teachers give our students the best learning environment to unlock their potential.</p>
+            <a href="{{url_for('tuition_fees') }}"><button>FIND OUT MORE</button></a>
+          </div>
+        </div>
+      </aside>
+    </div>  
+
+    <aside class="step-by-step-text">
+      <div class="step"><hr>
+        <h1>OUR STEP-BY-STEP PROCESS</h1>
+        <p>For your child to join us, we have a few thoughtful steps on what you need to do.</p><hr>
+      </div>
+    
+      <div class="step-box box1-step-by-step-with-text-and-image">
+        <img src="{{ url_for('static', filename='images/box1-step-by-image.jpg') }}" alt="">
+        <h4>Make an inquiry</h4>
+        <p>Send us an online inquiry form on our website, email us, or give us a call. </p>
+        <button class="step1">1</button>
+      </div>
+      <div class="step-box box2-step-by-step-with-text-and-image">
+        <img src="{{ url_for('static', filename='images/box2-step-by-image.jpg') }}" alt="">
+        <h4>Discover our school</h4>
+        <p>Based on what works best for you, you’re welcomed to visit our school either in person or virtually. You’ll
+          imagine your child on our warm campus and in our bright classrooms, and you’ll talk to a member of our Senior
+          Leadership Team or a teacher from your child’s learning year – so that you have first-hand information. </p>
+        <button class="step2">2</button>
+      </div>
+      <div class="step-box box3-step-by-step-with-text-and-imag">
+        <img src="{{ url_for('static', filename='images/box3-step-by-image.jpg') }}" alt="">
+        <h4>Apply for a place</h4>
+        <p>You’ll submit your online application form and supporting documents. </p>
+        <button class="step3">3</button>
+      </div>
+      <img src="{{ url_for('static', filename='images/step-image-design.svg') }}" alt="">
+    </aside>
+    
+
+    <aside class="key-term" id="key-term">
+      <div class="key-term-left-text">
+        <h1>KEY TERM DATES: 2022–23</h1>
+        <p>These are the most important dates for your calendar, to keep in mind during the admissions process.</p>
+    
+        <p>DNPS does accept rolling admissions – so you can still apply anytime during the calendar year. Our review of
+        students’ rolling applications occurs in the order in which they are received.</p>
+        <a href="{{ url_for('schoo_calendar_dnps')}}"><button>2022-23 School Calendar DNPS</button></a>
+        <a href="{{url_for('add_to_calendar')}}">
+          <p>ADD TO CALENDAR</p>
+          <hr>
+        </a>
+      </div>
+    
+      <div class="key-term-right-text">
+        <div>
+          <h5>Signed Enrollment Contracts Due (August 2022 Start)</h5>
+          <p>Monday, Aug 01 2022</p>
+        </div>
+        <div>
+          <h5>Early Years Play Date</h5>
+          <p>Saturday, Aug 13 2022</p>
+        </div>
+    
+        <div>
+          <h5>Orientation and Success-Planning Day</h5>
+          <p>Wednesday, Aug 17 2022</p>
+        </div>
+    
+        <div>
+          <h5>First Day of the 2022–23 School Year</h5>
+          <p>Thursday, Aug 18 2022</p>
+        </div>
+      </div>
+    
+      <img src="{{ url_for('static', filename='images/key-term-background-image.svg') }}" alt="Background Image">
+    </aside>
+    
+
+    <article class="faq" id="faq">
+      <div><hr>
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <div class="button-to-expan-text">
+          <h5>How large is your school, and what are your class sizes?<button class="expand">+</button></h5>
+          <p>
+            The British International School of Washington has around 550 students enrolled on average. Typically, each
+            year group has approximately 35 to 45 students enrolled. These numbers tend to be smaller for our youngest
+            learners in our Early Years program as well as our oldest learners in the International Baccalaureate
+            Diploma Program. Class sizes can range from 12 to 22 students, depending on the year group and the course subject.
+            The average student:teacher ratio also varies depending on the year group.</p>
+          <p>See the specific student-to-teacher ratio for each year group, below.</p><br>
+          <p>Early Years</p>
+          <p>Pre-Nursery (2 years old)</p>
+          <p>1:4 student-to-teacher ratio</p><br>
+          <p>Nursery (3 years old)</p>
+          <p>1:8 student-to-teacher ratio</p><br>
+          <p>Reception (4 years old)</p>
+          <p>1:10 student-to-teacher ratio</p><br>
+          <p>Primary School</p>
+          <p>The average size of each year group in BISW's primary school is 36. We divide each group into two
+            (sometimes three) classrooms for an average of 18 students per classroom.</p><br>
+          <p>Years 1–2</p>
+          <p>Each class has a classroom teacher and learning assistant, and students see specialist teachers each week.
+          </p><br>
+          <p>Years 3–6</p>
+          <p>In addition to the classroom teacher, students see specialist teachers each week.</p><br>
+          <p>Secondary School</p>
+          <p>The average size of each year group in BISW's secondary school is 36. Students in Years 7–13 typically have
+            an average class size of 14–24 students. The class size is dependent upon the course and the total number of
+            students per year group.</p>
+        </div>
+
+        <div class="button-to-expan-text">
+          <h5>Do you take mid-year enrollments? <button class="expand">+</button></h5>
+          <p>
+            Yes, we take rolling admissions and mid-year enrollments. This makes the admissions process as
+            straightforward as possible for families from all around the world who want to join our school community.
+            Also, with our rolling admissions, you can apply anytime and expect that our school leaders will review your
+            child's application quickly. Contact our Admissions Department at admissions@dnpsabuja.org to speak to a
+            representative who can provide guidance on our admissions process.</p>
+        </div>
+
+        <div class="button-to-expan-text">
+          <h5>What nationalities are represented in the student body?<button class="expand">+</button></h5>
+          <p>
+            25% of DNPS students are from Nigeria, 30% from the United Kingdom, 20% are from the United States, and the
+            remaining majority
+            include a wide variety of nationalities. Currently, we have more than 70 nationalities in our student body.
+            The predominant backgrounds change from year to year, as global transitions lead new families to Abuja. For
+            instance, we could have many students from the United Arab Emirates one year and then more students
+            from Denmark the following year. </p>
+        </div>
+
+        <div class="button-to-expan-text">
+          <h5>Where do your graduates usually go to college or university?<button class="expand">+</button></h5>
+          <p>
+            DNPS graduates often attend schools in the Nigeria, United Kingdom, the United States, Europe, and Canada.
+            We also
+            see students choose universities in other exciting international locations. </p>
+        </div>
+
+
+        <div class="button-to-expan-text">
+          <h5>What is the average length of time students attend DNPS<button class="expand">+</button></h5>
+          <p>
+            As an international school in Nigeria, Abuja, we acknowledge that many of our families will be with us for a
+            limited time, so the length of time students attend DNPS can vary widely. On average, we see families join
+            DNPS for 3 to 5 years. Some students stay for one or two years; however, we have also had students remain
+            with us all the way from Pre-Nursery to Year 13. We remain flexible to offer our world-class education to as
+            many students as possible. </p>
+        </div>
+
+        <div class="button-to-expan-text">
+          <h5>What is the average length of time teachers stay at DNPS?<button class="expand">+</button></h5>
+          <p>
+            The faculty at DNPS consists of world-class teachers, and our teachers typically stay for several years.
+            Exceptionally, some teachers have been with us for more than 20 years. Because we are both part of Nord
+            Anglia Education and located in a highly desirable place, we have a vast pool of highly talented,
+            world-class candidates to hire from. </p>
+        </div>
+
+        <div class="button-to-expan-text">
+          <h5>How is your approach to teaching different from other schools' approaches? <button
+              class="expand">+</button></h5>
+          <p>
+            DPNS implements Nord Anglia Education's "Create Your Future" approach to teaching. We are committed to
+            developing children's minds, relationships, and their understanding of their place within their community
+            and the world at large. Your child will leave our school with everything they need for success, no matter
+            what they choose to do or be in life. We achieve this by educating children to become: </p>
+          <ul>
+            <li> Lifelong learners who are principled and empathetic;</li>
+            <li>Tolerant and sensitive members of the school and community;</li>
+            <li>Responsible, knowledgeable, and adaptable citizens ready to prosper in an ever-changing and challenging
+              world; and</li>
+            <li>Future leaders.</li>
+          </ul>
+        </div>
+        <a href="{{ url_for('more_faq')}}"><button class="more-faqs">MORE FAQS</button></a>
+      </div>
+     
+    </article>
+
+    <aside class="director-of-marketing">
+      <div class="director-of-marketing-image">
+        <img src="{{ url_for('static', filename='images/director-of-marketing-image.jpg')}}" alt="images of marketing director">
+      </div>
+      <div class="director-content">
+        <p>Our admissions team prides itself on providing an outstanding experience for new families. Whether you're a
+          native to the DC area or relocating from across the globe, we'll work with you to ensure your child has a
+          wonderful induction to BISW.</p>
+        <div class="director">
+          <p ><b>Amanda Carbury</b><br>Director of Marketing & Admissions</p>
+        </div>
+      </div>
+    </aside>
+    <hr>   
+
+  </main>
+  <hr>
+  <footer class="footer1">
+      <div class="footer-column">
+          <p>CONTACT DAN INFO</p>
+          <ul>
+              <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+              <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+              <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+              <li>Dan Nursery & Primary School Abuja</li>
+          </ul>
+      </div>
+
+      <div class="footer-column">
+          <p>RESOURCES</p>
+          <ul>
+              <li><a href="#">A-Z Index</a></li>
+              <li><a href="#">DAN Mobile App (Android)</a></li>
+              <li><a href="#">DAN Mobile App (IOS)</a></li>
+              <li><a href="#">Student Development Services</a></li>
+              <li><a href="#">Employment At DAN</a></li>
+              <li><a href="#">Office Of Belonging</a></li>
+              <li><a href="#">Helping Distressed Students</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Office Of IT</a></li>
+              <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+              <li><a href="#">School Police & Parking</a></li>
+          </ul>
+      </div>
+
+
+      <div class="footer-column">
+          <p>OTHER DAN SCHOOLS</p>
+          <ul>
+              <li><a href="#">Dan Jos</a></li>
+              <li><a href="#">Dan Lagos</a></li>
+              <li><a href="#">Dan Logos</a></li>
+              <li><a href="#">Dan College Jos</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-column">
+          <div class="social-column">
+              <p>CONNECT</p>
+              <ul>
+                  <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                  </li>
+                  <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                  </li>
+                  <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                  </li>
+              </ul>
+          </div>
+          <ul class="connect-list">
+              <li><a href="#">DAN Alumni</a></li>
+              <li><a href="#">DAN Athletics</a></li>
+              <li><a href="#">DAN News</a></li>
+              <li><a href="#">DAN Store</a></li>
+              <li><a href="#">DANtv</a></li>
+          </ul>
+      </div>
+  </footer>
+
+  <footer class="footer-article">
+      <article class="copy" id="footer">
+          <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+          <p class="copy-date"></p>
+      </article>
+  </footer>
+  <script src="{{ url_for('static', filename='assets-js/admission.js') }}"></script> 
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

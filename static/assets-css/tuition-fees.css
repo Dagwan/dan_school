@@ -1,0 +1,104 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+
+.tuition-fees-text h4,
+.tuition-fees-text h1,
+.tuition-fees-text p {
+  max-width: 960px;
+  padding: 20px 20px 0 20px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.tuition-fees-text h4 {
+  font-size: 1.5rem;
+  color: blue;
+  margin-top: 60px;
+}
+
+.tuition-fees-text h1 {
+  font-size: 3rem;
+}
+
+.tuition-fees {
+  max-width: 960px;
+  background-color: white;
+  padding: 20px 20px 10px 20px;
+  margin: 0 auto; /* Add this line to center the content */
+}
+
+.tuition-fees p {
+  font-size: 1.2rem;
+}
+.tuition-fees-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.tuition-fees-image img {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.tuition-fees hr {
+  border: 1px solid #ddd;
+  margin: 40px 0;
+  
+}
+
+.tuition-fees h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.tuition-fees a {
+  color: blue;
+  text-decoration: none;
+}
+
+.tuition-fees table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.tuition-fees
+
+.tuition-fees th,
+.tuition-fees td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+}
+
+.tuition-fees th {
+  background-color: #f2f2f2;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .tuition-fees {
+    padding: 20px;
+  }
+  
+  .tuition-fees-text h1 {
+    font-size: 3rem;
+  }
+  
+  .tuition-fees-text h4 {
+    font-size: 1.2rem;
+  }
+  
+  .tuition-fees-text p {
+    font-size: 1.8rem;
+  }
+}

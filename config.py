@@ -1,0 +1,5 @@
+STATIC_URL_PREFIX = '/assets-css'
+STATIC_URL_PREFIX = '/assets-js'
+STATIC_URL_PREFIX = '/css'
+STATIC_URL_PREFIX = '/js'
+STATIC_URL_PREFIX = '/images'

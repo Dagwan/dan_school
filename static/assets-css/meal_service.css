@@ -1,0 +1,70 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway;
+}
+
+.meal-service {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.meal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.meal h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.meal p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.meal-services {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-services h2 {
+    font-size: 24px;
+    font-weight: bold;
+   
+}
+
+.meal-services p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .meal-service {
+        padding: 10px;
+    }
+    .meal h1 {
+        font-size: 24px;
+    }
+    .meal-services {
+        padding: 10px;
+    }
+    .meal-services h2,
+    .meal-services h4,
+    .meal-services p {
+        font-size: 16px;
+    }
+}

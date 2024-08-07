@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Commputer Development | Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/support.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+              
+  
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+             
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+               <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <main>
+        <section  class="trip" id="trip">
+            <div>
+                <h1 class="heading">DNPS Students Community Development Support</h1>
+                <div class="full-width-image">
+                <img src="{{ url_for('static', filename='images/support-image1.jpg')}}" alt="stuent support">
+                </div>
+            </div>
+            <div>
+                <hr>
+                <h5> >Academic Excellence > DNPS Students Community Development Support</h5>
+                <hr>
+            </div>
+            <h1 class="heading">DNPS Students Community Development Support</h1>
+            <p>DNPS students coordinated multiple efforts to support earthquake relief in Syria and Turkey.</p>
+            <p>This term, children from the British International School of Washington coordinated multiple efforts to
+                support disaster relief in the aftermath of earthquakes in Syria and Turkey. The news had an impact on
+                students in both primary and secondary, so they jumped into action and found ways to help.</p>
+            <h1>Year 5 Fundraiser and Donations</h1>
+            <p>When reports of the earthquakes broke, Year 5 was studying "Champions for Change," an International
+                Primary Curriculum topic that looks at historical leaders who took action to make a difference. Much
+                like the people in the IPC topic, the Year 5 children felt inspired to take action, so they held a
+                Valentine's Day dance fundraiser and invited their peers from Years 4 and 6. The event raised around
+                $1,000, which the students used to get items the Turkish embassy had requested.</p>
+            <p>Later that week, Year 5 walked from the BISW campus through Dumbarton Oaks Park to the Turkish embassy to
+                hand-deliver sleeping bags, blankets, and hand warmers, which the embassy sent to families in the
+                affected regions. The children's hard work even caught the attention of Turkish news outlet <a
+                    href="https://haberglobal.com.tr/gundem/washingtondaki-ogrencilerden-depremzedeler-icin-anlamli-yardim-232416"
+                    target="_blank">Haber
+                    Global</a>.</p>
+                    <div class="full-width-image">
+            <img src="{{ url_for('static', filename='images/support-image2.jpg')}}" alt="support image">
+            <img src="{{ url_for('static', filename='images/support-image3.jpg')}}" alt="support image">
+                    </div>
+            <h1 class="heading">Secondary Bake Sale</h1>
+            <p>Meanwhile, BISW secondary students organized a Valentine's Day bake sale to raise funds for relief
+                efforts. Children from Years 7 to 13 made baked goods at home and sold them during break and lunch. It
+                was an excellent way for the students to have a meaningful impact while using skills from various
+                classes. In the end, our students successfully collected more than $1,200, which they gave to UNICEF to
+                support the agency's humanitarian efforts across Syria and Turkey. The undertaking underscored the
+                importance that our students place on global awareness and collaboration.</p>
+            <img src="{{url_for('static', filename='images/support-image4.jpg')}}" alt="support image">
+            <img src="{{url_for('static', filename='/images/support-image5.jpg')}}" alt="support image">
+            <img src="{{url_for('static', filename='/images/support-image6.jpg')}}" alt="support image">
+            <img src="{{url_for('static', filename='/images/support-image7.jpg')}}" alt="support image">
+            <img src="{{url_for('static', filename='/images/support-image8.jpg')}}" alt="support image">
+            <img src="{{url_for('static', filename='/images/support-image9.jpg')}}" alt="support image">
+            <p>Our students' quick response to the unfolding events in Syria and Turkey was astounding. Along with
+                raising funds, the students raised awareness about the crises and showed the impact we can have when we
+                work with one another. We're proud of our students' efforts and grateful for our community's generosity.
+                Our thoughts are with Syria and Turkey and all affected by the earthquakes. </p>
+        
+
+        </section>
+
+        <article class="latest-news" id="latest-news">
+            <div class="left-text" id="left-text">
+              <h4>THE LATEST DNPS NEWS</h4>
+              <h1>OUR NEWS</h1>
+            </div>
+            <div class="latest-news-right-text" id="right-text">
+              <p><button>READ MORE</button></p>
+            </div>
+          </article>
+          <div class="article-news">
+            <article class="new" id="new">
+              <div class="featured">
+                <a href="{{ url_for('trip') }}">
+                  <img src="{{ url_for('static', filename='images/news-image1.jpg') }}" alt="news image">
+                  <p>NEWS</p>
+                  <h2>DNPS Model United Nations NYC Trip</h2>
+                </a>
+                <p>DNPS MUN attended the NHSMUN conference, got a tour of the UN, had a delegate social and saw NYC sights.</p>
+                <a href="{{ url_for('trip') }}"><button>READ MORE</button></a>
+              </div>
+              
+              <div class="featured">
+                <a href="{{ url_for('dnpschallenge') }}">
+                  <img src="{{ url_for('static', filename='images/news-image3.jpg') }}" alt="news image">
+                  <p>NEWS</p>
+                  <h2>The 2023 Great Kindness Challenge at DNPS</h2>
+                </a>
+                <p>DNPS participated in The Great Kindness Challenge from January 23 to 27.</p>
+                <a href="{{ url_for('dnpschallenge') }}"><button>READ MORE</button></a>
+              </div>
+
+              <div class="featured">
+                <a href="{{ url_for('dnpschallenge') }}">
+                  <img src="{{ url_for('static', filename='images/house-image.jpg') }}" alt="news image">
+                  <p>BLOG</p>
+                  <h2>The House System</h2>
+                </a>
+                <p>Learn about the house system at the British International School of Washington, which gives children a sense of belonging and community.</p>
+                <a href="{{ url_for('dnpschallenge') }}"><button>READ MORE</button></a>
+              </div>
+
+              <div class="featured">
+                <a href="{{ url_for('homework') }}">
+                  <img src="{{ url_for('static', filename='images/homework-image.jpg') }}" alt="news image">
+                  <p>BLOG</p>
+                  <h2>Homework</h2>
+                </a>
+                <p>Read about homework at the British International School of Washington, including information about its importance and how parents can help at home.</p>
+                <a href="{{ url_for('homework') }}"><button>READ MORE</button></a>
+              </div>
+            </article>
+          </div>
+
+
+    </main>
+    <hr>
+    <footer class="footer1">
+        <div class="footer-column">
+            <p>CONTACT DAN INFO</p>
+            <ul>
+                <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                <li>Dan Nursery & Primary School Abuja</li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <p>RESOURCES</p>
+            <ul>
+                <li><a href="#">A-Z Index</a></li>
+                <li><a href="#">DAN Mobile App (Android)</a></li>
+                <li><a href="#">DAN Mobile App (IOS)</a></li>
+                <li><a href="#">Student Development Services</a></li>
+                <li><a href="#">Employment At DAN</a></li>
+                <li><a href="#">Office Of Belonging</a></li>
+                <li><a href="#">Helping Distressed Students</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Office Of IT</a></li>
+                <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                <li><a href="#">School Police & Parking</a></li>
+            </ul>
+        </div>
+  
+  
+        <div class="footer-column">
+            <p>OTHER DAN SCHOOLS</p>
+            <ul>
+                <li><a href="#">Dan Jos</a></li>
+                <li><a href="#">Dan Lagos</a></li>
+                <li><a href="#">Dan Logos</a></li>
+                <li><a href="#">Dan College Jos</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-column">
+            <div class="social-column">
+                <p>CONNECT</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                    </li>
+                    <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="connect-list">
+                <li><a href="#">DAN Alumni</a></li>
+                <li><a href="#">DAN Athletics</a></li>
+                <li><a href="#">DAN News</a></li>
+                <li><a href="#">DAN Store</a></li>
+                <li><a href="#">DANtv</a></li>
+            </ul>
+        </div>
+    </footer>
+  
+    <footer class="footer-article">
+        <article class="copy" id="footer">
+            <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+            <p class="copy-date"></p>
+        </article>
+    </footer>
+    <script src="{{ url_for('static', filename='assets-js/index.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+  
+  </html>

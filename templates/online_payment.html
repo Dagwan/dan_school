@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment | Home-Dan School</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/online_payment.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+  
+  </head>
+  
+  <body>
+    <!-- index.html -->
+    <header>
+      <div class="header-container">
+          <div class="logo">
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+              
+  
+          </div>
+          <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav>
+              <ul class="menu-list">
+             
+                <li> <a href="{{ url_for('index') }}">Home</a></li>
+                <li> <a href="{{ url_for('about') }}">About</a></li>
+                <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+                <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+               <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+                <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+                <li> <a href="{{ url_for('login') }}">Login</a></li>
+                <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+                <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+                  <!-- Add more links as needed -->
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+        <main>
+            <section class="make-payment" id="make-payment">
+                <div class="payment">
+                  <h1>Save Time, Sign In! <span class="view-comment">
+                    <button class="view">!</button>
+                    <p class="comment-on-mouse-over-view-button">By logging in now you can checkout quickly and save transactions</p>
+                  </span>                  </h1>
+                  
+                  
+                    <a href="{{ url_for('login')}}"><button class="login-btn">Login</button></a>
+                    <a href="{{ url_for('create_account')}}"><button class="register-btn">Create acount</button></a>
+                    
+                 
+                </div>
+                <div class="payment-details">
+                  <div class="left-text1">
+                    <h2>Tuition Payment Plans</h2>
+                    <p>We are pleased to offer this easy and secure online payment system as a convenient way for families to make electronic payments.</p>
+                    <p>Three different electronic payment methods are accepted:</p>
+                    <ul>
+                      <li>Credit and debit cards are assessed a service fee of 2.89%.</li>
+                      <li>ACH (eCheck) is assessed a service fee of 0.25%.</li>
+                    </ul>
+                   <a href="{{ url_for('login')}}"> <button class="setup-plan-btn">SET UP A PLAN</button></a>
+                  </div>
+                  <div class="right-text1">
+                    <h2>Incidental Payments</h2>
+                    <p>We are pleased to offer this easy and secure online payment system as a convenient way for families to make electronic payments.</p>
+                    <p>Three different electronic payment methods are accepted:</p>
+                    <ul>
+                      <li>Credit and debit cards are assessed a service fee of 2.89%.</li>
+                      <li>ACH (eCheck) is assessed a service fee of 0.25%.</li>
+                    </ul>
+                    <a href="{{ url_for('login')}}"><button class="make-payment-btn">MAKE PAYMENT</button></a>
+                  </div>
+                </div>
+              </section>          
+              
+        </main>
+        <hr>
+        <footer class="footer1">
+            <div class="footer-column">
+                <p>CONTACT DAN INFO</p>
+                <ul>
+                    <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+                    <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+                    <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+                    <li>Dan Nursery & Primary School Abuja</li>
+                </ul>
+            </div>
+      
+            <div class="footer-column">
+                <p>RESOURCES</p>
+                <ul>
+                    <li><a href="#">A-Z Index</a></li>
+                    <li><a href="#">DAN Mobile App (Android)</a></li>
+                    <li><a href="#">DAN Mobile App (IOS)</a></li>
+                    <li><a href="#">Student Development Services</a></li>
+                    <li><a href="#">Employment At DAN</a></li>
+                    <li><a href="#">Office Of Belonging</a></li>
+                    <li><a href="#">Helping Distressed Students</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Office Of IT</a></li>
+                    <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+                    <li><a href="#">School Police & Parking</a></li>
+                </ul>
+            </div>
+      
+      
+            <div class="footer-column">
+                <p>OTHER DAN SCHOOLS</p>
+                <ul>
+                    <li><a href="#">Dan Jos</a></li>
+                    <li><a href="#">Dan Lagos</a></li>
+                    <li><a href="#">Dan Logos</a></li>
+                    <li><a href="#">Dan College Jos</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer-column">
+                <div class="social-column">
+                    <p>CONNECT</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                        </li>
+                        <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                        </li>
+                        <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="connect-list">
+                    <li><a href="#">DAN Alumni</a></li>
+                    <li><a href="#">DAN Athletics</a></li>
+                    <li><a href="#">DAN News</a></li>
+                    <li><a href="#">DAN Store</a></li>
+                    <li><a href="#">DANtv</a></li>
+                </ul>
+            </div>
+        </footer>
+      
+        <footer class="footer-article">
+            <article class="copy" id="footer">
+                <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+                <p class="copy-date"></p>
+            </article>
+        </footer>
+        <script src="{{ url_for('static', filename='assets-js/index.js') }}"></script> 
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+      </body>
+      
+      </html>

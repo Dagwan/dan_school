@@ -1,0 +1,366 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway; 
+    overflow: auto;
+}
+  
+  /* Image Slider Styles */
+.image-slider {
+  width: 300%;
+ 
+  display: flex;
+  animation: slideImages 60s infinite linear;
+}
+
+.image-slider img {
+  width: 33.3333%;
+  object-fit: cover;
+}
+
+/* Keyframe Animation */
+@keyframes slideImages {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+  /* Container styles */
+  .container1 {
+    position: relative;
+    overflow: hidden;
+    background-color: darkblue;
+  }
+  
+  /* Background image styles */
+  .home-background-image10 img {
+    top: 50px;
+    width: 100%;
+    right: 0;
+    display: block;
+  }
+  
+  .containerheading3 {
+    text-align: right;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 4rem;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    font-style: italic;
+  }
+  
+  /* Facts container */
+  .facts-container {
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    right: 0;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Fact styles */
+  .facts {
+    flex: 1;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    background-color: rgba(0, 0, 100, 0.5); /* Dark blue color with opacity */
+  }
+  
+  .facts p {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: white;
+  }
+  /* Media queries for small devices */
+  @media (max-width: 768px) {
+    .containerheading3 {
+      font-size: 2rem;
+      top: 5px;
+      right: 5px;
+    }
+    
+    .facts-container {
+      display: none; /* Hide the entire facts container on small devices */
+    }
+  }
+
+.features {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.campus-features {
+  flex: 1;
+  padding: 0 20px;
+  text-align: left;
+  margin-left: 7%;
+}
+
+.campus-features h4 {
+  color: #0056b3;
+  font-size: 18px;
+  margin: 0;
+}
+
+.campus-features h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.campus-features p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.campus-features ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.campus-features li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  line-height: 2.5;
+}
+
+.campus-features button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.campus-features button:hover {
+  background-color: #0056b3;
+}
+
+.campus-features-image img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .campus-features, .campus-features-image {
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .campus-features-image img {
+    margin-left: 0;
+  }
+}
+
+#map-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #0056b3;
+}
+
+#map-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#map {
+  flex: 1;
+  height: 100vh;
+}
+
+#info-container {
+  flex: 1;
+  background-color: darkblue;
+  color: white;
+  padding: 20px;
+  margin-left: 9%;
+}
+
+#info-container h1 {
+  margin-top: 0;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  #map-container {
+      flex-direction: column;
+  }
+
+  #map-container {
+      flex-direction: column-reverse;
+  }
+
+  #info-container {
+      padding: 10px;
+  }
+
+  #info-container h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin: 20px;
+  }
+}
+
+.teachnology {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the article */
+  display: flex;
+  padding: 20px; /* Add padding to the entire article */
+}
+
+.teachnology-content {
+  flex: 1;
+  margin-right: 20px; /* Add margin between image and text */
+}
+
+.teachnology-content img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.teachnology-text {
+  flex: 1;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+ 
+}
+
+.teachnology-text h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.teachnology-text h4 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.teachnology-text p {
+ line-height: 1.5;
+}
+
+.start-the-journey {
+  background-color: lightblue;
+}
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .teachnology {
+      flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .teachnology-content,
+  .teachnology-text {
+      padding: 20px;
+  }
+
+  .teachnology-content img {
+      max-width: 100%;
+  }
+}
+
+/*contact-form*/
+/* Style for the form container */
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+  }
+  
+  /* Center the form */
+  .form h1 {
+    text-align: center;
+  }
+  
+  /* Style for form labels */
+  .form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style for form inputs and textarea */
+  .form input[type="text"],
+  .form input[type="email"],
+  .form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+
+  /* Increase height of the message textarea */
+.form textarea {
+    height: 150px; /* Adjust the height as needed */
+  }
+  
+  /* Style for form submit button */
+  .form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+
+  .form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media query for small devices */
+  @media screen and (max-width: 600px) {
+    .form {
+      padding: 10px;
+    }
+  
+    .form input[type="text"],
+    .form input[type="email"],
+    .form textarea {
+      padding: 5px;
+      font-size: 1rem;
+    }
+  
+    .form button[type="submit"] {
+      padding: 8px 15px;
+    }
+  }
+  
+
+
+

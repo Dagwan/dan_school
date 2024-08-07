@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outstanding Experience | Home-Dan School</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets-css/outstanding-experience.css') }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+
+</head>
+
+<body>
+  <!-- index.html -->
+  <header>
+    <div class="header-container">
+        <div class="logo">
+          <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/stlogo.png') }}" alt="Logo"></a>
+        </div>
+        <h1>DAN NURSERY & <br>PRIMARY SCHOOL ABUJA</h1>
+        
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu-list">
+          
+              <li> <a href="{{ url_for('index') }}">Home</a></li>
+              <li> <a href="{{ url_for('about') }}">About</a></li>
+              <li> <a href="{{ url_for('services') }}">Our Services</a></li>
+              <li> <a href="{{ url_for('contact') }}">Contact Us</a></li>
+             <li> <a href="{{ url_for('outstanding_experience') }}">Outstanding Experience</a></li>
+              <li> <a href="{{ url_for('admissions') }}">Admissions</a></li>
+              <li> <a href="{{ url_for('login') }}">Login</a></li>
+              <li> <a href="{{ url_for('create_account') }}">Student Portal</a></li>
+              <li> <a href="{{ url_for('accademicexcellence') }}">Accademic Excellence</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <main>
+    <section id="home">
+      <div class="admission">
+        <h1>OUTSTANDING EXPERIENCES</h1>
+      </div>
+      <div class="image-admission">
+        <img src=" {{ url_for('static', filename='images/outstanding-experience-image.jpg') }}" alt="admission">
+        <div class="image-text"><hr>
+          <h4>DISCOVERY AHEAD</h4>
+          <h2>A huge world awaits your child, filled with adventures and opportunities!</h2>
+        </div>
+      </div>
+    </section>   
+    
+    <aside id="learn-more">
+      <div class="learn-text">
+        <h1>CREATING INDIVIDUAL GOALS</h1>
+        <p>
+          We encourage your child to reach for the stars. Our British heritage education curriculum is designed to support their individual abilities and goals, so that our teachers can create exceptional experiences that balance your child’s top academic outcomes with their character development and wellbeing.
+        </p>
+        <p>
+          Our lively connections with UNICEF and the UN’s Sustainable Development Goals, as well as our collaborations with world-leading institutions like MIT and Julliard, allow our students to do and be their best in a world where they can make a difference.
+        </p>
+        <p>
+          In turn, our students’ excellent results help them to build their resilience for life and create the pathways to their first-choice universities.
+        </p>
+      </div>
+    
+      <div class="learn-image">
+        <img src=" {{ url_for('static', filename='images/aside-excellence-image.png') }}" alt="learn">
+      </div>
+    </aside>
+
+    <div class="model-content-text">
+      <h1>BROADENING HORIZONS</h1>
+      <p>Our exciting global projects are realised through collaborations with world-leading institutions such as Juilliard, UNICEF, and MIT – providing your child with the best resources to develop their natural talents and important life skills.
+        
+      </p>
+      <a href="{{ url_for('collaboration') }}"><button>MORE ABOUT COLLABORATIONS</button></a>
+    </div>
+
+    <div class="container">
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/Juilliard.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>The Juilliard School</h4>
+            <p>Our collaboration with the world’s most renowned arts institution enriches our students’ love of dance, drama and music.</p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!-- The modal -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/Juilliard.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">The Juilliard School</h1>
+            <p>Performing arts are so much more than what is seen on stage. They encourage self-expression and self-awareness, as well the development of empathy, confidence and cultural exploration. Our collaboration with Juilliard, the world-renowned performing arts school, combined with our outstanding dance, drama, and music programmes, inspires our students’ creativity, team-work and resilience.</p>
+
+            <p>The Juilliard School is recognised around the world as a leader in the performing arts; our exclusive collaboration with them harnesses their expertise and experience to create an arts programme that both inspires our students and sparks their passion to pursue their talents and interests.</p>
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/MIT.jpg') }}" alt="accademic excellence">
+          </div>
+
+          <div class="content">
+            <h4>MIT</h4>
+            <p>The MIT-Dan STEAM programme helps our students to develop their creativity and problem-solving skills by tackling interdisciplinary challenges facing the world today.</p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+
+      <!--the mode -->
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/MIT.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">MIT</h1>
+            <p>Our global programme inspires students to look beyond individual subjects and harness the benefits of an interdisciplinary, practical, hands-on approach to learning guided by the world’s leading STEAM institution. Our students are encouraged to solve problems creatively, to embrace curiosity and to learn from world-leading experts at MIT. It also gives our teachers the chance to learn and receive professional development from inspiring figures in the world of STEAM and pass on their passion for learning to our students.</p>
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/UNICEF.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>UNICEF</h4>
+            <p>Students are challenged to make a difference locally and globally by tackling the Sustainable Development Goals.</p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+            
+          </div>
+        </div>
+      </section>
+      <!--the mode -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/UNICEF.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">UNICEF </h1>
+            <p>We want to give both our students and our teachers the chance to make a meaningful, positive impact in their community. This includes embedding the UN Sustainable Development Goals (SDGs) and the UN Convention on the Rights of the Child (UNCRC) in all aspects of teaching and learning across our schools, using materials developed by UNICEF.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="exploring">
+      <div class="exploring-talent">
+        <div class="text-content">
+          <h1>EXPLORING TALENTS. FEEDING PASSIONS.</h1>
+          <p>At DNPS, your child will take the spotlight and create something meaningful — all in an age-appropriate environment, with just the right amounts of competition and encouragement from our outstanding staff.</p>
+        </div>
+        <div class="image-exploring-right">
+          <img src="{{ url_for('static', filename='images/image-exploring-right.png') }}" alt="image-exploring-right">
+        </div>
+      </div>
+    </div>
+
+      <div class="container">
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/team-sports.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>Team Sports </h4>
+            <p>Our extracurricular sports and athletics encourage our students’ wellbeing by building their confidence, strength, and skills in teamwork.
+            </p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!--the mode -->
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/team-sports.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">Extracurricular Activities </h1>
+            <p>We have a wide range of after-school activities that help students explore their interests. These activities can help your child develop their specific interests and inspire them toward future goals or careers.</p>
+
+            <p>Some of the Extracurricular Activities Available:</p>
+            <ul>
+              <li>Walk in the Woods: Reception–Year 2</li>
+              <li>Performances/Musicals: primary and secondary, by age group</li>
+              <li>Music (instrumental and choirs): Varies </li>
+              <li>Green Team: primary and secondary</li>
+              <li>Model UN: Years 6–11</li>
+              <li>Newspaper club: secondary students</li>
+              <li>A rotating slate of 20+ clubs each term that touch upon all year groups, from Reception through Year 13</li>
+            </ul>
+            <p>After-School Sports</p>
+            <p>Our school competes in several sporting events. Training sessions equip students to compete in leagues against other schools and clubs in the following sports: .</p>
+            <ul>
+              <li>Basketball</li>
+              <li>Cross-Country Running</li>
+              <li>Football (Soccer) </li>
+              <li>Swimming</li>
+              <li>Track and Field</li>
+              <li>Volleyball</li>
+              
+            <p>Trips and Visits</p>
+            <p>The British International School of Washington makes use of the rich cultural opportunities offered in our capital city. For example, we organize educational excursions regularly throughout the school year to enhance learning experiences in the classroom.</p>
+         
+            <p>Residential Trips</p>
+            <p>We offer extended overnight trips to enhance the physical, emotional, and social development of the students. For instance, Year 2 pupils have stayed overnight in Delaware to enrich their unit of work “We’re Going on Holiday”. Years 7, 8, and 9 have visited the premiere educational North Bay Adventure Camp in Maryland, while Years 10 and 11 have taken trips to Camp Horizons in the heart of the Blue Ridge Mountains in Virginia. These experiences always present exciting new challenges that inspire the students in a natural environment.</p>
+         
+            <p>Global Classroom</p>
+            <p>The Global Classroom is an innovative and modern online educational program unique to Dan Education. It runs school challenges where students receive access to world-leading experts to develop their team building and creative skills in an authentic context. Similarly, the Global Classroom Annual Expedition to Tanzania brings students from around the world together for a face to face experience whilst having an impact on the lives of others.</p>
+         
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/performing-arts.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+            <h4>Performing Arts</h4>
+            <p>We prepare your child for the world stage through in-school and extracurricular activities that showcase their abilities in music, dance, and drama.
+            </p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </section>
+      <!--the mode -->
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/performing-arts.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide" id="">Performing Arts</h1>
+            <p>Dan Education's collaboration with The Juilliard School gives your child an incredible opportunity to think creatively and apply their skills and knowledge around music, dance, and drama.</p>
+
+            <p>Our Performing Arts Department works with our students to put on concerts, competitions, school musicals, dance troupe events, and more.</p>
+
+          </div>
+        </div>
+      </div>
+      <section class="learning-experience-design">
+        <div class="accademic-excellence">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/clubs.jpg') }}" alt="accademic excellence">
+          </div>
+          <div class="content">
+
+            <h4>Clubs </h4>
+            <p>We have over 20 exciting clubs for all ages – from Reception through Year 13 – at BISW each term, so that your child can grow their interests outside of class time. With so much to choose from, there’s something for everyone to get involved with!
+            </p>
+            <p><button class="pop-onlick">LEARN MORE</button></p>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!--the mode -->
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="hidden-content">
+            <img src="{{ url_for('static', filename='images/clubs.jpg') }}" alt="images to hide" class="hidden-image">
+            <h1 class="text-to-hide">Clubs</h1>
+            <p>Our wide range of after-school activities help your child develop their specific interests. Our clubs also inspire them to develop their future goals or careers.</p>
+
+            <p>Some of our activities include: </p>
+            <ul>
+              <li>performances/musicals (primary and secondary students, by age group)</li>
+              <li>instrumental music and choirs </li>
+              <li>Green Team (primary and secondary students)</li>
+              <li>Model UN (Years 6–11)</li>
+              <li>Newspaper Club (secondary students)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="close">X</button>
+    </div>
+
+    <div class="exploring1">
+      <div class="exploring-talent">
+        <div class="text-content">
+          <h1>GOING BEYOND THE CLASSROOM</h1>
+          <p>BISW students have unique opportunities to explore the world and make a difference. Our transformative local, national, and international trips broaden students' horizons and foster lifelong friendships.</p>
+        </div>
+        <div class="image-exploring-right">
+          <img src="{{ url_for('static', filename='images/learning-experience-image-background.png') }}" alt="image-exploring-right">
+        </div>
+      </div>
+    </div>
+
+    <div class="article-news">
+      <article class="new" id="new">
+        <div class="featured">
+            <img src="{{ url_for('static', filename='images/abuja.jpg') }}" alt="news image">
+            <h2>Abuja - FCT</h2>
+            <p>Inspiration in the District</p>
+          <p>Here in the nation's capital, we have world-class museums, historical monuments, and national parks at our doorstep. We take field trips that complement and support in-class lessons and ensure students benefit from our proximity to DC's impressive sites.</p>
+        </div>
+        <div class="featured">
+          <img src="{{ url_for('static', filename='images/service-rips.jpg') }}" alt="news image">
+          <h2>Service Trips</h2>
+          <p>Fostering Growth while Helping Others</p>
+        <p>BISW students take a hands-on approach to service and community support. Local service trips to DC-area charitable organizations help students see the positive impact of their actions right here in Washington, DC. Similarly, service trips abroad help BISW students connect with and aid international communities.</p>
+      </div>
+      <div class="featured">
+        <img src="{{ url_for('static', filename='images/events-through-NAE-partnerships.jpg') }}" alt="news image">
+        <h2>Events through NAE Partnerships</h2>
+        <p>United by NAE</p>
+      <p>Through NAE's partnerships, BISW students have access to out-of-town activities that unite them with fellow NAE students and the global community. For example, students have visited the UNICEF headquarters in New York; given music, dance, and drama performances at the annual NAE Performing Arts Festival in front of Juilliard-affiliated artists etc.</p>
+    </div>
+    <div class="featured">
+      <img src="{{ url_for('static', filename='images/camp-stays.jpg') }}" alt="news image">
+      <h2>Camp Stays</h2>
+      <p>Building Confidence and Making Memories at Camp</p>
+    <p>BISW facilitates sleepaway camp experiences that let students build self-esteem, learn life skills, and work collaboratively. Students return to school with exciting stories about activities they tried, such as horseback riding, team-building exercises, archery, watercraft adventures, canoeing, rock climbing, zip-lining, and more.</p>
+  </div>
+  <div class="featured">
+    <img src="{{ url_for('static', filename='images/ski-trips.jpg') }}" alt="news image">
+    <h2>Ski Trips</h2>
+    <p>Exciting Winter Sports</p>
+  <p>During the snowy season, secondary school students learn to ski or snowboard at mountain lodge resorts, such as Mountain Top Lodge Resort. The students stay in cosy executive suites on this annual trip and enjoy activities like snow tubing and indoor swimming.</p>
+</div>
+</article>
+</div>
+
+    <aside class="offer" id="offer">
+      <div class="content-offer">
+        <h4>KEEPING HEALTHY </h4>
+        <h1>LOOKING AFTER OUR WELL-BEING</h1>
+        <ul>
+          <p>Your child’s wellbeing is a key part of their personal and academic success. Our attentive staff are available to support your child no matter what – and our dedicated full-time student counsellors work closely with our student community. From secondary school, we also offer regular mindfulness and yoga activities, which are integrated into our physical education curriculum.</p>
+          <p>We follow DC Regulations and Nord Anglia Education’s expectations regarding safeguarding and child protection. To keep our students’ minds and bodies fit and flexible, we also use resources from our Global Campus online platform – so that our students are ready to take on new challenges, both in and out of school.</p>
+      </div>
+      <div class="image-offer">
+        <img src="{{ url_for('static', filename='images/well-being.jpg') }}" alt="content image">
+      </div>
+    </aside>
+
+    <aside class="caring" id="caring">
+      <div class="image-caring">
+        <img src="{{ url_for('static', filename='images/image-caring.jpg') }}" alt="content image">
+      </div>
+      <div class="content-caring">
+        <h4>OUR SOCIAL PURPOSE</h4>
+        <h1>CARING THAT DRIVES ACTION</h1>
+        <p>As an important part of our curriculum, we challenge our students to go beyond the classroom. Your child will have the opportunity to research, reflect on, plan, and manage their own service projects with communities close to home or far beyond. </p>
+        <p>Because your child is always at the center of their own learning experiences, we ensure their voice is heard through platforms of positive change including our ambitious Student Council, Global Goals and Model United Nations clubs, which work together to shape the spirit and social direction of our school’s community. </p>
+        <p>On Global Campus, our Nord Anglia online platform, we also challenge your child through our social impact programme, where our students learn about the UN’s Sustainable Development 2030 agenda and the UN Convention on the Rights of the Child. </p>
+        <a href="{{ url_for('our_social') }}"><p><button>FIND OUT MORE</button></p> </a>
+      </div>
+    </aside>  
+   
+    
+    <article class="reach-for-the-start" id="reach-for-the-start">
+      <div class="reach-content" id="reach-content">
+        <div class="reach-image" id="reach-image">
+          <img src="{{ url_for('static', filename='images/surroundings-image.png') }}" alt="reach for the start image">
+        </div>
+    
+        <div class="reach-text" id="reach-text">
+          <h1>SURROUNDINGS MADE FOR LEARNING</h1>
+          <p>Learn more about our state-of-the-art facilities and the latest high-tech teaching equipment we have at our fingertips.</p>
+          <a href=" {{ url_for('about') }}"><button>MORE ABOUT OUR CAMPUS</button></a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+  <hr>
+  <footer class="footer1">
+      <div class="footer-column">
+          <p>CONTACT DAN INFO</p>
+          <ul>
+              <li><a href="tel:+2348101756091">Call or Text: +234 (0) 810 175 6091</a></li>
+              <li><a href="mailto:info@danschool.edu">Email: info@danschool.edu</a></li>
+              <li><a href="http://info.danschool.edu">Website: info.danschool.edu</a></li>
+              <li>Dan Nursery & Primary School Abuja</li>
+          </ul>
+      </div>
+
+      <div class="footer-column">
+          <p>RESOURCES</p>
+          <ul>
+              <li><a href="#">A-Z Index</a></li>
+              <li><a href="#">DAN Mobile App (Android)</a></li>
+              <li><a href="#">DAN Mobile App (IOS)</a></li>
+              <li><a href="#">Student Development Services</a></li>
+              <li><a href="#">Employment At DAN</a></li>
+              <li><a href="#">Office Of Belonging</a></li>
+              <li><a href="#">Helping Distressed Students</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Office Of IT</a></li>
+              <li><a href="#">Title IX (Sexual Misconduct)</a></li>
+              <li><a href="#">School Police & Parking</a></li>
+          </ul>
+      </div>
+
+
+      <div class="footer-column">
+          <p>OTHER DAN SCHOOLS</p>
+          <ul>
+              <li><a href="#">Dan Jos</a></li>
+              <li><a href="#">Dan Lagos</a></li>
+              <li><a href="#">Dan Logos</a></li>
+              <li><a href="#">Dan College Jos</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-column">
+          <div class="social-column">
+              <p>CONNECT</p>
+              <ul>
+                  <li><a href="https://www.facebook.com/"><img src="{{ url_for('static', filename='images/fb.png') }}" alt="facebook" class="social"></a>
+                  </li>
+                  <li><a href="https://instagram.com/"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="instagram" class="social"></a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/"><img src="{{ url_for('static', filename='images/linkIn.jpg') }}" alt="linkedin" class="social"></a>
+                  </li>
+                  <li><a href="https://www.twitter.com/"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="twitter" class="social"></a>
+                  </li>
+              </ul>
+          </div>
+          <ul class="connect-list">
+              <li><a href="#">DAN Alumni</a></li>
+              <li><a href="#">DAN Athletics</a></li>
+              <li><a href="#">DAN News</a></li>
+              <li><a href="#">DAN Store</a></li>
+              <li><a href="#">DANtv</a></li>
+          </ul>
+      </div>
+  </footer>
+
+  <footer class="footer-article">
+      <article class="copy" id="footer">
+          <p class="copy">_____-:- &copy;DAN NURSERY & PRIMARY SCHOOL -:- _____</p>
+          <p class="copy-date"></p>
+      </article>
+  </footer>
+  <script src="{{ url_for('static', filename='assets-js/outstanding-experience.js') }}"></script> 
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

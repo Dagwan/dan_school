@@ -1,0 +1,46 @@
+/* Reset default styles and apply custom styles */
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body
+{
+    margin: 0px;
+    font-family: Raleway; 
+    overflow: auto;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+
+.thank-you-container {
+    text-align: center;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.thank-you-container button{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  .thank-you-container  button:hover{
+    background-color: #0056b3;
+  }
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 1.2rem;
+}
